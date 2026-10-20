@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\我的打字练习软件\backend\server.py", line 152, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Administrator\Desktop\我的打字练习软件\backend\server.py", line 144, in main
+    init_db()
+    ~~~~~~~^^
+  File "C:\Users\Administrator\Desktop\我的打字练习软件\backend\server.py", line 30, in init_db
+    with closing(connect()) as db:
+                 ~~~~~~~^^
+  File "C:\Users\Administrator\Desktop\我的打字练习软件\backend\server.py", line 23, in connect
+    db = sqlite3.connect(DATABASE, timeout=10)
+sqlite3.OperationalError: unable to open database file

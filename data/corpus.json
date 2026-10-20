@@ -1,0 +1,2690 @@
+{
+  "version": 1,
+  "chineseSourceRoot": "C:\\Users\\Administrator\\Desktop\\MathorCup",
+  "sources": [
+    {
+      "id": "bfbf8658b9d9",
+      "file": "2020年MathorCup大数据竞赛赛道A优秀论文/2020年MathorCup大数据竞赛赛道A优秀论文1.pdf",
+      "title": "2020年MathorCup大数据竞赛赛道A优秀论文1",
+      "pages": 27,
+      "sha256": "959d8dccb34262a64f1831a181f00add478120e415e4096245172b13d81ea1a7"
+    },
+    {
+      "id": "5de76c7b7fd0",
+      "file": "2020年MathorCup大数据竞赛赛道A优秀论文/2020年MathorCup大数据竞赛赛道A优秀论文2.pdf",
+      "title": "2020年MathorCup大数据竞赛赛道A优秀论文2",
+      "pages": 41,
+      "sha256": "363a47f3eecb7d79cc3119802cc8c53995c1e613bf8e5cc46b5596378a89df39"
+    },
+    {
+      "id": "40ed37ad8840",
+      "file": "2020年MathorCup大数据竞赛赛道A优秀论文/2020年MathorCup大数据竞赛赛道A优秀论文3.pdf",
+      "title": "2020年MathorCup大数据竞赛赛道A优秀论文3",
+      "pages": 33,
+      "sha256": "8b7dce8649a7ad0fdb9f5c67f1e334d53d47220e413e7242bf51aca76635ac44"
+    },
+    {
+      "id": "9d8a0d30c152",
+      "file": "2020年MathorCup大数据竞赛赛道A优秀论文/2020年MathorCup大数据竞赛赛道A优秀论文4.pdf",
+      "title": "2020年MathorCup大数据竞赛赛道A优秀论文4",
+      "pages": 29,
+      "sha256": "835195dbbf544f2fa880bb1134fa521abe35f12dd4beabff97c8a5342fc3c1cb"
+    },
+    {
+      "id": "c2050ab5e5d0",
+      "file": "2020年MathorCup大数据竞赛赛道A优秀论文/2020年MathorCup大数据竞赛赛道A优秀论文5.pdf",
+      "title": "2020年MathorCup大数据竞赛赛道A优秀论文5",
+      "pages": 27,
+      "sha256": "1f556d0614f1bb715efbe58464501107a0fcb579daf83b1288ff076282b93e1c"
+    },
+    {
+      "id": "56c4827817e7",
+      "file": "2020年MathorCup大数据竞赛赛道B优秀论文/2020年MathorCup大数据竞赛赛道B优秀论文1.pdf",
+      "title": "2020年MathorCup大数据竞赛赛道B优秀论文1",
+      "pages": 18,
+      "sha256": "ac8b73288278a5c26232d4b76703f653d92a5e301aec41606de6a3546c42ba98"
+    },
+    {
+      "id": "937d077b9be6",
+      "file": "2020年MathorCup大数据竞赛赛道B优秀论文/2020年MathorCup大数据竞赛赛道B优秀论文2.pdf",
+      "title": "2020年MathorCup大数据竞赛赛道B优秀论文2",
+      "pages": 21,
+      "sha256": "5056c5788713bcf254e6db4351301dd8549495920a4b36dc8bdde0d123a273fd"
+    },
+    {
+      "id": "302b9b2fd301",
+      "file": "2020年MathorCup大数据竞赛赛道B优秀论文/2020年MathorCup大数据竞赛赛道B优秀论文3.pdf",
+      "title": "2020年MathorCup大数据竞赛赛道B优秀论文3",
+      "pages": 35,
+      "sha256": "9b032ba92af621e7fdd2822f2576779c46a4e22bb39f3bed22b9b78cfd0c7e5f"
+    },
+    {
+      "id": "dae99d32567a",
+      "file": "2020年MathorCup大数据竞赛赛道B优秀论文/2020年MathorCup大数据竞赛赛道B优秀论文4.pdf",
+      "title": "2020年MathorCup大数据竞赛赛道B优秀论文4",
+      "pages": 30,
+      "sha256": "f4bf6bae2a62ce283a0b910943b9a305a607ddedf09a2ddb95a5058f2f09b814"
+    },
+    {
+      "id": "f49c9d93adfe",
+      "file": "2021年MathorCup大数据竞优秀论文/2021年MathorCup大数据竞优秀论文1.pdf",
+      "title": "2021年MathorCup大数据竞优秀论文1",
+      "pages": 35,
+      "sha256": "2ff6d4f2cff7d19cbfd8882c4d4ed857445a960d8e42f9f80f3d440c830249c5"
+    },
+    {
+      "id": "2125b8e5f0ff",
+      "file": "2021年MathorCup大数据竞优秀论文/2021年MathorCup大数据竞优秀论文2.pdf",
+      "title": "2021年MathorCup大数据竞优秀论文2",
+      "pages": 29,
+      "sha256": "f13c5cfc6d691caf41d374ce0c3dcfcb20c9c3a88085f855f8a5dd6bc0769643"
+    },
+    {
+      "id": "9b28662dae90",
+      "file": "2021年MathorCup大数据竞优秀论文/2021年MathorCup大数据竞优秀论文3.pdf",
+      "title": "2021年MathorCup大数据竞优秀论文3",
+      "pages": 23,
+      "sha256": "87384028b1a012ac1c46a669f53c15f5a696709525df2f4319698d1597fb58a2"
+    },
+    {
+      "id": "a15e1506845c",
+      "file": "2021年MathorCup大数据竞优秀论文/2021年MathorCup大数据竞优秀论文4.pdf",
+      "title": "2021年MathorCup大数据竞优秀论文4",
+      "pages": 23,
+      "sha256": "e4992f2f96f7e3c4264d5ce8568ead5955c8eacab4e6d046f3ebe08e4d43669c"
+    },
+    {
+      "id": "c89c3742f67d",
+      "file": "2021年MathorCup大数据竞优秀论文/2021年MathorCup大数据竞优秀论文5.pdf",
+      "title": "2021年MathorCup大数据竞优秀论文5",
+      "pages": 20,
+      "sha256": "427e87c771dcfb59a2543c7cda11c858546c6ed52bc159176987cd6611c991cd"
+    },
+    {
+      "id": "f020bd4d79dd",
+      "file": "2021年MathorCup大数据竞优秀论文/2021年MathorCup大数据竞优秀论文6.pdf",
+      "title": "2021年MathorCup大数据竞优秀论文6",
+      "pages": 27,
+      "sha256": "f76ecdfa8a73fe1aae3ef12ea1f8d7cab1f5363a2c82ef7301f268fc79a5827a"
+    },
+    {
+      "id": "41a81408dcd7",
+      "file": "2021年MathorCup大数据竞优秀论文/2021年MathorCup大数据竞优秀论文7.pdf",
+      "title": "2021年MathorCup大数据竞优秀论文7",
+      "pages": 28,
+      "sha256": "5c29114e27ef565fa01e4ac8555ee11fd14839c122f73a4a8e69c0b1de52505b"
+    },
+    {
+      "id": "5dafafb328d9",
+      "file": "2021年MathorCup大数据竞优秀论文/2021年MathorCup大数据竞优秀论文8.pdf",
+      "title": "2021年MathorCup大数据竞优秀论文8",
+      "pages": 39,
+      "sha256": "d6386807023b8e2d8deeb11a85fe6021d02ee21c7685315bd80b0a9a410c8571"
+    },
+    {
+      "id": "13c9a0a15dc3",
+      "file": "2022年MathorCup大数据竞赛优秀论文/2022年MathorCup大数据竞赛优秀论文-1.pdf",
+      "title": "2022年MathorCup大数据竞赛优秀论文-1",
+      "pages": 27,
+      "sha256": "eca60efe0a2fcfde904ba3c1d792e6ce25513ed8502dffff72de2bcd082b9473"
+    },
+    {
+      "id": "fba18799657e",
+      "file": "2022年MathorCup大数据竞赛优秀论文/2022年MathorCup大数据竞赛优秀论文-2.pdf",
+      "title": "2022年MathorCup大数据竞赛优秀论文-2",
+      "pages": 23,
+      "sha256": "8ae7a7e25f0599670106b15c2d9f568e2507e974053fe4c1d4294fb87b3fb2b3"
+    },
+    {
+      "id": "465ea3f444aa",
+      "file": "2022年MathorCup大数据竞赛优秀论文/2022年MathorCup大数据竞赛优秀论文-3.pdf",
+      "title": "2022年MathorCup大数据竞赛优秀论文-3",
+      "pages": 34,
+      "sha256": "b41d7f63f984f288b8328403db1f2ae24c7eefe1ffeed66470edc4b3cfcd5bdf"
+    },
+    {
+      "id": "9e5f52636933",
+      "file": "2022年MathorCup大数据竞赛优秀论文/2022年MathorCup大数据竞赛优秀论文-4.pdf",
+      "title": "2022年MathorCup大数据竞赛优秀论文-4",
+      "pages": 22,
+      "sha256": "f9425d8be3715ab4606a7a16ce4e8779b258e6fbcd37acf11667b5ebc6a9a1db"
+    },
+    {
+      "id": "a46f90e05c15",
+      "file": "2022年MathorCup大数据竞赛优秀论文/2022年MathorCup大数据竞赛优秀论文-5.pdf",
+      "title": "2022年MathorCup大数据竞赛优秀论文-5",
+      "pages": 31,
+      "sha256": "75040ffde59f71bfa6bce616aca75b0b13356f3211c1d29b0946beb4ffa62d63"
+    },
+    {
+      "id": "aba98d574bc5",
+      "file": "2022年MathorCup大数据竞赛优秀论文/2022年MathorCup大数据竞赛优秀论文-6.pdf",
+      "title": "2022年MathorCup大数据竞赛优秀论文-6",
+      "pages": 29,
+      "sha256": "1c029e0de0fcc92dde8498d14de15fddabdae265880de22f7c70a90eace18af9"
+    },
+    {
+      "id": "27213be53299",
+      "file": "2022年MathorCup大数据竞赛优秀论文/2022年MathorCup大数据竞赛优秀论文-7.pdf",
+      "title": "2022年MathorCup大数据竞赛优秀论文-7",
+      "pages": 18,
+      "sha256": "f8d84c535700545856b174cb3cf4d71e1ea48d59eb28e8e9a9e7a43ae476838b"
+    },
+    {
+      "id": "10cc63762802",
+      "file": "2022年MathorCup大数据竞赛优秀论文/2022年MathorCup大数据竞赛优秀论文-8.pdf",
+      "title": "2022年MathorCup大数据竞赛优秀论文-8",
+      "pages": 32,
+      "sha256": "95de2fe4dfe9a369986c0fd7cdd4b3158881f5dfa17fda6721a996df7f4894c2"
+    },
+    {
+      "id": "87a57a22e75d",
+      "file": "2023年MathorCup大数据竞赛优秀论文/2023年MathorCup大数据竞赛优秀论文-1.pdf",
+      "title": "2023年MathorCup大数据竞赛优秀论文-1",
+      "pages": 38,
+      "sha256": "d92bcb921534bc6c1b0b865886d0bcb7ae56ded6035ced0101d8046eb9081918"
+    },
+    {
+      "id": "0c2ed933b8f5",
+      "file": "2023年MathorCup大数据竞赛优秀论文/2023年MathorCup大数据竞赛优秀论文-2.pdf",
+      "title": "2023年MathorCup大数据竞赛优秀论文-2",
+      "pages": 52,
+      "sha256": "4be04f49923cab77171bf24951766585cb97ac10f381e4649cd4dae26c6bc626"
+    },
+    {
+      "id": "914b0c8a50f0",
+      "file": "2023年MathorCup大数据竞赛优秀论文/2023年MathorCup大数据竞赛优秀论文-3.pdf",
+      "title": "2023年MathorCup大数据竞赛优秀论文-3",
+      "pages": 53,
+      "sha256": "96798bf484a9c2929f0d7060cdd73d8bfcad629706c74c831a54ab11f03fd4f3"
+    },
+    {
+      "id": "3fafcaac909d",
+      "file": "2023年MathorCup大数据竞赛优秀论文/2023年MathorCup大数据竞赛优秀论文-4.pdf",
+      "title": "2023年MathorCup大数据竞赛优秀论文-4",
+      "pages": 62,
+      "sha256": "3f6e786d03ae005feaf2b83758f68c66f25b9642050abf182ad0cc7c3fd30590"
+    },
+    {
+      "id": "1a3281fff0df",
+      "file": "2023年MathorCup大数据竞赛优秀论文/2023年MathorCup大数据竞赛优秀论文-5.pdf",
+      "title": "2023年MathorCup大数据竞赛优秀论文-5",
+      "pages": 53,
+      "sha256": "5d799a759a47211b6a4c2b215b8d910cd8673042188ddb3991c4ce3c212fc3d8"
+    },
+    {
+      "id": "01b9dae2a177",
+      "file": "2023年MathorCup大数据竞赛优秀论文/2023年MathorCup大数据竞赛优秀论文-6.pdf",
+      "title": "2023年MathorCup大数据竞赛优秀论文-6",
+      "pages": 46,
+      "sha256": "725e1d0996dcc6e5b9926f4fad7d3355028c40d71a1973792a43a3eaae235d76"
+    },
+    {
+      "id": "905af7f12e9f",
+      "file": "2023年MathorCup大数据竞赛优秀论文/2023年MathorCup大数据竞赛优秀论文-7.pdf",
+      "title": "2023年MathorCup大数据竞赛优秀论文-7",
+      "pages": 43,
+      "sha256": "dbb1c64518b986ce5eacf5978fce2055e49cf2ab64b9bfa59bf30c373fadb6fd"
+    },
+    {
+      "id": "95c3dcf1e3cb",
+      "file": "2023年MathorCup大数据竞赛优秀论文/2023年MathorCup大数据竞赛优秀论文-8.pdf",
+      "title": "2023年MathorCup大数据竞赛优秀论文-8",
+      "pages": 34,
+      "sha256": "8a2e6079390f463c458288fe3f89f5b332f8547099aa356c787692725d0268ee"
+    },
+    {
+      "id": "0ea10a23126b",
+      "file": "2024年MathorCup大数据竞赛优秀论文/2024年MathorCup大数据竞赛优秀论文-1.pdf",
+      "title": "2024年MathorCup大数据竞赛优秀论文-1",
+      "pages": 59,
+      "sha256": "1194c0dc38dcb9ae73fa94148489051db6ac497dd510b6aadd63c3f7a5558eac"
+    },
+    {
+      "id": "dfc9dbdc5e93",
+      "file": "2024年MathorCup大数据竞赛优秀论文/2024年MathorCup大数据竞赛优秀论文-2.pdf",
+      "title": "2024年MathorCup大数据竞赛优秀论文-2",
+      "pages": 52,
+      "sha256": "49d29bde3240677f445451c56e4dee5afe9a07d3c3d7f531c3b6a7e1fe50e4e4"
+    },
+    {
+      "id": "4e77591cd118",
+      "file": "2024年MathorCup大数据竞赛优秀论文/2024年MathorCup大数据竞赛优秀论文-3.pdf",
+      "title": "2024年MathorCup大数据竞赛优秀论文-3",
+      "pages": 48,
+      "sha256": "21ec34ae2da1884656410eed8074240f9af84661072300bec8ec1c8f7b4b80c4"
+    },
+    {
+      "id": "9212d6611612",
+      "file": "2024年MathorCup大数据竞赛优秀论文/2024年MathorCup大数据竞赛优秀论文-4.pdf",
+      "title": "2024年MathorCup大数据竞赛优秀论文-4",
+      "pages": 37,
+      "sha256": "1167e5a60ca442970783e14680de38540e6539fa6828aefdccb8eebf0790fc0d"
+    },
+    {
+      "id": "9fe0f262cce8",
+      "file": "2024年MathorCup大数据竞赛优秀论文/2024年MathorCup大数据竞赛优秀论文-5.pdf",
+      "title": "2024年MathorCup大数据竞赛优秀论文-5",
+      "pages": 52,
+      "sha256": "89b51adc0657d4c95bd04dfe7c2e352c9fbdfe4b8329a8712263fc77e177341f"
+    },
+    {
+      "id": "dd18281a07f0",
+      "file": "2024年MathorCup大数据竞赛优秀论文/2024年MathorCup大数据竞赛优秀论文-6.pdf",
+      "title": "2024年MathorCup大数据竞赛优秀论文-6",
+      "pages": 68,
+      "sha256": "bbc723e3d7fd6fd76f8e3e116cee4d9cb62c274f5a80fdbc91111aab7e8ede18"
+    },
+    {
+      "id": "bef75a229717",
+      "file": "2024年MathorCup大数据竞赛优秀论文/2024年MathorCup大数据竞赛优秀论文-7.pdf",
+      "title": "2024年MathorCup大数据竞赛优秀论文-7",
+      "pages": 66,
+      "sha256": "1c5e212b2961715b7627d448ab6582a61e0df9521ded78b1d88ebe9111549e45"
+    },
+    {
+      "id": "d67533739c8e",
+      "file": "2024年MathorCup大数据竞赛优秀论文/2024年MathorCup大数据竞赛优秀论文-8.pdf",
+      "title": "2024年MathorCup大数据竞赛优秀论文-8",
+      "pages": 69,
+      "sha256": "85c33d0dc637609d5d8c94bab4e07a0d9a0ec31067e5176b41ee6ce6bbfabfbb"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "zh-phrase-01",
+      "language": "zh",
+      "kind": "phrase",
+      "order": 1,
+      "title": "建模词组 · 01",
+      "text": "数据预处理 数据清洗 缺失值 异常值 标准化",
+      "tier": 0,
+      "targetSpeed": 6,
+      "targetAccuracy": 75,
+      "references": [
+        {
+          "text": "数据预处理",
+          "sourceId": "bfbf8658b9d9",
+          "page": 1
+        },
+        {
+          "text": "数据清洗",
+          "sourceId": "bfbf8658b9d9",
+          "page": 7
+        },
+        {
+          "text": "缺失值",
+          "sourceId": "bfbf8658b9d9",
+          "page": 7
+        },
+        {
+          "text": "异常值",
+          "sourceId": "bfbf8658b9d9",
+          "page": 7
+        },
+        {
+          "text": "标准化",
+          "sourceId": "bfbf8658b9d9",
+          "page": 23
+        }
+      ],
+      "topic": "数学建模术语",
+      "sourceLabel": "MathorCup 优秀论文 · 原文词组"
+    },
+    {
+      "id": "zh-phrase-02",
+      "language": "zh",
+      "kind": "phrase",
+      "order": 2,
+      "title": "建模词组 · 02",
+      "text": "归一化 特征工程 特征提取 特征选择 主成分分析",
+      "tier": 0,
+      "targetSpeed": 6,
+      "targetAccuracy": 75,
+      "references": [
+        {
+          "text": "归一化",
+          "sourceId": "bfbf8658b9d9",
+          "page": 9
+        },
+        {
+          "text": "特征工程",
+          "sourceId": "f49c9d93adfe",
+          "page": 1
+        },
+        {
+          "text": "特征提取",
+          "sourceId": "bfbf8658b9d9",
+          "page": 1
+        },
+        {
+          "text": "特征选择",
+          "sourceId": "5de76c7b7fd0",
+          "page": 2
+        },
+        {
+          "text": "主成分分析",
+          "sourceId": "13c9a0a15dc3",
+          "page": 14
+        }
+      ],
+      "topic": "数学建模术语",
+      "sourceLabel": "MathorCup 优秀论文 · 原文词组"
+    },
+    {
+      "id": "zh-phrase-03",
+      "language": "zh",
+      "kind": "phrase",
+      "order": 3,
+      "title": "建模词组 · 03",
+      "text": "聚类分析 相关性分析 回归分析 多元线性回归 逻辑回归",
+      "tier": 0,
+      "targetSpeed": 6,
+      "targetAccuracy": 75,
+      "references": [
+        {
+          "text": "聚类分析",
+          "sourceId": "5de76c7b7fd0",
+          "page": 1
+        },
+        {
+          "text": "相关性分析",
+          "sourceId": "9b28662dae90",
+          "page": 5
+        },
+        {
+          "text": "回归分析",
+          "sourceId": "f49c9d93adfe",
+          "page": 35
+        },
+        {
+          "text": "多元线性回归",
+          "sourceId": "41a81408dcd7",
+          "page": 2
+        },
+        {
+          "text": "逻辑回归",
+          "sourceId": "f020bd4d79dd",
+          "page": 5
+        }
+      ],
+      "topic": "数学建模术语",
+      "sourceLabel": "MathorCup 优秀论文 · 原文词组"
+    },
+    {
+      "id": "zh-phrase-04",
+      "language": "zh",
+      "kind": "phrase",
+      "order": 4,
+      "title": "建模词组 · 04",
+      "text": "随机森林 决策树 支持向量机 神经网络 深度学习",
+      "tier": 0,
+      "targetSpeed": 6,
+      "targetAccuracy": 75,
+      "references": [
+        {
+          "text": "随机森林",
+          "sourceId": "5de76c7b7fd0",
+          "page": 1
+        },
+        {
+          "text": "决策树",
+          "sourceId": "5de76c7b7fd0",
+          "page": 11
+        },
+        {
+          "text": "支持向量机",
+          "sourceId": "2125b8e5f0ff",
+          "page": 12
+        },
+        {
+          "text": "神经网络",
+          "sourceId": "5de76c7b7fd0",
+          "page": 35
+        },
+        {
+          "text": "深度学习",
+          "sourceId": "302b9b2fd301",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模术语",
+      "sourceLabel": "MathorCup 优秀论文 · 原文词组"
+    },
+    {
+      "id": "zh-phrase-05",
+      "language": "zh",
+      "kind": "phrase",
+      "order": 5,
+      "title": "建模词组 · 05",
+      "text": "机器学习 集成学习 时间序列 指数平滑 灰色预测",
+      "tier": 0,
+      "targetSpeed": 6,
+      "targetAccuracy": 75,
+      "references": [
+        {
+          "text": "机器学习",
+          "sourceId": "bfbf8658b9d9",
+          "page": 26
+        },
+        {
+          "text": "集成学习",
+          "sourceId": "302b9b2fd301",
+          "page": 1
+        },
+        {
+          "text": "时间序列",
+          "sourceId": "bfbf8658b9d9",
+          "page": 1
+        },
+        {
+          "text": "指数平滑",
+          "sourceId": "5de76c7b7fd0",
+          "page": 10
+        },
+        {
+          "text": "灰色预测",
+          "sourceId": "95c3dcf1e3cb",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模术语",
+      "sourceLabel": "MathorCup 优秀论文 · 原文词组"
+    },
+    {
+      "id": "zh-phrase-06",
+      "language": "zh",
+      "kind": "phrase",
+      "order": 6,
+      "title": "建模词组 · 06",
+      "text": "预测模型 目标函数 约束条件 最优解 线性规划",
+      "tier": 0,
+      "targetSpeed": 6,
+      "targetAccuracy": 75,
+      "references": [
+        {
+          "text": "预测模型",
+          "sourceId": "bfbf8658b9d9",
+          "page": 21
+        },
+        {
+          "text": "目标函数",
+          "sourceId": "bfbf8658b9d9",
+          "page": 5
+        },
+        {
+          "text": "约束条件",
+          "sourceId": "5de76c7b7fd0",
+          "page": 24
+        },
+        {
+          "text": "最优解",
+          "sourceId": "937d077b9be6",
+          "page": 15
+        },
+        {
+          "text": "线性规划",
+          "sourceId": "905af7f12e9f",
+          "page": 27
+        }
+      ],
+      "topic": "数学建模术语",
+      "sourceLabel": "MathorCup 优秀论文 · 原文词组"
+    },
+    {
+      "id": "zh-phrase-07",
+      "language": "zh",
+      "kind": "phrase",
+      "order": 7,
+      "title": "建模词组 · 07",
+      "text": "整数规划 动态规划 遗传算法 模拟退火 粒子群算法",
+      "tier": 0,
+      "targetSpeed": 6,
+      "targetAccuracy": 75,
+      "references": [
+        {
+          "text": "整数规划",
+          "sourceId": "27213be53299",
+          "page": 1
+        },
+        {
+          "text": "动态规划",
+          "sourceId": "a15e1506845c",
+          "page": 20
+        },
+        {
+          "text": "遗传算法",
+          "sourceId": "2125b8e5f0ff",
+          "page": 26
+        },
+        {
+          "text": "模拟退火",
+          "sourceId": "2125b8e5f0ff",
+          "page": 26
+        },
+        {
+          "text": "粒子群算法",
+          "sourceId": "f020bd4d79dd",
+          "page": 26
+        }
+      ],
+      "topic": "数学建模术语",
+      "sourceLabel": "MathorCup 优秀论文 · 原文词组"
+    },
+    {
+      "id": "zh-phrase-08",
+      "language": "zh",
+      "kind": "phrase",
+      "order": 8,
+      "title": "建模词组 · 08",
+      "text": "蚁群算法 数学模型 模型假设 模型建立 模型求解",
+      "tier": 1,
+      "targetSpeed": 8,
+      "targetAccuracy": 80,
+      "references": [
+        {
+          "text": "蚁群算法",
+          "sourceId": "27213be53299",
+          "page": 18
+        },
+        {
+          "text": "数学模型",
+          "sourceId": "2125b8e5f0ff",
+          "page": 3
+        },
+        {
+          "text": "模型假设",
+          "sourceId": "5de76c7b7fd0",
+          "page": 2
+        },
+        {
+          "text": "模型建立",
+          "sourceId": "5de76c7b7fd0",
+          "page": 2
+        },
+        {
+          "text": "模型求解",
+          "sourceId": "9d8a0d30c152",
+          "page": 8
+        }
+      ],
+      "topic": "数学建模术语",
+      "sourceLabel": "MathorCup 优秀论文 · 原文词组"
+    },
+    {
+      "id": "zh-phrase-09",
+      "language": "zh",
+      "kind": "phrase",
+      "order": 9,
+      "title": "建模词组 · 09",
+      "text": "模型检验 模型评价 灵敏度分析 鲁棒性 交叉验证",
+      "tier": 1,
+      "targetSpeed": 8,
+      "targetAccuracy": 80,
+      "references": [
+        {
+          "text": "模型检验",
+          "sourceId": "5de76c7b7fd0",
+          "page": 2
+        },
+        {
+          "text": "模型评价",
+          "sourceId": "5de76c7b7fd0",
+          "page": 2
+        },
+        {
+          "text": "灵敏度分析",
+          "sourceId": "2125b8e5f0ff",
+          "page": 1
+        },
+        {
+          "text": "鲁棒性",
+          "sourceId": "9b28662dae90",
+          "page": 14
+        },
+        {
+          "text": "交叉验证",
+          "sourceId": "f49c9d93adfe",
+          "page": 16
+        }
+      ],
+      "topic": "数学建模术语",
+      "sourceLabel": "MathorCup 优秀论文 · 原文词组"
+    },
+    {
+      "id": "zh-phrase-10",
+      "language": "zh",
+      "kind": "phrase",
+      "order": 10,
+      "title": "建模词组 · 10",
+      "text": "训练集 测试集 验证集 均方误差 均方根误差",
+      "tier": 1,
+      "targetSpeed": 8,
+      "targetAccuracy": 80,
+      "references": [
+        {
+          "text": "训练集",
+          "sourceId": "5de76c7b7fd0",
+          "page": 26
+        },
+        {
+          "text": "测试集",
+          "sourceId": "937d077b9be6",
+          "page": 13
+        },
+        {
+          "text": "验证集",
+          "sourceId": "56c4827817e7",
+          "page": 2
+        },
+        {
+          "text": "均方误差",
+          "sourceId": "2125b8e5f0ff",
+          "page": 5
+        },
+        {
+          "text": "均方根误差",
+          "sourceId": "2125b8e5f0ff",
+          "page": 5
+        }
+      ],
+      "topic": "数学建模术语",
+      "sourceLabel": "MathorCup 优秀论文 · 原文词组"
+    },
+    {
+      "id": "zh-phrase-11",
+      "language": "zh",
+      "kind": "phrase",
+      "order": 11,
+      "title": "建模词组 · 11",
+      "text": "平均绝对误差 决定系数 置信区间 评价指标 层次分析法",
+      "tier": 1,
+      "targetSpeed": 8,
+      "targetAccuracy": 80,
+      "references": [
+        {
+          "text": "平均绝对误差",
+          "sourceId": "2125b8e5f0ff",
+          "page": 5
+        },
+        {
+          "text": "决定系数",
+          "sourceId": "f49c9d93adfe",
+          "page": 1
+        },
+        {
+          "text": "置信区间",
+          "sourceId": "f49c9d93adfe",
+          "page": 29
+        },
+        {
+          "text": "评价指标",
+          "sourceId": "bfbf8658b9d9",
+          "page": 8
+        },
+        {
+          "text": "层次分析法",
+          "sourceId": "9d8a0d30c152",
+          "page": 29
+        }
+      ],
+      "topic": "数学建模术语",
+      "sourceLabel": "MathorCup 优秀论文 · 原文词组"
+    },
+    {
+      "id": "zh-phrase-12",
+      "language": "zh",
+      "kind": "phrase",
+      "order": 12,
+      "title": "建模词组 · 12",
+      "text": "熵权法 综合评价 正态分布 概率分布 参数估计",
+      "tier": 1,
+      "targetSpeed": 8,
+      "targetAccuracy": 80,
+      "references": [
+        {
+          "text": "熵权法",
+          "sourceId": "465ea3f444aa",
+          "page": 1
+        },
+        {
+          "text": "综合评价",
+          "sourceId": "bfbf8658b9d9",
+          "page": 1
+        },
+        {
+          "text": "正态分布",
+          "sourceId": "5de76c7b7fd0",
+          "page": 5
+        },
+        {
+          "text": "概率分布",
+          "sourceId": "56c4827817e7",
+          "page": 15
+        },
+        {
+          "text": "参数估计",
+          "sourceId": "c89c3742f67d",
+          "page": 17
+        }
+      ],
+      "topic": "数学建模术语",
+      "sourceLabel": "MathorCup 优秀论文 · 原文词组"
+    },
+    {
+      "id": "zh-phrase-13",
+      "language": "zh",
+      "kind": "phrase",
+      "order": 13,
+      "title": "建模词组 · 13",
+      "text": "显著性检验 假设检验 拟合优度 最小二乘法 损失函数",
+      "tier": 1,
+      "targetSpeed": 8,
+      "targetAccuracy": 80,
+      "references": [
+        {
+          "text": "显著性检验",
+          "sourceId": "aba98d574bc5",
+          "page": 13
+        },
+        {
+          "text": "假设检验",
+          "sourceId": "9e5f52636933",
+          "page": 8
+        },
+        {
+          "text": "拟合优度",
+          "sourceId": "f49c9d93adfe",
+          "page": 13
+        },
+        {
+          "text": "最小二乘法",
+          "sourceId": "c89c3742f67d",
+          "page": 20
+        },
+        {
+          "text": "损失函数",
+          "sourceId": "5de76c7b7fd0",
+          "page": 34
+        }
+      ],
+      "topic": "数学建模术语",
+      "sourceLabel": "MathorCup 优秀论文 · 原文词组"
+    },
+    {
+      "id": "zh-phrase-14",
+      "language": "zh",
+      "kind": "phrase",
+      "order": 14,
+      "title": "建模词组 · 14",
+      "text": "优化算法 数据分析 数据挖掘 数据处理 数据集",
+      "tier": 2,
+      "targetSpeed": 10,
+      "targetAccuracy": 82,
+      "references": [
+        {
+          "text": "优化算法",
+          "sourceId": "5de76c7b7fd0",
+          "page": 37
+        },
+        {
+          "text": "数据分析",
+          "sourceId": "40ed37ad8840",
+          "page": 1
+        },
+        {
+          "text": "数据挖掘",
+          "sourceId": "5de76c7b7fd0",
+          "page": 36
+        },
+        {
+          "text": "数据处理",
+          "sourceId": "5de76c7b7fd0",
+          "page": 2
+        },
+        {
+          "text": "数据集",
+          "sourceId": "bfbf8658b9d9",
+          "page": 8
+        }
+      ],
+      "topic": "数学建模术语",
+      "sourceLabel": "MathorCup 优秀论文 · 原文词组"
+    },
+    {
+      "id": "zh-phrase-15",
+      "language": "zh",
+      "kind": "phrase",
+      "order": 15,
+      "title": "建模词组 · 15",
+      "text": "可视化 散点图 箱线图 直方图 热力图",
+      "tier": 2,
+      "targetSpeed": 10,
+      "targetAccuracy": 82,
+      "references": [
+        {
+          "text": "可视化",
+          "sourceId": "5de76c7b7fd0",
+          "page": 20
+        },
+        {
+          "text": "散点图",
+          "sourceId": "f49c9d93adfe",
+          "page": 1
+        },
+        {
+          "text": "箱线图",
+          "sourceId": "9d8a0d30c152",
+          "page": 8
+        },
+        {
+          "text": "直方图",
+          "sourceId": "5de76c7b7fd0",
+          "page": 7
+        },
+        {
+          "text": "热力图",
+          "sourceId": "9d8a0d30c152",
+          "page": 13
+        }
+      ],
+      "topic": "数学建模术语",
+      "sourceLabel": "MathorCup 优秀论文 · 原文词组"
+    },
+    {
+      "id": "zh-phrase-16",
+      "language": "zh",
+      "kind": "phrase",
+      "order": 16,
+      "title": "建模词组 · 16",
+      "text": "特征变量 解释变量 因变量 自变量 权重系数",
+      "tier": 2,
+      "targetSpeed": 10,
+      "targetAccuracy": 82,
+      "references": [
+        {
+          "text": "特征变量",
+          "sourceId": "f49c9d93adfe",
+          "page": 1
+        },
+        {
+          "text": "解释变量",
+          "sourceId": "41a81408dcd7",
+          "page": 20
+        },
+        {
+          "text": "因变量",
+          "sourceId": "9d8a0d30c152",
+          "page": 8
+        },
+        {
+          "text": "自变量",
+          "sourceId": "9d8a0d30c152",
+          "page": 8
+        },
+        {
+          "text": "权重系数",
+          "sourceId": "bfbf8658b9d9",
+          "page": 5
+        }
+      ],
+      "topic": "数学建模术语",
+      "sourceLabel": "MathorCup 优秀论文 · 原文词组"
+    },
+    {
+      "id": "zh-phrase-17",
+      "language": "zh",
+      "kind": "phrase",
+      "order": 17,
+      "title": "建模词组 · 17",
+      "text": "矩阵 运筹学 供应链 库存管理 运输成本",
+      "tier": 2,
+      "targetSpeed": 10,
+      "targetAccuracy": 82,
+      "references": [
+        {
+          "text": "矩阵",
+          "sourceId": "bfbf8658b9d9",
+          "page": 22
+        },
+        {
+          "text": "运筹学",
+          "sourceId": "d67533739c8e",
+          "page": 31
+        },
+        {
+          "text": "供应链",
+          "sourceId": "f49c9d93adfe",
+          "page": 33
+        },
+        {
+          "text": "库存管理",
+          "sourceId": "1a3281fff0df",
+          "page": 1
+        },
+        {
+          "text": "运输成本",
+          "sourceId": "9fe0f262cce8",
+          "page": 28
+        }
+      ],
+      "topic": "数学建模术语",
+      "sourceLabel": "MathorCup 优秀论文 · 原文词组"
+    },
+    {
+      "id": "zh-phrase-18",
+      "language": "zh",
+      "kind": "phrase",
+      "order": 18,
+      "title": "建模词组 · 18",
+      "text": "调度方案 生产效率 资源配置 需求预测 预测精度",
+      "tier": 2,
+      "targetSpeed": 10,
+      "targetAccuracy": 82,
+      "references": [
+        {
+          "text": "调度方案",
+          "sourceId": "9fe0f262cce8",
+          "page": 31
+        },
+        {
+          "text": "生产效率",
+          "sourceId": "9fe0f262cce8",
+          "page": 31
+        },
+        {
+          "text": "资源配置",
+          "sourceId": "9fe0f262cce8",
+          "page": 1
+        },
+        {
+          "text": "需求预测",
+          "sourceId": "1a3281fff0df",
+          "page": 1
+        },
+        {
+          "text": "预测精度",
+          "sourceId": "302b9b2fd301",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模术语",
+      "sourceLabel": "MathorCup 优秀论文 · 原文词组"
+    },
+    {
+      "id": "zh-phrase-19",
+      "language": "zh",
+      "kind": "phrase",
+      "order": 19,
+      "title": "建模词组 · 19",
+      "text": "误差分析 非线性 线性关系 影响因素 统计分析",
+      "tier": 2,
+      "targetSpeed": 10,
+      "targetAccuracy": 82,
+      "references": [
+        {
+          "text": "误差分析",
+          "sourceId": "c89c3742f67d",
+          "page": 2
+        },
+        {
+          "text": "非线性",
+          "sourceId": "bfbf8658b9d9",
+          "page": 12
+        },
+        {
+          "text": "线性关系",
+          "sourceId": "f49c9d93adfe",
+          "page": 12
+        },
+        {
+          "text": "影响因素",
+          "sourceId": "f49c9d93adfe",
+          "page": 3
+        },
+        {
+          "text": "统计分析",
+          "sourceId": "5de76c7b7fd0",
+          "page": 8
+        }
+      ],
+      "topic": "数学建模术语",
+      "sourceLabel": "MathorCup 优秀论文 · 原文词组"
+    },
+    {
+      "id": "zh-phrase-20",
+      "language": "zh",
+      "kind": "phrase",
+      "order": 20,
+      "title": "建模词组 · 20",
+      "text": "描述性统计 统计特征 离散程度 变化趋势 最优方案",
+      "tier": 2,
+      "targetSpeed": 10,
+      "targetAccuracy": 82,
+      "references": [
+        {
+          "text": "描述性统计",
+          "sourceId": "13c9a0a15dc3",
+          "page": 1
+        },
+        {
+          "text": "统计特征",
+          "sourceId": "5de76c7b7fd0",
+          "page": 1
+        },
+        {
+          "text": "离散程度",
+          "sourceId": "9d8a0d30c152",
+          "page": 8
+        },
+        {
+          "text": "变化趋势",
+          "sourceId": "bfbf8658b9d9",
+          "page": 10
+        },
+        {
+          "text": "最优方案",
+          "sourceId": "9fe0f262cce8",
+          "page": 26
+        }
+      ],
+      "topic": "数学建模术语",
+      "sourceLabel": "MathorCup 优秀论文 · 原文词组"
+    },
+    {
+      "id": "zh-phrase-21",
+      "language": "zh",
+      "kind": "phrase",
+      "order": 21,
+      "title": "建模词组 · 21",
+      "text": "实际问题 问题分析 问题重述 建模思路 研究结果",
+      "tier": 3,
+      "targetSpeed": 12,
+      "targetAccuracy": 85,
+      "references": [
+        {
+          "text": "实际问题",
+          "sourceId": "40ed37ad8840",
+          "page": 15
+        },
+        {
+          "text": "问题分析",
+          "sourceId": "5de76c7b7fd0",
+          "page": 2
+        },
+        {
+          "text": "问题重述",
+          "sourceId": "bfbf8658b9d9",
+          "page": 2
+        },
+        {
+          "text": "建模思路",
+          "sourceId": "dae99d32567a",
+          "page": 14
+        },
+        {
+          "text": "研究结果",
+          "sourceId": "5de76c7b7fd0",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模术语",
+      "sourceLabel": "MathorCup 优秀论文 · 原文词组"
+    },
+    {
+      "id": "zh-phrase-22",
+      "language": "zh",
+      "kind": "phrase",
+      "order": 22,
+      "title": "建模词组 · 22",
+      "text": "实验结果 算法实现 模型改进 模型推广 数据来源",
+      "tier": 3,
+      "targetSpeed": 12,
+      "targetAccuracy": 85,
+      "references": [
+        {
+          "text": "实验结果",
+          "sourceId": "56c4827817e7",
+          "page": 2
+        },
+        {
+          "text": "算法实现",
+          "sourceId": "914b0c8a50f0",
+          "page": 17
+        },
+        {
+          "text": "模型改进",
+          "sourceId": "fba18799657e",
+          "page": 14
+        },
+        {
+          "text": "模型推广",
+          "sourceId": "9d8a0d30c152",
+          "page": 1
+        },
+        {
+          "text": "数据来源",
+          "sourceId": "5dafafb328d9",
+          "page": 4
+        }
+      ],
+      "topic": "数学建模术语",
+      "sourceLabel": "MathorCup 优秀论文 · 原文词组"
+    },
+    {
+      "id": "zh-phrase-23",
+      "language": "zh",
+      "kind": "phrase",
+      "order": 23,
+      "title": "建模词组 · 23",
+      "text": "研究对象 目标变量 样本数据 历史数据 原始数据",
+      "tier": 3,
+      "targetSpeed": 12,
+      "targetAccuracy": 85,
+      "references": [
+        {
+          "text": "研究对象",
+          "sourceId": "465ea3f444aa",
+          "page": 22
+        },
+        {
+          "text": "目标变量",
+          "sourceId": "f49c9d93adfe",
+          "page": 16
+        },
+        {
+          "text": "样本数据",
+          "sourceId": "bfbf8658b9d9",
+          "page": 9
+        },
+        {
+          "text": "历史数据",
+          "sourceId": "5de76c7b7fd0",
+          "page": 3
+        },
+        {
+          "text": "原始数据",
+          "sourceId": "bfbf8658b9d9",
+          "page": 9
+        }
+      ],
+      "topic": "数学建模术语",
+      "sourceLabel": "MathorCup 优秀论文 · 原文词组"
+    },
+    {
+      "id": "zh-phrase-24",
+      "language": "zh",
+      "kind": "phrase",
+      "order": 24,
+      "title": "建模词组 · 24",
+      "text": "特征重要性 分类模型 回归模型 聚类模型 组合模型",
+      "tier": 3,
+      "targetSpeed": 12,
+      "targetAccuracy": 85,
+      "references": [
+        {
+          "text": "特征重要性",
+          "sourceId": "5de76c7b7fd0",
+          "page": 2
+        },
+        {
+          "text": "分类模型",
+          "sourceId": "9d8a0d30c152",
+          "page": 2
+        },
+        {
+          "text": "回归模型",
+          "sourceId": "9d8a0d30c152",
+          "page": 8
+        },
+        {
+          "text": "聚类模型",
+          "sourceId": "bfbf8658b9d9",
+          "page": 1
+        },
+        {
+          "text": "组合模型",
+          "sourceId": "465ea3f444aa",
+          "page": 34
+        }
+      ],
+      "topic": "数学建模术语",
+      "sourceLabel": "MathorCup 优秀论文 · 原文词组"
+    },
+    {
+      "id": "zh-phrase-25",
+      "language": "zh",
+      "kind": "phrase",
+      "order": 25,
+      "title": "建模词组 · 25",
+      "text": "梯度提升 数据分布 样本数量 时间分布 相关系数",
+      "tier": 3,
+      "targetSpeed": 12,
+      "targetAccuracy": 85,
+      "references": [
+        {
+          "text": "梯度提升",
+          "sourceId": "f49c9d93adfe",
+          "page": 19
+        },
+        {
+          "text": "数据分布",
+          "sourceId": "5de76c7b7fd0",
+          "page": 7
+        },
+        {
+          "text": "样本数量",
+          "sourceId": "56c4827817e7",
+          "page": 17
+        },
+        {
+          "text": "时间分布",
+          "sourceId": "a15e1506845c",
+          "page": 7
+        },
+        {
+          "text": "相关系数",
+          "sourceId": "5de76c7b7fd0",
+          "page": 6
+        }
+      ],
+      "topic": "数学建模术语",
+      "sourceLabel": "MathorCup 优秀论文 · 原文词组"
+    },
+    {
+      "id": "zh-phrase-26",
+      "language": "zh",
+      "kind": "phrase",
+      "order": 26,
+      "title": "建模词组 · 26",
+      "text": "数据特征 预测结果",
+      "tier": 3,
+      "targetSpeed": 12,
+      "targetAccuracy": 85,
+      "references": [
+        {
+          "text": "数据特征",
+          "sourceId": "bfbf8658b9d9",
+          "page": 1
+        },
+        {
+          "text": "预测结果",
+          "sourceId": "5de76c7b7fd0",
+          "page": 6
+        }
+      ],
+      "topic": "数学建模术语",
+      "sourceLabel": "MathorCup 优秀论文 · 原文词组"
+    },
+    {
+      "id": "zh-sentence-01",
+      "language": "zh",
+      "kind": "sentence",
+      "order": 1,
+      "title": "论文句子 · 01",
+      "text": "的仓库、预知各地仓库的需求量对商家和客户来说，是双赢的局面。",
+      "tier": 0,
+      "targetSpeed": 6,
+      "targetAccuracy": 75,
+      "references": [
+        {
+          "sourceId": "905af7f12e9f",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-sentence-02",
+      "language": "zh",
+      "kind": "sentence",
+      "order": 2,
+      "title": "论文句子 · 02",
+      "text": "随着移动通信系统的发展，合理地设计基站节能开关策略越来越重要。",
+      "tier": 0,
+      "targetSpeed": 6,
+      "targetAccuracy": 75,
+      "references": [
+        {
+          "sourceId": "40ed37ad8840",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-sentence-03",
+      "language": "zh",
+      "kind": "sentence",
+      "order": 3,
+      "title": "论文句子 · 03",
+      "text": "针对问题一，主要需要确定影响成交价格的因素并建立合适的预测模型。",
+      "tier": 0,
+      "targetSpeed": 6,
+      "targetAccuracy": 75,
+      "references": [
+        {
+          "sourceId": "9b28662dae90",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-sentence-04",
+      "language": "zh",
+      "kind": "sentence",
+      "order": 4,
+      "title": "论文句子 · 04",
+      "text": "随着信息流和互联网的迅猛发展，网络越发成为人们获取信息的主要来源。",
+      "tier": 0,
+      "targetSpeed": 6,
+      "targetAccuracy": 75,
+      "references": [
+        {
+          "sourceId": "a15e1506845c",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-sentence-05",
+      "language": "zh",
+      "kind": "sentence",
+      "order": 5,
+      "title": "论文句子 · 05",
+      "text": "第二部分为影响因素重要性量化分析，采用随机森林进行特征重要性评估。",
+      "tier": 0,
+      "targetSpeed": 6,
+      "targetAccuracy": 75,
+      "references": [
+        {
+          "sourceId": "a46f90e05c15",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-sentence-06",
+      "language": "zh",
+      "kind": "sentence",
+      "order": 6,
+      "title": "论文句子 · 06",
+      "text": "别缺省值过多的指标的数据缺失占比达到70%以上，所以将这些指标丢弃。",
+      "tier": 0,
+      "targetSpeed": 6,
+      "targetAccuracy": 75,
+      "references": [
+        {
+          "sourceId": "aba98d574bc5",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-sentence-07",
+      "language": "zh",
+      "kind": "sentence",
+      "order": 7,
+      "title": "论文句子 · 07",
+      "text": "及上下行流量均值比作为小区基站历史流量数据的时序特征，共计30维特征。",
+      "tier": 0,
+      "targetSpeed": 6,
+      "targetAccuracy": 75,
+      "references": [
+        {
+          "sourceId": "c2050ab5e5d0",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-sentence-08",
+      "language": "zh",
+      "kind": "sentence",
+      "order": 8,
+      "title": "论文句子 · 08",
+      "text": "移动通信技术的快速发展为人们带来了便利，同时也使得网络覆盖越来越完善。",
+      "tier": 0,
+      "targetSpeed": 6,
+      "targetAccuracy": 75,
+      "references": [
+        {
+          "sourceId": "9e5f52636933",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-sentence-09",
+      "language": "zh",
+      "kind": "sentence",
+      "order": 9,
+      "title": "论文句子 · 09",
+      "text": "融合的思路，利用软投票加权的方式打分后归一化处理，得到合理的预测结果。",
+      "tier": 1,
+      "targetSpeed": 8,
+      "targetAccuracy": 80,
+      "references": [
+        {
+          "sourceId": "3fafcaac909d",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-sentence-10",
+      "language": "zh",
+      "kind": "sentence",
+      "order": 10,
+      "title": "论文句子 · 10",
+      "text": "个指标得分都比单一模型高，即采用融合模型预测测试集中二手车交易价格最优。",
+      "tier": 1,
+      "targetSpeed": 8,
+      "targetAccuracy": 80,
+      "references": [
+        {
+          "sourceId": "5dafafb328d9",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-sentence-11",
+      "language": "zh",
+      "kind": "sentence",
+      "order": 11,
+      "title": "论文句子 · 11",
+      "text": "针对问题一，主要需要对用户语音及上网业务评分影响因素的程度进行量化分析。",
+      "tier": 1,
+      "targetSpeed": 8,
+      "targetAccuracy": 80,
+      "references": [
+        {
+          "sourceId": "465ea3f444aa",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-sentence-12",
+      "language": "zh",
+      "kind": "sentence",
+      "order": 12,
+      "title": "论文句子 · 12",
+      "text": "摘要本文主要建立了一个预训练的计算机视觉模型，对坑洼道路进行有效的检测。",
+      "tier": 1,
+      "targetSpeed": 8,
+      "targetAccuracy": 80,
+      "references": [
+        {
+          "sourceId": "0c2ed933b8f5",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-sentence-13",
+      "language": "zh",
+      "kind": "sentence",
+      "order": 13,
+      "title": "论文句子 · 13",
+      "text": "可靠的用户需求量预测，对电商平台各商家对仓库、商品的管理和决策非常重要。",
+      "tier": 1,
+      "targetSpeed": 8,
+      "targetAccuracy": 80,
+      "references": [
+        {
+          "sourceId": "01b9dae2a177",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-sentence-14",
+      "language": "zh",
+      "kind": "sentence",
+      "order": 14,
+      "title": "论文句子 · 14",
+      "text": "本文的研究结果有助于平台的订单分配，从而使用户体验提升，同时节省阿姨时间。",
+      "tier": 1,
+      "targetSpeed": 8,
+      "targetAccuracy": 80,
+      "references": [
+        {
+          "sourceId": "27213be53299",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-sentence-15",
+      "language": "zh",
+      "kind": "sentence",
+      "order": 15,
+      "title": "论文句子 · 15",
+      "text": "和学习率等参数对遥感图像提取耕地边界进行了优化探索，但这些方法训练效果不佳。",
+      "tier": 1,
+      "targetSpeed": 8,
+      "targetAccuracy": 80,
+      "references": [
+        {
+          "sourceId": "56c4827817e7",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-sentence-16",
+      "language": "zh",
+      "kind": "sentence",
+      "order": 16,
+      "title": "论文句子 · 16",
+      "text": "的浪费，过低会降低用户的使用体验；另一方面，流量阈值的确定又具有较强的主观性。",
+      "tier": 2,
+      "targetSpeed": 10,
+      "targetAccuracy": 82,
+      "references": [
+        {
+          "sourceId": "9d8a0d30c152",
+          "page": 4
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-sentence-17",
+      "language": "zh",
+      "kind": "sentence",
+      "order": 17,
+      "title": "论文句子 · 17",
+      "text": "随着中国二手车交易体量日趋增长，一个完善合理的二手车资产价值评估体系亟需构建。",
+      "tier": 2,
+      "targetSpeed": 10,
+      "targetAccuracy": 82,
+      "references": [
+        {
+          "sourceId": "f49c9d93adfe",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-sentence-18",
+      "language": "zh",
+      "kind": "sentence",
+      "order": 18,
+      "title": "论文句子 · 18",
+      "text": "流获得最大的收益，那么信息流收益评估模型的建立就具有十分重要的理论和实践意义。",
+      "tier": 2,
+      "targetSpeed": 10,
+      "targetAccuracy": 82,
+      "references": [
+        {
+          "sourceId": "2125b8e5f0ff",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-sentence-19",
+      "language": "zh",
+      "kind": "sentence",
+      "order": 19,
+      "title": "论文句子 · 19",
+      "text": "通过计算机识别卫星遥感影像中的耕地面积能够加速耕地信息的提取，减少人力、财力消耗。",
+      "tier": 2,
+      "targetSpeed": 10,
+      "targetAccuracy": 82,
+      "references": [
+        {
+          "sourceId": "302b9b2fd301",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-sentence-20",
+      "language": "zh",
+      "kind": "sentence",
+      "order": 20,
+      "title": "论文句子 · 20",
+      "text": "提升二手车价值评估效率，分析影响车辆成交周期的关键因素，加快门店在库车辆的销售速度。",
+      "tier": 2,
+      "targetSpeed": 10,
+      "targetAccuracy": 82,
+      "references": [
+        {
+          "sourceId": "41a81408dcd7",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-sentence-21",
+      "language": "zh",
+      "kind": "sentence",
+      "order": 21,
+      "title": "论文句子 · 21",
+      "text": "摘要农业的可持续发展离不开对耕地的有效利用，准确把控耕地的数量和质量是解决农业发展困境的关键。",
+      "tier": 2,
+      "targetSpeed": 10,
+      "targetAccuracy": 82,
+      "references": [
+        {
+          "sourceId": "dae99d32567a",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-sentence-22",
+      "language": "zh",
+      "kind": "sentence",
+      "order": 22,
+      "title": "论文句子 · 22",
+      "text": "随着经济的发展，我国的机动车保有量不断上升，二手车市场迅速扩展，二手车交易受到诸多因素的影响。",
+      "tier": 2,
+      "targetSpeed": 10,
+      "targetAccuracy": 82,
+      "references": [
+        {
+          "sourceId": "f020bd4d79dd",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-sentence-23",
+      "language": "zh",
+      "kind": "sentence",
+      "order": 23,
+      "title": "论文句子 · 23",
+      "text": "针对问题一，首先根据题意定义决策变量，并将题中所给的约束条件、优化目标等转化为具体的数学规划模型。",
+      "tier": 2,
+      "targetSpeed": 10,
+      "targetAccuracy": 82,
+      "references": [
+        {
+          "sourceId": "fba18799657e",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-sentence-24",
+      "language": "zh",
+      "kind": "sentence",
+      "order": 24,
+      "title": "论文句子 · 24",
+      "text": "坑洼道路是指路面出现了凹凸不平、有大大小小的裂缝和洞坑等问题，不仅会给车辆和行人带来不便，还可能导致交通事故的发生。",
+      "tier": 3,
+      "targetSpeed": 12,
+      "targetAccuracy": 85,
+      "references": [
+        {
+          "sourceId": "87a57a22e75d",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-sentence-25",
+      "language": "zh",
+      "kind": "sentence",
+      "order": 25,
+      "title": "论文句子 · 25",
+      "text": "摘要移动网络用户的满意度是运营商经营质量水平的一个重要评价标准，高水平的用户满意度评分是提升存量用户忠诚度的重要保障。",
+      "tier": 3,
+      "targetSpeed": 12,
+      "targetAccuracy": 85,
+      "references": [
+        {
+          "sourceId": "10cc63762802",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-sentence-26",
+      "language": "zh",
+      "kind": "sentence",
+      "order": 26,
+      "title": "论文句子 · 26",
+      "text": "摘要目前互联网信息蓬勃发展，用户面临信息过载，而推荐算法不仅满足用户个性化内容消费需求，而且提升了用户获取有用信息的效率。",
+      "tier": 3,
+      "targetSpeed": 12,
+      "targetAccuracy": 85,
+      "references": [
+        {
+          "sourceId": "c89c3742f67d",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-sentence-27",
+      "language": "zh",
+      "kind": "sentence",
+      "order": 27,
+      "title": "论文句子 · 27",
+      "text": "随着移动通信技术的飞速发展，网络覆盖越来越完善，各个移动运营商越来越重视用户的网络使用与体验，从而进一步提升网络服务质量。",
+      "tier": 3,
+      "targetSpeed": 12,
+      "targetAccuracy": 85,
+      "references": [
+        {
+          "sourceId": "13c9a0a15dc3",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-sentence-28",
+      "language": "zh",
+      "kind": "sentence",
+      "order": 28,
+      "title": "论文句子 · 28",
+      "text": "摘要坑洼道路检测和识别是地质勘探、航天科学和自然灾害等领域一项重要研究，快速精准识别道路坑洼状态对分析和模拟道路形态具有重要意义。",
+      "tier": 3,
+      "targetSpeed": 12,
+      "targetAccuracy": 85,
+      "references": [
+        {
+          "sourceId": "914b0c8a50f0",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-sentence-29",
+      "language": "zh",
+      "kind": "sentence",
+      "order": 29,
+      "title": "论文句子 · 29",
+      "text": "时间序列特征提取与分类(问题一)：根据题目要求需要基于相关小区的历史流量数据提取时间序列数据特征进行“小区”分类，并描述每类的特点。",
+      "tier": 3,
+      "targetSpeed": 12,
+      "targetAccuracy": 85,
+      "references": [
+        {
+          "sourceId": "5de76c7b7fd0",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-sentence-30",
+      "language": "zh",
+      "kind": "sentence",
+      "order": 30,
+      "title": "论文句子 · 30",
+      "text": "摘要需求预测往往是电商平台智能供应链的决策基础，它可以让管理者提前预知各地的需求，从而将库存提前放在靠近需求的仓库中，显著地降低库存成本，同时保证商品的按时履约。",
+      "tier": 3,
+      "targetSpeed": 12,
+      "targetAccuracy": 85,
+      "references": [
+        {
+          "sourceId": "1a3281fff0df",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-article-01",
+      "language": "zh",
+      "kind": "article",
+      "order": 1,
+      "title": "论文节选 · 01",
+      "text": "摘要台风作为一种极端气象现象，对沿海地区的安全和经济活动构成了严重威胁。随着全球气候变化的加剧，台风的频率和强度可能会发生变化，这使得准确预测其路径、强度及其对环境影响的能力显得尤为重要。台风的形成和发展受多种气象因素的影响，包括气温、气压、洋流和风场等，这些因素的复杂相互作用使得台风的研究充满挑战。",
+      "tier": 0,
+      "targetSpeed": 6,
+      "targetAccuracy": 75,
+      "references": [
+        {
+          "sourceId": "0ea10a23126b",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-article-02",
+      "language": "zh",
+      "kind": "article",
+      "order": 2,
+      "title": "论文节选 · 02",
+      "text": "但是，经过专家学者研究发现，除了内容本身因素以外，内容之间的排列组合关系，也会影响用户的浏览体验，进而影响推荐收益的大小。例如，相似内容的高度集中，往往会带来较差的结果反馈，即使它们都高度匹配用户兴趣或者具有较高的内容质量。于是，越来越多的研究集中在如何选择最优的内容排列组合上，而不仅仅是最优的内容上。",
+      "tier": 0,
+      "targetSpeed": 6,
+      "targetAccuracy": 75,
+      "references": [
+        {
+          "sourceId": "c89c3742f67d",
+          "page": 3
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-article-03",
+      "language": "zh",
+      "kind": "article",
+      "order": 3,
+      "title": "论文节选 · 03",
+      "text": "需求预测往往是供应链决策的基础，此时需要根据历史一段时间的商品需求预测未来商品需求，一般企业会根据历史情况分析出需求量序列的数理特征，对相似需求量序列进行归类，并根据分类结果进行预测。不过，实际任务中，部分商品和仓库的调整和购物节等不规律性，也给需求量预测提高了难度。需要找到一般历史规律，进行精准预测。",
+      "tier": 0,
+      "targetSpeed": 6,
+      "targetAccuracy": 75,
+      "references": [
+        {
+          "sourceId": "01b9dae2a177",
+          "page": 4
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-article-04",
+      "language": "zh",
+      "kind": "article",
+      "order": 4,
+      "title": "论文节选 · 04",
+      "text": "本文则是对北京移动用户体验影响因素的探究，通过分析影响用户体验的主要影响因素，并以此来为决策提供依据，进而提升客户的上网体验。本文基于附件中提供的打分项以及影响打分的各个因素建立了对于客户语音业务和上网业务的数学模型，最终得出量化分析结果，并对附件3，附件4中的客户打分进行了预测。具体本文解决了以下问题。",
+      "tier": 0,
+      "targetSpeed": 6,
+      "targetAccuracy": 75,
+      "references": [
+        {
+          "sourceId": "13c9a0a15dc3",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-article-05",
+      "language": "zh",
+      "kind": "article",
+      "order": 5,
+      "title": "论文节选 · 05",
+      "text": "时间序列特征提取与分类(问题一)：根据题目要求需要基于相关小区的历史流量数据提取时间序列数据特征进行“小区”分类，并描述每类的特点。但由于题目所提供的数据过于庞大，如果直接对原始数据进行清洗并在处理后的原始数据基础上进行数学建模，虽然得到的分类结果更加全面，但是考虑到时间效率与处理机器性能的限制可操作性较低。",
+      "tier": 0,
+      "targetSpeed": 6,
+      "targetAccuracy": 75,
+      "references": [
+        {
+          "sourceId": "5de76c7b7fd0",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-article-06",
+      "language": "zh",
+      "kind": "article",
+      "order": 6,
+      "title": "论文节选 · 06",
+      "text": "数据集仍采用初赛中给出的8张遥感图像和人工标签。我们需要对初赛模型的预测能力进行分析，寻找模型缺陷，重点关注其对耕地边界的提取情况。在初赛模型的基础上设计优化思路，改进模型，并用优化后的模型对测试图像进行预测，制作耕地标签图，计算耕地面积比例。另外，我们需要比较优化前后对不同类别图像的表现，分析模型优化的合理性并说明优化效果。",
+      "tier": 1,
+      "targetSpeed": 8,
+      "targetAccuracy": 80,
+      "references": [
+        {
+          "sourceId": "302b9b2fd301",
+          "page": 4
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-article-07",
+      "language": "zh",
+      "kind": "article",
+      "order": 7,
+      "title": "论文节选 · 07",
+      "text": "摘要需求预测往往是电商平台智能供应链的决策基础，它可以让管理者提前预知各地的需求，从而将库存提前放在靠近需求的仓库中，显著地降低库存成本，同时保证商品的按时履约。本文对各商品的历史出货量数据进行挖掘与分析，构建了基于数理特征与专家经验的多模型集成预测框架，旨在协助电商平台优化库存管理，更好地规划和定制促销活动，提高库存周转率。",
+      "tier": 1,
+      "targetSpeed": 8,
+      "targetAccuracy": 80,
+      "references": [
+        {
+          "sourceId": "1a3281fff0df",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-article-08",
+      "language": "zh",
+      "kind": "article",
+      "order": 8,
+      "title": "论文节选 · 08",
+      "text": "针对后半小问，我们采用随机森林分类模型对附件数据进行学习，计算出每个指标的重要性权重，排名前两名的指标名称和权重分别为地形排水5.9655%和基础设施恶化5.8961%。通过上述结果我们选出权重较大的6个指标对洪水发生概率进行预测，再通过随机森林分类模型建立发生洪水不同风险的预警评价模型，其训练数据预测准确率为93.244%。",
+      "tier": 1,
+      "targetSpeed": 8,
+      "targetAccuracy": 80,
+      "references": [
+        {
+          "sourceId": "9212d6611612",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-article-09",
+      "language": "zh",
+      "kind": "article",
+      "order": 9,
+      "title": "论文节选 · 09",
+      "text": "首先对数据进行预处理，包含风向等非数值数据类型进行转换，处理缺失值、异常值等；接着观察数据集发现，本题数据基本为非线性数据，因此采用斯皮尔曼相关系数分析台风特征参数与环境特征参数之间的相关性。随后，采用K-means聚类方法对台风的路径特征与强度特征两方面进行聚类分析，通过手肘法与轮廓系数综合考虑确定最佳聚类数分别为4类与3类。",
+      "tier": 1,
+      "targetSpeed": 8,
+      "targetAccuracy": 80,
+      "references": [
+        {
+          "sourceId": "dfc9dbdc5e93",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-article-10",
+      "language": "zh",
+      "kind": "article",
+      "order": 10,
+      "title": "论文节选 · 10",
+      "text": "随着我国经济水平的发展和人民生活质量的提高，人们对家政服务的要求日益专业化、规范化、综合化，为增强客户体验及提高时间效率，探究家政服务公司订单分派系统的优化问题，我们通过贪心算法的思想，设计基于收益评估的阿姨与订单分配算法，来研究如何在离线批量派单时达到收益最大，接着引入下单时间对模型进行改进，建立多批次的分配模型，实现订单的多批次分配。",
+      "tier": 1,
+      "targetSpeed": 8,
+      "targetAccuracy": 80,
+      "references": [
+        {
+          "sourceId": "fba18799657e",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-article-11",
+      "language": "zh",
+      "kind": "article",
+      "order": 11,
+      "title": "论文节选 · 11",
+      "text": "在数据预处理部分，我们首先对明显无关属性、重复属性与方差极小的属性进行了剔除处理。对于空值，类别变量我们将其填充为此列的众数；而连续型变量，根据附件5说明，我们将其填充为0。针对类别变量，我们将其进行标签编码，以便之后的数据分析。此外，我们根据直觉构造出新的特征属性，如“遇到网络问题场景数”、“遇到网络问题类别数”、“视频网络问题数”等。",
+      "tier": 2,
+      "targetSpeed": 10,
+      "targetAccuracy": 82,
+      "references": [
+        {
+          "sourceId": "9e5f52636933",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-article-12",
+      "language": "zh",
+      "kind": "article",
+      "order": 12,
+      "title": "论文节选 · 12",
+      "text": "对问题一中二手车的估价问题，首先对所给数据进行预处理，在这一阶段，先根据特征的取值离散连续情况标记出类别特征并编码，分别通过众数和平均值分别填充离散和连续特征；其次，剔除数据中的异常值以避免引入误差；最后，变换实际交易价格使其近似呈线性分布，以利于模型的学习；对类别特征采用one-hot编码，消除编码带来的类间差异；计算特征之间的相关系数以及建立新的特征等。",
+      "tier": 2,
+      "targetSpeed": 10,
+      "targetAccuracy": 82,
+      "references": [
+        {
+          "sourceId": "f020bd4d79dd",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-article-13",
+      "language": "zh",
+      "kind": "article",
+      "order": 13,
+      "title": "论文节选 · 13",
+      "text": "随着中国二手车交易体量日趋增长，一个完善合理的二手车资产价值评估体系亟需构建。但由于二手车具有“一车一况”的特殊属性且新车价格的波动会带来联动影响，二手车的价值衡量标准难以准确设定。本文旨在建立一个二手车资产价值评估的普适性模型，为二手车价格估算提供一种辅助解决方案，并探究缩短门店成交周期的有效手段，为缓和二手车市场信息不对称、完善交易评估体系出一份绵薄之力。",
+      "tier": 2,
+      "targetSpeed": 10,
+      "targetAccuracy": 82,
+      "references": [
+        {
+          "sourceId": "f49c9d93adfe",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-article-14",
+      "language": "zh",
+      "kind": "article",
+      "order": 14,
+      "title": "论文节选 · 14",
+      "text": "道路的状况对于交通安全至关重要。坑洼道路是指路面出现了凹凸不平、有大大小小的裂缝和洞坑等问题，不仅会给车辆和行人带来不便，还可能导致交通事故的发生。随着近年来科技的进步，深度学习技术迅速发展，为坑洼道路检测任务提供了新的解决方案。本文结合所给的图像文件，提取了图像特征，建立了识别图像道路坑洼与否的模型，并从不同维度进行模型评估，并利用该模型对测试集中的图像进行分类识别。",
+      "tier": 2,
+      "targetSpeed": 10,
+      "targetAccuracy": 82,
+      "references": [
+        {
+          "sourceId": "87a57a22e75d",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-article-15",
+      "language": "zh",
+      "kind": "article",
+      "order": 15,
+      "title": "论文节选 · 15",
+      "text": "摘要农业的可持续发展离不开对耕地的有效利用，准确把控耕地的数量和质量是解决农业发展困境的关键。利用遥感技术，通过获取的卫星影像可快速、高效地提取并识别出耕地，并进行专题地图的制作。为了更高效的提取耕地地块，需要利用算法，建立合理的模型，来实现耕地的识别与提取。而模式识别耕地边界的精度，直接影响了耕地数量与质量的把控，所以，建立精确的模型提取耕地地块已经成为农业发展的进一步要求。",
+      "tier": 2,
+      "targetSpeed": 10,
+      "targetAccuracy": 82,
+      "references": [
+        {
+          "sourceId": "dae99d32567a",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-article-16",
+      "language": "zh",
+      "kind": "article",
+      "order": 16,
+      "title": "论文节选 · 16",
+      "text": "随着全业务运营时代的到来，中国电信领域竞争格局发生深刻变化，移动通信业务同质化趋势明显。移动运营企业为了预防用户流失，实现市场份额扩大和利润提升，需要不断提高用户满意度，增强用户黏性，凸显竞争优势。中国电信市场范围和层次逐渐增加以及人们在通信方面的需求量增多的背景之下,通信行业竞争程度也日渐加剧。我国通信重组后交易运营局势,让通讯市场构成中国移动、中国联通和中国电信鼎立的情况。",
+      "tier": 3,
+      "targetSpeed": 12,
+      "targetAccuracy": 85,
+      "references": [
+        {
+          "sourceId": "10cc63762802",
+          "page": 4
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-article-17",
+      "language": "zh",
+      "kind": "article",
+      "order": 17,
+      "title": "论文节选 · 17",
+      "text": "按照月份将成交时间划分为春夏秋冬四个季节，分别对四个季节的成交价格统计特征进行分析，得出夏季和秋季的成交总额较多，而夏季的成交额的平均值较少，春季、秋季和冬季成交额的平均值比较接近；对于影响二手车保值率的关键因素，本文分别采用基于惩罚性的特征选择法和树模型的特征选择法，对重要特征进行提取，再使用投票机制得到最终影响汽车保值率的关键因素，分别为新车价、二手车交易价格、上架价格、品牌id、车系id和厂商类型。",
+      "tier": 3,
+      "targetSpeed": 12,
+      "targetAccuracy": 85,
+      "references": [
+        {
+          "sourceId": "41a81408dcd7",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-article-18",
+      "language": "zh",
+      "kind": "article",
+      "order": 18,
+      "title": "论文节选 · 18",
+      "text": "问题一：对于商品分类情况下的需求量预测，本质上是一个时间序列预测问题。针对不同商家不同商品不同仓库的1996种组合，利用原始的166天销售量数据，基于销售量的统计特征（最小值，最大值，中位数，上四分位数，下四分位数，平均值，标准差）进行k-均值聚类，从轮廓系数和轮廓图综合考虑将1996种组合聚成了4类，从模型的简易性，实用性，与可解释性方面放弃了回归预测，灰色预测与深度学习模型，针对每一类选取合适的ARIMA预测模型进行为期15天的销售量预测。",
+      "tier": 3,
+      "targetSpeed": 12,
+      "targetAccuracy": 85,
+      "references": [
+        {
+          "sourceId": "95c3dcf1e3cb",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-article-19",
+      "language": "zh",
+      "kind": "article",
+      "order": 19,
+      "title": "论文节选 · 19",
+      "text": "摘要作为极端气象事件，台风对沿海地区的安全和经济活动构成了重大威胁。随着全球气候变化日趋明显，台风的频率与强度也可能发生变化，因而对其路径、强度及环境影响的精确预测变得尤为重要。台风的形成与发展受气温、气压、洋流和风场等多重气象因素的影响，这些因素的复杂相互作用使台风的研究具有高度挑战性。近年来，大数据和机器学习技术的进步为台风路径预测及其影响因素分析带来了显著提升，但数据维度不一致、特征提取不足及模型鲁棒性较弱等问题依然存在，制约了实际应用效果。",
+      "tier": 3,
+      "targetSpeed": 12,
+      "targetAccuracy": 85,
+      "references": [
+        {
+          "sourceId": "4e77591cd118",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "zh-article-20",
+      "language": "zh",
+      "kind": "article",
+      "order": 20,
+      "title": "论文节选 · 20",
+      "text": "针对问题一，首先选取超分辨率生成对抗网络获得虚拟特征以解决训练样本数量少的问题，加入空间和通道注意力机制引导生成器特征生成接近真实特征的道路坑洼特征图，使用图像分块对待训练的图像进行分块和重组，在提升图像占比的同时保留中心目标点。然后选取YOLOv8检测网络作为目标检测的基础框架，利用深度卷积神经网络改进检测网络中的卷积核，引入双路径注意机制以提升检测网络对目标的关注度，采用共线方程和高斯滤波提取坑洼道路边缘特征，利用特征增强模块连接多通道特征值以生成待检测的特征图，进而增强网络的特征提取能力，再将得到的特征图输入值道路检测网络实现特征提取与目标检测，针对检测过程中目标丢失的问题，在已有IoU损失函数的基础上采用CIoU调整检测过程中存在的损失函数，进一步提升坑洼道路的检测精度。",
+      "tier": 3,
+      "targetSpeed": 12,
+      "targetAccuracy": 85,
+      "references": [
+        {
+          "sourceId": "914b0c8a50f0",
+          "page": 1
+        }
+      ],
+      "topic": "数学建模论文",
+      "sourceLabel": "MathorCup 优秀论文 · 正文节选"
+    },
+    {
+      "id": "en-article-01",
+      "language": "en",
+      "kind": "article",
+      "order": 1,
+      "title": "Education beyond the classroom",
+      "text": "Education plays a vital role in preparing young people for the challenges of adult life. While academic knowledge provides a strong foundation for future study, practical skills help students apply what they have learned in everyday situations. In my view, schools should offer a balanced curriculum that develops both intellectual ability and personal independence. On the one hand, traditional subjects such as mathematics and science encourage critical thinking. Students learn to examine evidence, solve complex problems and explain their reasoning clearly. These abilities are essential for those who wish to pursue higher education or enter specialised professions. Without a solid understanding of basic concepts, learners may find it difficult to adapt to more demanding courses later in life. Moreover, a broad academic education allows children to discover interests that might otherwise remain unexplored. On the other hand, academic success alone does not guarantee a smooth transition to adulthood. Many school leavers struggle to manage a household budget, prepare healthy meals or communicate effectively in the workplace. Introducing practical lessons would give students the confidence to deal with these responsibilities. For example, a project in which pupils plan a community event could teach teamwork, financial planning and decision making at the same time. Such activities can also make classroom learning feel more relevant and engaging. In conclusion, academic subjects and practical skills should be seen as complementary parts of education. Schools have limited teaching time, but this does not mean they must choose between knowledge and its application. By connecting theoretical lessons with real situations, teachers can help students become capable learners and responsible members of society.",
+      "tier": 0,
+      "targetSpeed": 8,
+      "targetAccuracy": 75,
+      "topic": "教育与成长",
+      "sourceLabel": "IELTS Writing Task 2 · 原创主题范文",
+      "prompt": "Some people believe that schools should focus on academic subjects, while others think practical skills are equally important. Discuss both views and give your opinion.",
+      "translation": "讨论学术知识与生活技能的价值，主张学校教育应兼顾两者。"
+    },
+    {
+      "id": "en-phrase-01",
+      "language": "en",
+      "kind": "phrase",
+      "order": 1,
+      "title": "教育与成长 · 核心表达 1",
+      "text": "plays a vital role a strong foundation a balanced curriculum personal independence",
+      "tier": 0,
+      "targetSpeed": 8,
+      "targetAccuracy": 75,
+      "topic": "教育与成长",
+      "sourceLabel": "IELTS Writing Task 2 · 原创主题范文",
+      "translation": "发挥重要作用；坚实的基础；均衡的课程体系；个人独立能力"
+    },
+    {
+      "id": "en-sentence-01",
+      "language": "en",
+      "kind": "sentence",
+      "order": 1,
+      "title": "教育与成长 · 写作句型 1",
+      "text": "Education plays a vital role in preparing young people for the challenges of adult life. While academic knowledge provides a strong foundation for future study, practical skills help students apply what they have learned in everyday situations.",
+      "tier": 0,
+      "targetSpeed": 8,
+      "targetAccuracy": 75,
+      "topic": "教育与成长",
+      "sourceLabel": "IELTS Writing Task 2 · 原创主题范文"
+    },
+    {
+      "id": "en-phrase-02",
+      "language": "en",
+      "kind": "phrase",
+      "order": 2,
+      "title": "教育与成长 · 核心表达 2",
+      "text": "critical thinking pursue higher education a smooth transition responsible members of society",
+      "tier": 0,
+      "targetSpeed": 8,
+      "targetAccuracy": 75,
+      "topic": "教育与成长",
+      "sourceLabel": "IELTS Writing Task 2 · 原创主题范文",
+      "translation": "批判性思维；接受高等教育；平稳过渡；有责任感的社会成员"
+    },
+    {
+      "id": "en-sentence-02",
+      "language": "en",
+      "kind": "sentence",
+      "order": 2,
+      "title": "教育与成长 · 写作句型 2",
+      "text": "In my view, schools should offer a balanced curriculum that develops both intellectual ability and personal independence. On the one hand, traditional subjects such as mathematics and science encourage critical thinking.",
+      "tier": 0,
+      "targetSpeed": 8,
+      "targetAccuracy": 75,
+      "topic": "教育与成长",
+      "sourceLabel": "IELTS Writing Task 2 · 原创主题范文"
+    },
+    {
+      "id": "en-article-02",
+      "language": "en",
+      "kind": "article",
+      "order": 2,
+      "title": "A greener way to travel",
+      "text": "Traffic congestion has become a pressing concern in many cities around the world. Some people argue that building more roads is the most effective response, whereas others favour greater investment in public transport. I largely agree with the latter view, although road maintenance remains necessary in areas with limited transport options. The main advantage of reliable public transport is its ability to move large numbers of people efficiently. A frequent bus service or a well-designed railway network can reduce dependence on private cars, particularly during the morning rush hour. When commuters have an affordable alternative, fewer vehicles compete for the same road space. This can shorten journey times and improve access to employment for residents who cannot afford a car. Better connections may also help local businesses attract customers from a wider area. There are also clear environmental benefits. Replacing individual car journeys with shared travel can reduce carbon emissions and improve air quality. However, these gains depend on how services are operated and how many passengers use them. An empty diesel bus is unlikely to solve every environmental problem. Governments should therefore combine cleaner vehicles with convenient timetables, safe stations and simple ticketing systems. These improvements would make public transport a realistic choice rather than merely a theoretical one. Nevertheless, new roads may still be justified in remote communities where population density is low. Emergency vehicles, delivery services and agricultural businesses need a dependable road network. Investment decisions should reflect local circumstances instead of following a single national formula. In conclusion, public transport deserves priority in densely populated cities because it addresses congestion, accessibility and environmental damage together. A balanced policy should also protect essential road infrastructure so that rural communities are not left behind.",
+      "tier": 0,
+      "targetSpeed": 8,
+      "targetAccuracy": 75,
+      "topic": "环境与交通",
+      "sourceLabel": "IELTS Writing Task 2 · 原创主题范文",
+      "prompt": "Governments should invest more in public transport than in building new roads. To what extent do you agree or disagree?",
+      "translation": "从拥堵、环境与公平出发讨论公共交通投资，同时考虑偏远地区的道路需求。"
+    },
+    {
+      "id": "en-phrase-03",
+      "language": "en",
+      "kind": "phrase",
+      "order": 3,
+      "title": "环境与交通 · 核心表达 1",
+      "text": "a pressing concern public transport reduce dependence on an affordable alternative",
+      "tier": 0,
+      "targetSpeed": 8,
+      "targetAccuracy": 75,
+      "topic": "环境与交通",
+      "sourceLabel": "IELTS Writing Task 2 · 原创主题范文",
+      "translation": "迫切的问题；公共交通；减少对……的依赖；负担得起的替代方式"
+    },
+    {
+      "id": "en-sentence-03",
+      "language": "en",
+      "kind": "sentence",
+      "order": 3,
+      "title": "环境与交通 · 写作句型 1",
+      "text": "Traffic congestion has become a pressing concern in many cities around the world. Some people argue that building more roads is the most effective response, whereas others favour greater investment in public transport.",
+      "tier": 0,
+      "targetSpeed": 8,
+      "targetAccuracy": 75,
+      "topic": "环境与交通",
+      "sourceLabel": "IELTS Writing Task 2 · 原创主题范文"
+    },
+    {
+      "id": "en-phrase-04",
+      "language": "en",
+      "kind": "phrase",
+      "order": 4,
+      "title": "环境与交通 · 核心表达 2",
+      "text": "reduce carbon emissions improve air quality reflect local circumstances essential road infrastructure",
+      "tier": 1,
+      "targetSpeed": 12,
+      "targetAccuracy": 80,
+      "topic": "环境与交通",
+      "sourceLabel": "IELTS Writing Task 2 · 原创主题范文",
+      "translation": "减少碳排放；改善空气质量；反映当地实际情况；必要的道路基础设施"
+    },
+    {
+      "id": "en-sentence-04",
+      "language": "en",
+      "kind": "sentence",
+      "order": 4,
+      "title": "环境与交通 · 写作句型 2",
+      "text": "I largely agree with the latter view, although road maintenance remains necessary in areas with limited transport options. The main advantage of reliable public transport is its ability to move large numbers of people efficiently.",
+      "tier": 1,
+      "targetSpeed": 12,
+      "targetAccuracy": 80,
+      "topic": "环境与交通",
+      "sourceLabel": "IELTS Writing Task 2 · 原创主题范文"
+    },
+    {
+      "id": "en-article-03",
+      "language": "en",
+      "kind": "article",
+      "order": 3,
+      "title": "Technology and human connection",
+      "text": "Digital communication has transformed the way people maintain relationships across distance. A message that once took days to arrive can now be delivered almost instantly. Although this development creates new challenges, I believe its advantages outweigh its disadvantages when technology is used with care and clear boundaries. One significant benefit is the opportunity to stay in touch with friends and relatives who live abroad. Video calls allow families to share ordinary moments despite living in different time zones. Students studying overseas can seek emotional support from home, while grandparents can follow important events in their grandchildren's lives. Online communities also bring together people with shared interests who might never meet in their local neighbourhoods. For someone with a rare hobby or a long-term illness, these connections can provide a valuable sense of belonging. However, convenient communication does not always lead to meaningful interaction. People may check notifications during meals or respond to short messages while ignoring the person sitting beside them. Over time, this divided attention can weaken the quality of face-to-face relationships. Written messages can also cause misunderstandings because they lack the tone of voice and facial expressions that help explain a speaker's intentions. These problems deserve attention, especially when young people are still developing their social skills. The solution is not to reject digital tools but to use them more deliberately. Families could agree to put their phones away during dinner, and schools could teach students how to communicate respectfully online. Choosing a phone call instead of a hurried message may also prevent unnecessary conflict. In conclusion, digital communication makes relationships more accessible and resilient across distance. Its value depends on whether people treat it as a way to support human connection and reserve enough time for undistracted conversation.",
+      "tier": 1,
+      "targetSpeed": 12,
+      "targetAccuracy": 80,
+      "topic": "科技与社会",
+      "sourceLabel": "IELTS Writing Task 2 · 原创主题范文",
+      "prompt": "Digital communication has changed the way people build relationships. Do the advantages of this development outweigh the disadvantages?",
+      "translation": "讨论数字沟通带来的联系便利，以及注意力分散和交流质量等问题。"
+    },
+    {
+      "id": "en-phrase-05",
+      "language": "en",
+      "kind": "phrase",
+      "order": 5,
+      "title": "科技与社会 · 核心表达 1",
+      "text": "maintain relationships clear boundaries stay in touch emotional support",
+      "tier": 1,
+      "targetSpeed": 12,
+      "targetAccuracy": 80,
+      "topic": "科技与社会",
+      "sourceLabel": "IELTS Writing Task 2 · 原创主题范文",
+      "translation": "维系关系；清晰的界限；保持联系；情感支持"
+    },
+    {
+      "id": "en-sentence-05",
+      "language": "en",
+      "kind": "sentence",
+      "order": 5,
+      "title": "科技与社会 · 写作句型 1",
+      "text": "Digital communication has transformed the way people maintain relationships across distance. A message that once took days to arrive can now be delivered almost instantly.",
+      "tier": 1,
+      "targetSpeed": 12,
+      "targetAccuracy": 80,
+      "topic": "科技与社会",
+      "sourceLabel": "IELTS Writing Task 2 · 原创主题范文"
+    },
+    {
+      "id": "en-phrase-06",
+      "language": "en",
+      "kind": "phrase",
+      "order": 6,
+      "title": "科技与社会 · 核心表达 2",
+      "text": "sense of belonging meaningful interaction social skills human connection",
+      "tier": 1,
+      "targetSpeed": 12,
+      "targetAccuracy": 80,
+      "topic": "科技与社会",
+      "sourceLabel": "IELTS Writing Task 2 · 原创主题范文",
+      "translation": "归属感；有意义的互动；社交技能；人与人之间的联系"
+    },
+    {
+      "id": "en-sentence-06",
+      "language": "en",
+      "kind": "sentence",
+      "order": 6,
+      "title": "科技与社会 · 写作句型 2",
+      "text": "Although this development creates new challenges, I believe its advantages outweigh its disadvantages when technology is used with care and clear boundaries. One significant benefit is the opportunity to stay in touch with friends and relatives who live abroad.",
+      "tier": 1,
+      "targetSpeed": 12,
+      "targetAccuracy": 80,
+      "topic": "科技与社会",
+      "sourceLabel": "IELTS Writing Task 2 · 原创主题范文"
+    },
+    {
+      "id": "en-article-04",
+      "language": "en",
+      "kind": "article",
+      "order": 4,
+      "title": "Rethinking the working week",
+      "text": "Working from home has become increasingly common in occupations that rely on digital tools. Supporters welcome the flexibility it offers, while critics worry about isolation and weaker collaboration. I consider this a positive development overall, provided that employers recognise the different needs of workers and the requirements of particular jobs. The most immediate advantage is a better work-life balance. Employees who no longer spend hours commuting can use that time to rest, exercise or look after their families. This is especially valuable for people with caring responsibilities or those living far from major business centres. Remote work can also widen access to employment by allowing companies to recruit skilled candidates regardless of where they live. For employers, a smaller office may reduce operating costs and free resources for staff training or improved services. Nevertheless, working at home can blur the boundaries between professional and personal life. Some employees feel pressure to answer messages late at night because their workplace is always within reach. Others miss informal conversations that help colleagues exchange ideas and build mutual trust. New members of staff may find it particularly difficult to learn from experienced coworkers without regular opportunities to ask questions. These concerns show why flexibility needs to be supported by thoughtful management. A practical approach is to offer a hybrid arrangement where the work permits it. Teams could meet in person for planning and creative discussion while completing independent tasks remotely. Managers should set clear expectations about working hours and evaluate performance through results rather than constant online availability. In conclusion, home working can improve well-being and expand employment opportunities. Its long-term success depends on sensible boundaries, effective communication and arrangements that match the nature of the work instead of imposing the same routine on everyone.",
+      "tier": 2,
+      "targetSpeed": 16,
+      "targetAccuracy": 82,
+      "topic": "工作与生活",
+      "sourceLabel": "IELTS Writing Task 2 · 原创主题范文",
+      "prompt": "More employers are allowing people to work from home. Is this a positive or negative development?",
+      "translation": "讨论远程办公的灵活性、生产效率与团队协作，提出适合岗位的混合安排。"
+    },
+    {
+      "id": "en-phrase-07",
+      "language": "en",
+      "kind": "phrase",
+      "order": 7,
+      "title": "工作与生活 · 核心表达 1",
+      "text": "increasingly common work life balance caring responsibilities access to employment",
+      "tier": 2,
+      "targetSpeed": 16,
+      "targetAccuracy": 82,
+      "topic": "工作与生活",
+      "sourceLabel": "IELTS Writing Task 2 · 原创主题范文",
+      "translation": "日益普遍；工作与生活的平衡；照护责任；就业机会的可及性"
+    },
+    {
+      "id": "en-sentence-07",
+      "language": "en",
+      "kind": "sentence",
+      "order": 7,
+      "title": "工作与生活 · 写作句型 1",
+      "text": "Working from home has become increasingly common in occupations that rely on digital tools. Supporters welcome the flexibility it offers, while critics worry about isolation and weaker collaboration.",
+      "tier": 2,
+      "targetSpeed": 16,
+      "targetAccuracy": 82,
+      "topic": "工作与生活",
+      "sourceLabel": "IELTS Writing Task 2 · 原创主题范文"
+    },
+    {
+      "id": "en-phrase-08",
+      "language": "en",
+      "kind": "phrase",
+      "order": 8,
+      "title": "工作与生活 · 核心表达 2",
+      "text": "reduce operating costs mutual trust set clear expectations evaluate performance",
+      "tier": 2,
+      "targetSpeed": 16,
+      "targetAccuracy": 82,
+      "topic": "工作与生活",
+      "sourceLabel": "IELTS Writing Task 2 · 原创主题范文",
+      "translation": "降低运营成本；相互信任；设定明确的期望；评估工作表现"
+    },
+    {
+      "id": "en-sentence-08",
+      "language": "en",
+      "kind": "sentence",
+      "order": 8,
+      "title": "工作与生活 · 写作句型 2",
+      "text": "I consider this a positive development overall, provided that employers recognise the different needs of workers and the requirements of particular jobs. The most immediate advantage is a better work-life balance.",
+      "tier": 2,
+      "targetSpeed": 16,
+      "targetAccuracy": 82,
+      "topic": "工作与生活",
+      "sourceLabel": "IELTS Writing Task 2 · 原创主题范文"
+    },
+    {
+      "id": "en-article-05",
+      "language": "en",
+      "kind": "article",
+      "order": 5,
+      "title": "Building healthier communities",
+      "text": "Good health depends on both personal choices and the conditions in which people live. While individuals should take responsibility for their daily habits, governments have a significant role in making healthy choices possible. I believe that lasting improvements require cooperation between citizens and public institutions rather than placing the entire burden on either side. There is a strong argument for personal responsibility. People decide how much they exercise, what they eat and whether they smoke. Public advice alone cannot replace the effort needed to develop healthier habits. When individuals understand the consequences of their decisions, they may be more willing to make changes and maintain them over time. Health education can support this process by providing clear information instead of relying on fear or blame. Parents can also influence children by setting a positive example at home. However, individual choices are shaped by the surrounding environment. A person may want to walk more but live in a neighbourhood without safe pavements or accessible parks. Fresh food may be expensive, while convenient meals with little nutritional value are available on every street. In such circumstances, telling people to make better decisions is unlikely to be enough. Governments can address these barriers through urban planning, food standards and investment in local facilities that encourage physical activity. Public measures should enable informed choices while remaining sensitive to different needs. For instance, affordable sports centres and reliable nutrition labels can support families without dictating every aspect of their lives. Medical services should also be available to those whose health problems cannot be prevented through lifestyle changes alone. In conclusion, personal effort is essential, but it works best within a supportive environment. Governments and individuals share responsibility for building healthier communities, and effective policy should help people turn knowledge into practical action.",
+      "tier": 2,
+      "targetSpeed": 16,
+      "targetAccuracy": 82,
+      "topic": "健康与公共政策",
+      "sourceLabel": "IELTS Writing Task 2 · 原创主题范文",
+      "prompt": "Some people think public health is mainly a personal responsibility. Others believe governments should play a larger role. Discuss both views and give your opinion.",
+      "translation": "结合个人健康选择和公共设施，讨论政府与个人共同承担的健康责任。"
+    },
+    {
+      "id": "en-phrase-09",
+      "language": "en",
+      "kind": "phrase",
+      "order": 9,
+      "title": "健康与公共政策 · 核心表达 1",
+      "text": "personal choices take responsibility public institutions healthier habits",
+      "tier": 2,
+      "targetSpeed": 16,
+      "targetAccuracy": 82,
+      "topic": "健康与公共政策",
+      "sourceLabel": "IELTS Writing Task 2 · 原创主题范文",
+      "translation": "个人选择；承担责任；公共机构；更健康的习惯"
+    },
+    {
+      "id": "en-sentence-09",
+      "language": "en",
+      "kind": "sentence",
+      "order": 9,
+      "title": "健康与公共政策 · 写作句型 1",
+      "text": "Good health depends on both personal choices and the conditions in which people live. While individuals should take responsibility for their daily habits, governments have a significant role in making healthy choices possible.",
+      "tier": 2,
+      "targetSpeed": 16,
+      "targetAccuracy": 82,
+      "topic": "健康与公共政策",
+      "sourceLabel": "IELTS Writing Task 2 · 原创主题范文"
+    },
+    {
+      "id": "en-phrase-10",
+      "language": "en",
+      "kind": "phrase",
+      "order": 10,
+      "title": "健康与公共政策 · 核心表达 2",
+      "text": "a positive example nutritional value physical activity informed choices",
+      "tier": 3,
+      "targetSpeed": 20,
+      "targetAccuracy": 85,
+      "topic": "健康与公共政策",
+      "sourceLabel": "IELTS Writing Task 2 · 原创主题范文",
+      "translation": "积极的榜样；营养价值；身体活动；知情选择"
+    },
+    {
+      "id": "en-sentence-10",
+      "language": "en",
+      "kind": "sentence",
+      "order": 10,
+      "title": "健康与公共政策 · 写作句型 2",
+      "text": "I believe that lasting improvements require cooperation between citizens and public institutions rather than placing the entire burden on either side. There is a strong argument for personal responsibility.",
+      "tier": 3,
+      "targetSpeed": 20,
+      "targetAccuracy": 85,
+      "topic": "健康与公共政策",
+      "sourceLabel": "IELTS Writing Task 2 · 原创主题范文"
+    },
+    {
+      "id": "en-article-06",
+      "language": "en",
+      "kind": "article",
+      "order": 6,
+      "title": "Tourism with a lighter footprint",
+      "text": "International tourism can create employment and encourage cultural exchange between visitors and local residents. However, a rapid increase in visitor numbers can place considerable pressure on popular destinations. The most serious problems involve housing, public spaces and the natural environment, and they require coordinated action from authorities, businesses and travellers. One major concern is the effect on the cost of living. When residential apartments are converted into short-term accommodation, local families may struggle to find affordable housing. Shops that once served residents may gradually be replaced by souvenir stores and expensive restaurants. Although tourism generates income, the benefits are not always distributed fairly across the community. People working in seasonal jobs may face unstable earnings while paying higher rents throughout the year. This can create resentment and weaken the sense of identity that originally made a place attractive. Another problem is environmental damage. Large crowds can produce waste, disturb wildlife and put pressure on water supplies. Historic streets and fragile landscapes may suffer when visitor numbers exceed the capacity of local infrastructure. Building more facilities without careful planning can make the situation worse by destroying the very features tourists come to see. Several measures could help address these challenges. Local governments should involve residents in decisions about accommodation rules and visitor management. Revenue from tourism could support public transport, waste collection and the maintenance of cultural sites. Businesses can offer longer visits and promote less crowded areas, while travellers can choose local services and respect community guidelines. In conclusion, tourism should be managed for the long-term benefit of the destination. Protecting housing, supporting local livelihoods and limiting environmental harm can allow communities to welcome visitors without sacrificing their quality of life or cultural heritage.",
+      "tier": 3,
+      "targetSpeed": 20,
+      "targetAccuracy": 85,
+      "topic": "文化与旅游",
+      "sourceLabel": "IELTS Writing Task 2 · 原创主题范文",
+      "prompt": "International tourism brings benefits but can also harm local communities. What problems does it cause, and how can these problems be addressed?",
+      "translation": "分析旅游带来的住房和环境压力，提出社区参与及长期管理的解决办法。"
+    },
+    {
+      "id": "en-phrase-11",
+      "language": "en",
+      "kind": "phrase",
+      "order": 11,
+      "title": "文化与旅游 · 核心表达 1",
+      "text": "cultural exchange local residents affordable housing distributed fairly",
+      "tier": 3,
+      "targetSpeed": 20,
+      "targetAccuracy": 85,
+      "topic": "文化与旅游",
+      "sourceLabel": "IELTS Writing Task 2 · 原创主题范文",
+      "translation": "文化交流；当地居民；可负担的住房；公平分配"
+    },
+    {
+      "id": "en-sentence-11",
+      "language": "en",
+      "kind": "sentence",
+      "order": 11,
+      "title": "文化与旅游 · 写作句型 1",
+      "text": "International tourism can create employment and encourage cultural exchange between visitors and local residents. However, a rapid increase in visitor numbers can place considerable pressure on popular destinations.",
+      "tier": 3,
+      "targetSpeed": 20,
+      "targetAccuracy": 85,
+      "topic": "文化与旅游",
+      "sourceLabel": "IELTS Writing Task 2 · 原创主题范文"
+    },
+    {
+      "id": "en-phrase-12",
+      "language": "en",
+      "kind": "phrase",
+      "order": 12,
+      "title": "文化与旅游 · 核心表达 2",
+      "text": "environmental damage careful planning local livelihoods cultural heritage",
+      "tier": 3,
+      "targetSpeed": 20,
+      "targetAccuracy": 85,
+      "topic": "文化与旅游",
+      "sourceLabel": "IELTS Writing Task 2 · 原创主题范文",
+      "translation": "环境破坏；审慎规划；当地居民的生计；文化遗产"
+    },
+    {
+      "id": "en-sentence-12",
+      "language": "en",
+      "kind": "sentence",
+      "order": 12,
+      "title": "文化与旅游 · 写作句型 2",
+      "text": "The most serious problems involve housing, public spaces and the natural environment, and they require coordinated action from authorities, businesses and travellers. One major concern is the effect on the cost of living.",
+      "tier": 3,
+      "targetSpeed": 20,
+      "targetAccuracy": 85,
+      "topic": "文化与旅游",
+      "sourceLabel": "IELTS Writing Task 2 · 原创主题范文"
+    }
+  ],
+  "notes": [
+    "中文正文由本机优秀论文 PDF 提取，词组逐一核对原文；仅词组练习将标点替换为空格，句子与文章保留原有标点。",
+    "中文文章练习为同一页连续正文节选，并非整篇论文。",
+    "英文为雅思 Task 2 常见主题原创练习范文，不代表官方真题范文或评分。",
+    "宽松鼓励模式：更正后恢复正确率，完成全文有60分基础分。"
+  ]
+}

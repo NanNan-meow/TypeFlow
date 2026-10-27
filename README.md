@@ -1,5 +1,28 @@
 # TypeFlow · 打字练习室
 
+## GitHub Pages 在线版
+
+仓库已配置 [Pages 部署工作流](.github/workflows/pages.yml)。推送到 `main` 或在 Actions 中手动运行 **Deploy TypeFlow to GitHub Pages**，即可自动测试、构建和部署。
+
+首次启用时，在仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**，然后推送代码，或在 Actions 页点击该工作流的 **Run workflow**。不需要设置 PAT、仓库密钥或 `gh-pages` 分支。GitHub 官方流程见 [自定义 Pages 工作流](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)。
+
+默认地址为 `https://nannan-meow.github.io/TypeFlow/`，实际部署地址以 Actions 的 `github-pages` 环境输出为准。
+
+Pages 版有全部 106 个关卡，在浏览器内评分，并将成绩保存在**当前浏览器**。它不需要启动 Python，切换设备、浏览器或清除网站数据后不会自动同步成绩；练习记录页仍可导出 JSON。在线版不会读取或公开本机 SQLite 数据库，已有本地成绩不会自动迁移到浏览器。
+
+Actions 只上传 `dist/` 中的前端资源和练习素材，构建时会移除素材中的本机绝对路径；后端、日志、浏览器测试文件及个人成绩均不进入 Pages 部署产物。项目使用相对资源路径，可部署到 `/TypeFlow/` 这类仓库子路径，也可用于自定义域名。
+
+本地检查 Pages 产物需要 Node.js 20 或更高版本和 Python 3.10 或更高版本，均无需额外安装依赖：
+
+```powershell
+npm test
+python -m unittest discover -s tests -v
+npm run build:pages
+node tests/pages.test.mjs
+```
+
+## 本地一键启动版
+
 双击 **一键启动.bat**（或 `Start.bat`），脚本会同时启动前端和后端，准备好后自动打开默认浏览器。保留启动窗口，按 `Ctrl+C` 可停止两个服务。再次双击时会优先打开已经运行的应用。端口被占用时会自动寻找其他端口。
 
 当前电脑已安装 Python，直接双击即可。运行只需要 Python 3.10 或更高版本，不需要 npm、不需要下载依赖，也不需要联网。默认访问地址为 `http://127.0.0.1:8765`，如自动换了端口，以启动窗口中显示的地址为准。

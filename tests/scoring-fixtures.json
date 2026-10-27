@@ -1,0 +1,722 @@
+[
+  {
+    "lesson": {
+      "id": "en-phrase-01",
+      "text": "plays a vital role a strong foundation a balanced curriculum personal independence",
+      "language": "en",
+      "targetSpeed": 8,
+      "targetAccuracy": 75
+    },
+    "typed": "plays a vital role a strong foundation a balanced curriculum personal independence",
+    "elapsed": 17.35,
+    "errors": 10,
+    "expected": {
+      "correct": 82,
+      "errors": 10,
+      "accuracy": 100.0,
+      "speed": 56.71,
+      "elapsed": 17.35,
+      "passed": true,
+      "stars": 3,
+      "score": 100,
+      "complete": true,
+      "mode": "challenge"
+    }
+  },
+  {
+    "lesson": {
+      "id": "en-phrase-01",
+      "text": "plays a vital role a strong foundation a balanced curriculum personal independence",
+      "language": "en",
+      "targetSpeed": 8,
+      "targetAccuracy": 75
+    },
+    "typed": "plays a vital role a strong foundation a balanced curriculum personal independence",
+    "elapsed": 123.0,
+    "errors": 0,
+    "expected": {
+      "correct": 82,
+      "errors": 0,
+      "accuracy": 100.0,
+      "speed": 8.0,
+      "elapsed": 123.0,
+      "passed": true,
+      "stars": 2,
+      "score": 100,
+      "complete": true,
+      "mode": "challenge"
+    }
+  },
+  {
+    "lesson": {
+      "id": "en-phrase-01",
+      "text": "plays a vital role a strong foundation a balanced curriculum personal independence",
+      "language": "en",
+      "targetSpeed": 8,
+      "targetAccuracy": 75
+    },
+    "typed": "plays a vital role a strong foundation a balanced curriculum personal independenc",
+    "elapsed": 20,
+    "errors": 1,
+    "expected": {
+      "correct": 81,
+      "errors": 1,
+      "accuracy": 100.0,
+      "speed": 48.6,
+      "elapsed": 20,
+      "passed": false,
+      "stars": 0,
+      "score": 59,
+      "complete": false,
+      "mode": "challenge"
+    }
+  },
+  {
+    "lesson": {
+      "id": "en-phrase-01",
+      "text": "plays a vital role a strong foundation a balanced curriculum personal independence",
+      "language": "en",
+      "targetSpeed": 8,
+      "targetAccuracy": 75
+    },
+    "typed": "",
+    "elapsed": 2,
+    "errors": 0,
+    "expected": {
+      "correct": 0,
+      "errors": 0,
+      "accuracy": 0,
+      "speed": 0.0,
+      "elapsed": 2,
+      "passed": false,
+      "stars": 0,
+      "score": 0,
+      "complete": false,
+      "mode": "challenge"
+    }
+  },
+  {
+    "lesson": {
+      "id": "en-phrase-01",
+      "text": "plays a vital role a strong foundation a balanced curriculum personal independence",
+      "language": "en",
+      "targetSpeed": 8,
+      "targetAccuracy": 75
+    },
+    "typed": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "elapsed": 10,
+    "errors": 0,
+    "expected": {
+      "correct": 0,
+      "errors": 82,
+      "accuracy": 0.0,
+      "speed": 0.0,
+      "elapsed": 10,
+      "passed": false,
+      "stars": 0,
+      "score": 60,
+      "complete": true,
+      "mode": "challenge"
+    }
+  },
+  {
+    "lesson": {
+      "id": "en-sentence-01",
+      "text": "Education plays a vital role in preparing young people for the challenges of adult life. While academic knowledge provides a strong foundation for future study, practical skills help students apply what they have learned in everyday situations.",
+      "language": "en",
+      "targetSpeed": 8,
+      "targetAccuracy": 75
+    },
+    "typed": "Education plays a vital role in preparing young people for the challenges of adult life. While academic knowledge provides a strong foundation for future study, practical skills help students apply what they have learned in everyday situations.",
+    "elapsed": 17.35,
+    "errors": 10,
+    "expected": {
+      "correct": 244,
+      "errors": 10,
+      "accuracy": 100.0,
+      "speed": 168.76,
+      "elapsed": 17.35,
+      "passed": true,
+      "stars": 3,
+      "score": 100,
+      "complete": true,
+      "mode": "challenge"
+    }
+  },
+  {
+    "lesson": {
+      "id": "en-sentence-01",
+      "text": "Education plays a vital role in preparing young people for the challenges of adult life. While academic knowledge provides a strong foundation for future study, practical skills help students apply what they have learned in everyday situations.",
+      "language": "en",
+      "targetSpeed": 8,
+      "targetAccuracy": 75
+    },
+    "typed": "Education plays a vital role in preparing young people for the challenges of adult life. While academic knowledge provides a strong foundation for future study, practical skills help students apply what they have learned in everyday situations.",
+    "elapsed": 366.0,
+    "errors": 0,
+    "expected": {
+      "correct": 244,
+      "errors": 0,
+      "accuracy": 100.0,
+      "speed": 8.0,
+      "elapsed": 366.0,
+      "passed": true,
+      "stars": 2,
+      "score": 100,
+      "complete": true,
+      "mode": "challenge"
+    }
+  },
+  {
+    "lesson": {
+      "id": "en-sentence-01",
+      "text": "Education plays a vital role in preparing young people for the challenges of adult life. While academic knowledge provides a strong foundation for future study, practical skills help students apply what they have learned in everyday situations.",
+      "language": "en",
+      "targetSpeed": 8,
+      "targetAccuracy": 75
+    },
+    "typed": "Education plays a vital role in preparing young people for the challenges of adult life. While academic knowledge provides a strong foundation for future study, practical skills help students apply what they have learned in everyday situations",
+    "elapsed": 20,
+    "errors": 1,
+    "expected": {
+      "correct": 243,
+      "errors": 1,
+      "accuracy": 100.0,
+      "speed": 145.8,
+      "elapsed": 20,
+      "passed": false,
+      "stars": 0,
+      "score": 60,
+      "complete": false,
+      "mode": "challenge"
+    }
+  },
+  {
+    "lesson": {
+      "id": "en-sentence-01",
+      "text": "Education plays a vital role in preparing young people for the challenges of adult life. While academic knowledge provides a strong foundation for future study, practical skills help students apply what they have learned in everyday situations.",
+      "language": "en",
+      "targetSpeed": 8,
+      "targetAccuracy": 75
+    },
+    "typed": "",
+    "elapsed": 2,
+    "errors": 0,
+    "expected": {
+      "correct": 0,
+      "errors": 0,
+      "accuracy": 0,
+      "speed": 0.0,
+      "elapsed": 2,
+      "passed": false,
+      "stars": 0,
+      "score": 0,
+      "complete": false,
+      "mode": "challenge"
+    }
+  },
+  {
+    "lesson": {
+      "id": "en-sentence-01",
+      "text": "Education plays a vital role in preparing young people for the challenges of adult life. While academic knowledge provides a strong foundation for future study, practical skills help students apply what they have learned in everyday situations.",
+      "language": "en",
+      "targetSpeed": 8,
+      "targetAccuracy": 75
+    },
+    "typed": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "elapsed": 10,
+    "errors": 0,
+    "expected": {
+      "correct": 0,
+      "errors": 244,
+      "accuracy": 0.0,
+      "speed": 0.0,
+      "elapsed": 10,
+      "passed": false,
+      "stars": 0,
+      "score": 60,
+      "complete": true,
+      "mode": "challenge"
+    }
+  },
+  {
+    "lesson": {
+      "id": "en-article-01",
+      "text": "Education plays a vital role in preparing young people for the challenges of adult life. While academic knowledge provides a strong foundation for future study, practical skills help students apply what they have learned in everyday situations. In my view, schools should offer a balanced curriculum that develops both intellectual ability and personal independence. On the one hand, traditional subjects such as mathematics and science encourage critical thinking. Students learn to examine evidence, solve complex problems and explain their reasoning clearly. These abilities are essential for those who wish to pursue higher education or enter specialised professions. Without a solid understanding of basic concepts, learners may find it difficult to adapt to more demanding courses later in life. Moreover, a broad academic education allows children to discover interests that might otherwise remain unexplored. On the other hand, academic success alone does not guarantee a smooth transition to adulthood. Many school leavers struggle to manage a household budget, prepare healthy meals or communicate effectively in the workplace. Introducing practical lessons would give students the confidence to deal with these responsibilities. For example, a project in which pupils plan a community event could teach teamwork, financial planning and decision making at the same time. Such activities can also make classroom learning feel more relevant and engaging. In conclusion, academic subjects and practical skills should be seen as complementary parts of education. Schools have limited teaching time, but this does not mean they must choose between knowledge and its application. By connecting theoretical lessons with real situations, teachers can help students become capable learners and responsible members of society.",
+      "language": "en",
+      "targetSpeed": 8,
+      "targetAccuracy": 75
+    },
+    "typed": "Education plays a vital role in preparing young people for the challenges of adult life. While academic knowledge provides a strong foundation for future study, practical skills help students apply what they have learned in everyday situations. In my view, schools should offer a balanced curriculum that develops both intellectual ability and personal independence. On the one hand, traditional subjects such as mathematics and science encourage critical thinking. Students learn to examine evidence, solve complex problems and explain their reasoning clearly. These abilities are essential for those who wish to pursue higher education or enter specialised professions. Without a solid understanding of basic concepts, learners may find it difficult to adapt to more demanding courses later in life. Moreover, a broad academic education allows children to discover interests that might otherwise remain unexplored. On the other hand, academic success alone does not guarantee a smooth transition to adulthood. Many school leavers struggle to manage a household budget, prepare healthy meals or communicate effectively in the workplace. Introducing practical lessons would give students the confidence to deal with these responsibilities. For example, a project in which pupils plan a community event could teach teamwork, financial planning and decision making at the same time. Such activities can also make classroom learning feel more relevant and engaging. In conclusion, academic subjects and practical skills should be seen as complementary parts of education. Schools have limited teaching time, but this does not mean they must choose between knowledge and its application. By connecting theoretical lessons with real situations, teachers can help students become capable learners and responsible members of society.",
+    "elapsed": 17.35,
+    "errors": 10,
+    "expected": {
+      "correct": 1826,
+      "errors": 10,
+      "accuracy": 100.0,
+      "speed": 1262.94,
+      "elapsed": 17.35,
+      "passed": true,
+      "stars": 3,
+      "score": 100,
+      "complete": true,
+      "mode": "challenge"
+    }
+  },
+  {
+    "lesson": {
+      "id": "en-article-01",
+      "text": "Education plays a vital role in preparing young people for the challenges of adult life. While academic knowledge provides a strong foundation for future study, practical skills help students apply what they have learned in everyday situations. In my view, schools should offer a balanced curriculum that develops both intellectual ability and personal independence. On the one hand, traditional subjects such as mathematics and science encourage critical thinking. Students learn to examine evidence, solve complex problems and explain their reasoning clearly. These abilities are essential for those who wish to pursue higher education or enter specialised professions. Without a solid understanding of basic concepts, learners may find it difficult to adapt to more demanding courses later in life. Moreover, a broad academic education allows children to discover interests that might otherwise remain unexplored. On the other hand, academic success alone does not guarantee a smooth transition to adulthood. Many school leavers struggle to manage a household budget, prepare healthy meals or communicate effectively in the workplace. Introducing practical lessons would give students the confidence to deal with these responsibilities. For example, a project in which pupils plan a community event could teach teamwork, financial planning and decision making at the same time. Such activities can also make classroom learning feel more relevant and engaging. In conclusion, academic subjects and practical skills should be seen as complementary parts of education. Schools have limited teaching time, but this does not mean they must choose between knowledge and its application. By connecting theoretical lessons with real situations, teachers can help students become capable learners and responsible members of society.",
+      "language": "en",
+      "targetSpeed": 8,
+      "targetAccuracy": 75
+    },
+    "typed": "Education plays a vital role in preparing young people for the challenges of adult life. While academic knowledge provides a strong foundation for future study, practical skills help students apply what they have learned in everyday situations. In my view, schools should offer a balanced curriculum that develops both intellectual ability and personal independence. On the one hand, traditional subjects such as mathematics and science encourage critical thinking. Students learn to examine evidence, solve complex problems and explain their reasoning clearly. These abilities are essential for those who wish to pursue higher education or enter specialised professions. Without a solid understanding of basic concepts, learners may find it difficult to adapt to more demanding courses later in life. Moreover, a broad academic education allows children to discover interests that might otherwise remain unexplored. On the other hand, academic success alone does not guarantee a smooth transition to adulthood. Many school leavers struggle to manage a household budget, prepare healthy meals or communicate effectively in the workplace. Introducing practical lessons would give students the confidence to deal with these responsibilities. For example, a project in which pupils plan a community event could teach teamwork, financial planning and decision making at the same time. Such activities can also make classroom learning feel more relevant and engaging. In conclusion, academic subjects and practical skills should be seen as complementary parts of education. Schools have limited teaching time, but this does not mean they must choose between knowledge and its application. By connecting theoretical lessons with real situations, teachers can help students become capable learners and responsible members of society.",
+    "elapsed": 2739.0,
+    "errors": 0,
+    "expected": {
+      "correct": 1826,
+      "errors": 0,
+      "accuracy": 100.0,
+      "speed": 8.0,
+      "elapsed": 2739.0,
+      "passed": true,
+      "stars": 2,
+      "score": 100,
+      "complete": true,
+      "mode": "challenge"
+    }
+  },
+  {
+    "lesson": {
+      "id": "en-article-01",
+      "text": "Education plays a vital role in preparing young people for the challenges of adult life. While academic knowledge provides a strong foundation for future study, practical skills help students apply what they have learned in everyday situations. In my view, schools should offer a balanced curriculum that develops both intellectual ability and personal independence. On the one hand, traditional subjects such as mathematics and science encourage critical thinking. Students learn to examine evidence, solve complex problems and explain their reasoning clearly. These abilities are essential for those who wish to pursue higher education or enter specialised professions. Without a solid understanding of basic concepts, learners may find it difficult to adapt to more demanding courses later in life. Moreover, a broad academic education allows children to discover interests that might otherwise remain unexplored. On the other hand, academic success alone does not guarantee a smooth transition to adulthood. Many school leavers struggle to manage a household budget, prepare healthy meals or communicate effectively in the workplace. Introducing practical lessons would give students the confidence to deal with these responsibilities. For example, a project in which pupils plan a community event could teach teamwork, financial planning and decision making at the same time. Such activities can also make classroom learning feel more relevant and engaging. In conclusion, academic subjects and practical skills should be seen as complementary parts of education. Schools have limited teaching time, but this does not mean they must choose between knowledge and its application. By connecting theoretical lessons with real situations, teachers can help students become capable learners and responsible members of society.",
+      "language": "en",
+      "targetSpeed": 8,
+      "targetAccuracy": 75
+    },
+    "typed": "Education plays a vital role in preparing young people for the challenges of adult life. While academic knowledge provides a strong foundation for future study, practical skills help students apply what they have learned in everyday situations. In my view, schools should offer a balanced curriculum that develops both intellectual ability and personal independence. On the one hand, traditional subjects such as mathematics and science encourage critical thinking. Students learn to examine evidence, solve complex problems and explain their reasoning clearly. These abilities are essential for those who wish to pursue higher education or enter specialised professions. Without a solid understanding of basic concepts, learners may find it difficult to adapt to more demanding courses later in life. Moreover, a broad academic education allows children to discover interests that might otherwise remain unexplored. On the other hand, academic success alone does not guarantee a smooth transition to adulthood. Many school leavers struggle to manage a household budget, prepare healthy meals or communicate effectively in the workplace. Introducing practical lessons would give students the confidence to deal with these responsibilities. For example, a project in which pupils plan a community event could teach teamwork, financial planning and decision making at the same time. Such activities can also make classroom learning feel more relevant and engaging. In conclusion, academic subjects and practical skills should be seen as complementary parts of education. Schools have limited teaching time, but this does not mean they must choose between knowledge and its application. By connecting theoretical lessons with real situations, teachers can help students become capable learners and responsible members of society",
+    "elapsed": 20,
+    "errors": 1,
+    "expected": {
+      "correct": 1825,
+      "errors": 1,
+      "accuracy": 100.0,
+      "speed": 1095.0,
+      "elapsed": 20,
+      "passed": false,
+      "stars": 0,
+      "score": 60,
+      "complete": false,
+      "mode": "challenge"
+    }
+  },
+  {
+    "lesson": {
+      "id": "en-article-01",
+      "text": "Education plays a vital role in preparing young people for the challenges of adult life. While academic knowledge provides a strong foundation for future study, practical skills help students apply what they have learned in everyday situations. In my view, schools should offer a balanced curriculum that develops both intellectual ability and personal independence. On the one hand, traditional subjects such as mathematics and science encourage critical thinking. Students learn to examine evidence, solve complex problems and explain their reasoning clearly. These abilities are essential for those who wish to pursue higher education or enter specialised professions. Without a solid understanding of basic concepts, learners may find it difficult to adapt to more demanding courses later in life. Moreover, a broad academic education allows children to discover interests that might otherwise remain unexplored. On the other hand, academic success alone does not guarantee a smooth transition to adulthood. Many school leavers struggle to manage a household budget, prepare healthy meals or communicate effectively in the workplace. Introducing practical lessons would give students the confidence to deal with these responsibilities. For example, a project in which pupils plan a community event could teach teamwork, financial planning and decision making at the same time. Such activities can also make classroom learning feel more relevant and engaging. In conclusion, academic subjects and practical skills should be seen as complementary parts of education. Schools have limited teaching time, but this does not mean they must choose between knowledge and its application. By connecting theoretical lessons with real situations, teachers can help students become capable learners and responsible members of society.",
+      "language": "en",
+      "targetSpeed": 8,
+      "targetAccuracy": 75
+    },
+    "typed": "",
+    "elapsed": 2,
+    "errors": 0,
+    "expected": {
+      "correct": 0,
+      "errors": 0,
+      "accuracy": 0,
+      "speed": 0.0,
+      "elapsed": 2,
+      "passed": false,
+      "stars": 0,
+      "score": 0,
+      "complete": false,
+      "mode": "challenge"
+    }
+  },
+  {
+    "lesson": {
+      "id": "en-article-01",
+      "text": "Education plays a vital role in preparing young people for the challenges of adult life. While academic knowledge provides a strong foundation for future study, practical skills help students apply what they have learned in everyday situations. In my view, schools should offer a balanced curriculum that develops both intellectual ability and personal independence. On the one hand, traditional subjects such as mathematics and science encourage critical thinking. Students learn to examine evidence, solve complex problems and explain their reasoning clearly. These abilities are essential for those who wish to pursue higher education or enter specialised professions. Without a solid understanding of basic concepts, learners may find it difficult to adapt to more demanding courses later in life. Moreover, a broad academic education allows children to discover interests that might otherwise remain unexplored. On the other hand, academic success alone does not guarantee a smooth transition to adulthood. Many school leavers struggle to manage a household budget, prepare healthy meals or communicate effectively in the workplace. Introducing practical lessons would give students the confidence to deal with these responsibilities. For example, a project in which pupils plan a community event could teach teamwork, financial planning and decision making at the same time. Such activities can also make classroom learning feel more relevant and engaging. In conclusion, academic subjects and practical skills should be seen as complementary parts of education. Schools have limited teaching time, but this does not mean they must choose between knowledge and its application. By connecting theoretical lessons with real situations, teachers can help students become capable learners and responsible members of society.",
+      "language": "en",
+      "targetSpeed": 8,
+      "targetAccuracy": 75
+    },
+    "typed": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "elapsed": 10,
+    "errors": 0,
+    "expected": {
+      "correct": 5,
+      "errors": 1821,
+      "accuracy": 0.27,
+      "speed": 6.0,
+      "elapsed": 10,
+      "passed": false,
+      "stars": 0,
+      "score": 71,
+      "complete": true,
+      "mode": "challenge"
+    }
+  },
+  {
+    "lesson": {
+      "id": "zh-phrase-01",
+      "text": "数据预处理 数据清洗 缺失值 异常值 标准化",
+      "language": "zh",
+      "targetSpeed": 6,
+      "targetAccuracy": 75
+    },
+    "typed": "数据预处理 数据清洗 缺失值 异常值 标准化",
+    "elapsed": 17.35,
+    "errors": 10,
+    "expected": {
+      "correct": 22,
+      "errors": 10,
+      "accuracy": 100.0,
+      "speed": 76.08,
+      "elapsed": 17.35,
+      "passed": true,
+      "stars": 3,
+      "score": 100,
+      "complete": true,
+      "mode": "challenge"
+    }
+  },
+  {
+    "lesson": {
+      "id": "zh-phrase-01",
+      "text": "数据预处理 数据清洗 缺失值 异常值 标准化",
+      "language": "zh",
+      "targetSpeed": 6,
+      "targetAccuracy": 75
+    },
+    "typed": "数据预处理 数据清洗 缺失值 异常值 标准化",
+    "elapsed": 220.0,
+    "errors": 0,
+    "expected": {
+      "correct": 22,
+      "errors": 0,
+      "accuracy": 100.0,
+      "speed": 6.0,
+      "elapsed": 220.0,
+      "passed": true,
+      "stars": 2,
+      "score": 100,
+      "complete": true,
+      "mode": "challenge"
+    }
+  },
+  {
+    "lesson": {
+      "id": "zh-phrase-01",
+      "text": "数据预处理 数据清洗 缺失值 异常值 标准化",
+      "language": "zh",
+      "targetSpeed": 6,
+      "targetAccuracy": 75
+    },
+    "typed": "数据预处理 数据清洗 缺失值 异常值 标准",
+    "elapsed": 20,
+    "errors": 1,
+    "expected": {
+      "correct": 21,
+      "errors": 1,
+      "accuracy": 100.0,
+      "speed": 63.0,
+      "elapsed": 20,
+      "passed": false,
+      "stars": 0,
+      "score": 57,
+      "complete": false,
+      "mode": "challenge"
+    }
+  },
+  {
+    "lesson": {
+      "id": "zh-phrase-01",
+      "text": "数据预处理 数据清洗 缺失值 异常值 标准化",
+      "language": "zh",
+      "targetSpeed": 6,
+      "targetAccuracy": 75
+    },
+    "typed": "",
+    "elapsed": 2,
+    "errors": 0,
+    "expected": {
+      "correct": 0,
+      "errors": 0,
+      "accuracy": 0,
+      "speed": 0.0,
+      "elapsed": 2,
+      "passed": false,
+      "stars": 0,
+      "score": 0,
+      "complete": false,
+      "mode": "challenge"
+    }
+  },
+  {
+    "lesson": {
+      "id": "zh-phrase-01",
+      "text": "数据预处理 数据清洗 缺失值 异常值 标准化",
+      "language": "zh",
+      "targetSpeed": 6,
+      "targetAccuracy": 75
+    },
+    "typed": "xxxxxxxxxxxxxxxxxxxxxx",
+    "elapsed": 10,
+    "errors": 0,
+    "expected": {
+      "correct": 0,
+      "errors": 22,
+      "accuracy": 0.0,
+      "speed": 0.0,
+      "elapsed": 10,
+      "passed": false,
+      "stars": 0,
+      "score": 60,
+      "complete": true,
+      "mode": "challenge"
+    }
+  },
+  {
+    "lesson": {
+      "id": "zh-sentence-01",
+      "text": "的仓库、预知各地仓库的需求量对商家和客户来说，是双赢的局面。",
+      "language": "zh",
+      "targetSpeed": 6,
+      "targetAccuracy": 75
+    },
+    "typed": "的仓库、预知各地仓库的需求量对商家和客户来说，是双赢的局面。",
+    "elapsed": 17.35,
+    "errors": 10,
+    "expected": {
+      "correct": 30,
+      "errors": 10,
+      "accuracy": 100.0,
+      "speed": 103.75,
+      "elapsed": 17.35,
+      "passed": true,
+      "stars": 3,
+      "score": 100,
+      "complete": true,
+      "mode": "challenge"
+    }
+  },
+  {
+    "lesson": {
+      "id": "zh-sentence-01",
+      "text": "的仓库、预知各地仓库的需求量对商家和客户来说，是双赢的局面。",
+      "language": "zh",
+      "targetSpeed": 6,
+      "targetAccuracy": 75
+    },
+    "typed": "的仓库、预知各地仓库的需求量对商家和客户来说，是双赢的局面。",
+    "elapsed": 300.0,
+    "errors": 0,
+    "expected": {
+      "correct": 30,
+      "errors": 0,
+      "accuracy": 100.0,
+      "speed": 6.0,
+      "elapsed": 300.0,
+      "passed": true,
+      "stars": 2,
+      "score": 100,
+      "complete": true,
+      "mode": "challenge"
+    }
+  },
+  {
+    "lesson": {
+      "id": "zh-sentence-01",
+      "text": "的仓库、预知各地仓库的需求量对商家和客户来说，是双赢的局面。",
+      "language": "zh",
+      "targetSpeed": 6,
+      "targetAccuracy": 75
+    },
+    "typed": "的仓库、预知各地仓库的需求量对商家和客户来说，是双赢的局面",
+    "elapsed": 20,
+    "errors": 1,
+    "expected": {
+      "correct": 29,
+      "errors": 1,
+      "accuracy": 100.0,
+      "speed": 87.0,
+      "elapsed": 20,
+      "passed": false,
+      "stars": 0,
+      "score": 58,
+      "complete": false,
+      "mode": "challenge"
+    }
+  },
+  {
+    "lesson": {
+      "id": "zh-sentence-01",
+      "text": "的仓库、预知各地仓库的需求量对商家和客户来说，是双赢的局面。",
+      "language": "zh",
+      "targetSpeed": 6,
+      "targetAccuracy": 75
+    },
+    "typed": "",
+    "elapsed": 2,
+    "errors": 0,
+    "expected": {
+      "correct": 0,
+      "errors": 0,
+      "accuracy": 0,
+      "speed": 0.0,
+      "elapsed": 2,
+      "passed": false,
+      "stars": 0,
+      "score": 0,
+      "complete": false,
+      "mode": "challenge"
+    }
+  },
+  {
+    "lesson": {
+      "id": "zh-sentence-01",
+      "text": "的仓库、预知各地仓库的需求量对商家和客户来说，是双赢的局面。",
+      "language": "zh",
+      "targetSpeed": 6,
+      "targetAccuracy": 75
+    },
+    "typed": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "elapsed": 10,
+    "errors": 0,
+    "expected": {
+      "correct": 0,
+      "errors": 30,
+      "accuracy": 0.0,
+      "speed": 0.0,
+      "elapsed": 10,
+      "passed": false,
+      "stars": 0,
+      "score": 60,
+      "complete": true,
+      "mode": "challenge"
+    }
+  },
+  {
+    "lesson": {
+      "id": "zh-article-01",
+      "text": "摘要台风作为一种极端气象现象，对沿海地区的安全和经济活动构成了严重威胁。随着全球气候变化的加剧，台风的频率和强度可能会发生变化，这使得准确预测其路径、强度及其对环境影响的能力显得尤为重要。台风的形成和发展受多种气象因素的影响，包括气温、气压、洋流和风场等，这些因素的复杂相互作用使得台风的研究充满挑战。",
+      "language": "zh",
+      "targetSpeed": 6,
+      "targetAccuracy": 75
+    },
+    "typed": "摘要台风作为一种极端气象现象，对沿海地区的安全和经济活动构成了严重威胁。随着全球气候变化的加剧，台风的频率和强度可能会发生变化，这使得准确预测其路径、强度及其对环境影响的能力显得尤为重要。台风的形成和发展受多种气象因素的影响，包括气温、气压、洋流和风场等，这些因素的复杂相互作用使得台风的研究充满挑战。",
+    "elapsed": 17.35,
+    "errors": 10,
+    "expected": {
+      "correct": 151,
+      "errors": 10,
+      "accuracy": 100.0,
+      "speed": 522.19,
+      "elapsed": 17.35,
+      "passed": true,
+      "stars": 3,
+      "score": 100,
+      "complete": true,
+      "mode": "challenge"
+    }
+  },
+  {
+    "lesson": {
+      "id": "zh-article-01",
+      "text": "摘要台风作为一种极端气象现象，对沿海地区的安全和经济活动构成了严重威胁。随着全球气候变化的加剧，台风的频率和强度可能会发生变化，这使得准确预测其路径、强度及其对环境影响的能力显得尤为重要。台风的形成和发展受多种气象因素的影响，包括气温、气压、洋流和风场等，这些因素的复杂相互作用使得台风的研究充满挑战。",
+      "language": "zh",
+      "targetSpeed": 6,
+      "targetAccuracy": 75
+    },
+    "typed": "摘要台风作为一种极端气象现象，对沿海地区的安全和经济活动构成了严重威胁。随着全球气候变化的加剧，台风的频率和强度可能会发生变化，这使得准确预测其路径、强度及其对环境影响的能力显得尤为重要。台风的形成和发展受多种气象因素的影响，包括气温、气压、洋流和风场等，这些因素的复杂相互作用使得台风的研究充满挑战。",
+    "elapsed": 1510.0,
+    "errors": 0,
+    "expected": {
+      "correct": 151,
+      "errors": 0,
+      "accuracy": 100.0,
+      "speed": 6.0,
+      "elapsed": 1510.0,
+      "passed": true,
+      "stars": 2,
+      "score": 100,
+      "complete": true,
+      "mode": "challenge"
+    }
+  },
+  {
+    "lesson": {
+      "id": "zh-article-01",
+      "text": "摘要台风作为一种极端气象现象，对沿海地区的安全和经济活动构成了严重威胁。随着全球气候变化的加剧，台风的频率和强度可能会发生变化，这使得准确预测其路径、强度及其对环境影响的能力显得尤为重要。台风的形成和发展受多种气象因素的影响，包括气温、气压、洋流和风场等，这些因素的复杂相互作用使得台风的研究充满挑战。",
+      "language": "zh",
+      "targetSpeed": 6,
+      "targetAccuracy": 75
+    },
+    "typed": "摘要台风作为一种极端气象现象，对沿海地区的安全和经济活动构成了严重威胁。随着全球气候变化的加剧，台风的频率和强度可能会发生变化，这使得准确预测其路径、强度及其对环境影响的能力显得尤为重要。台风的形成和发展受多种气象因素的影响，包括气温、气压、洋流和风场等，这些因素的复杂相互作用使得台风的研究充满挑战",
+    "elapsed": 20,
+    "errors": 1,
+    "expected": {
+      "correct": 150,
+      "errors": 1,
+      "accuracy": 100.0,
+      "speed": 450.0,
+      "elapsed": 20,
+      "passed": false,
+      "stars": 0,
+      "score": 60,
+      "complete": false,
+      "mode": "challenge"
+    }
+  },
+  {
+    "lesson": {
+      "id": "zh-article-01",
+      "text": "摘要台风作为一种极端气象现象，对沿海地区的安全和经济活动构成了严重威胁。随着全球气候变化的加剧，台风的频率和强度可能会发生变化，这使得准确预测其路径、强度及其对环境影响的能力显得尤为重要。台风的形成和发展受多种气象因素的影响，包括气温、气压、洋流和风场等，这些因素的复杂相互作用使得台风的研究充满挑战。",
+      "language": "zh",
+      "targetSpeed": 6,
+      "targetAccuracy": 75
+    },
+    "typed": "",
+    "elapsed": 2,
+    "errors": 0,
+    "expected": {
+      "correct": 0,
+      "errors": 0,
+      "accuracy": 0,
+      "speed": 0.0,
+      "elapsed": 2,
+      "passed": false,
+      "stars": 0,
+      "score": 0,
+      "complete": false,
+      "mode": "challenge"
+    }
+  },
+  {
+    "lesson": {
+      "id": "zh-article-01",
+      "text": "摘要台风作为一种极端气象现象，对沿海地区的安全和经济活动构成了严重威胁。随着全球气候变化的加剧，台风的频率和强度可能会发生变化，这使得准确预测其路径、强度及其对环境影响的能力显得尤为重要。台风的形成和发展受多种气象因素的影响，包括气温、气压、洋流和风场等，这些因素的复杂相互作用使得台风的研究充满挑战。",
+      "language": "zh",
+      "targetSpeed": 6,
+      "targetAccuracy": 75
+    },
+    "typed": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "elapsed": 10,
+    "errors": 0,
+    "expected": {
+      "correct": 0,
+      "errors": 151,
+      "accuracy": 0.0,
+      "speed": 0.0,
+      "elapsed": 10,
+      "passed": false,
+      "stars": 0,
+      "score": 60,
+      "complete": true,
+      "mode": "challenge"
+    }
+  }
+]

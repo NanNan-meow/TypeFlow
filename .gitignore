@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+data/*.sqlite3*
+data/runtime.json
+logs/
+test-artifacts/
+dist/
+edge-profile*/
+*.log
+*.sqlite3*
+.pages-deployment.json

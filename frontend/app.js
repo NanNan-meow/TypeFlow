@@ -1,4 +1,10 @@
 import { countNewErrors, liveMetrics, isUnlocked } from './engine.js';
+import { createBrowserApi } from './browser-store.js';
+
+const browserMode = document.querySelector('meta[name="typeflow-storage"]')?.content === 'browser';
+const browserApi = browserMode ? createBrowserApi() : null;
+const pendingKey = browserMode ? `typeflow-pending:${new URL('.', import.meta.url).pathname}` : 'typeflow-pending';
+const savedMessage = browserMode ? '已保存在当前浏览器 · 刷新后仍可继续' : '已保存到本机 · 重启后仍可继续';
 
 const $ = (selector, scope = document) => scope.querySelector(selector);
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
@@ -36,6 +42,7 @@ function toast(message) {
 }
 
 async function api(path, options = {}) {
+  if (browserApi) return browserApi(path, options);
   const response = await fetch(path, { ...options, headers: { 'Content-Type': 'application/json', ...options.headers } });
   if (!response.ok) {
     let message;
@@ -80,7 +87,7 @@ function keyboardArt() {
 }
 function courseCard(language) {
   const zh = language === 'zh', count = track(language).length, passed = completed(language);
-  return `<article class="course ${zh ? 'zh' : ''}"><div class="course-top"><div class="course-icon">${zh ? '中' : 'En'}</div><span class="course-badge">${zh ? 'MATHORCUP 优秀论文' : 'IELTS WRITING'}</span></div><h3>${zh ? '中文打字练习' : '英文打字练习'}<span>${zh ? 'Chinese' : 'English'}</span></h3><p>${zh ? '在优秀建模论文中，积累专业表达与输入手感。' : '以雅思写作主题为素材，让打字与英语一起进步。'}</p><div class="course-kinds">${Object.entries(kindNames).map(([kind, label]) => `<a href="#${language}/${kind}">${label}</a>`).join('')}</div><div class="course-bottom"><span>已解锁 <b>${track(language).filter(x => isUnlocked(x, corpus.lessons, stats.progress)).length}</b> 关 <span>·</span> 已通关 <b>${passed} / ${count}</b></span><a href="#${language}">进入练习 ${icon('arrow')}</a></div></article>`;
+  return `<article class="course ${zh ? 'zh' : ''}"><div class="course-top"><div class="course-icon">${zh ? '中' : 'En'}</div><span class="course-badge">${zh ? 'MATHORCUP 优秀论文' : 'IELTS WRITING'}</span></div><h3>${zh ? '中文打字练习' : '英文打字练习'}<span>${zh ? 'Chinese' : 'English'}</span></h3><p>${zh ? '在优秀建模论文中，积累专业表达与输入手感。' : '以雅思写作主题为素材，让打字与英语一起进步。'}</p><div class="course-kinds">${Object.entries(kindNames).map(([kind, label]) => `<a href="#${language}/${kind}">${label}</a>`).join('')}</div><div class="course-bottom"><span>可选关卡 <b>${track(language).filter(x => isUnlocked(x, corpus.lessons, stats.progress)).length}</b> 关 <span>·</span> 已通关 <b>${passed} / ${count}</b></span><a href="#${language}">进入练习 ${icon('arrow')}</a></div></article>`;
 }
 function home() {
   const totalPassed = Object.values(stats.progress).filter(x => x.passed).length;
@@ -99,7 +106,7 @@ function renderTrack(language) {
   const zh = language === 'zh', lessons = track(language, selectedKind), passed = completed(language, selectedKind);
   const first = nextLesson(language, selectedKind);
   main.innerHTML = `<div class="page-heading"><div><div class="eyebrow">${zh ? 'MATHORCUP · CHINESE' : 'IELTS WRITING · ENGLISH'}</div><h1>${zh ? '中文打字练习' : '英文打字练习'}</h1><p>${zh ? '用优秀建模论文，练熟每一段专业表达。' : '让雅思写作表达，在一次次敲击中变得熟悉。'}</p></div><span class="study-pill">${zh ? corpus.sources.length + ' 篇真实论文' : '6 大雅思写作主题'}</span></div>
-    <div class="track-banner ${zh ? 'zh' : ''}"><div><strong>${mode === 'challenge' ? '一步一关，把进步变得看得见。' : '自由探索，按自己的节奏练习。'}</strong><p>${mode === 'challenge' ? '速度与正确率同时达标，即可解锁下一关。' : '所有素材均可练习；自由练习计入记录，不解锁关卡。'}</p></div><div class="track-progress">${passed} / ${lessons.length} 关已通关<div class="progress-track"><i style="width:${passed * 100 / lessons.length}%"></i></div></div></div>
+    <div class="track-banner ${zh ? 'zh' : ''}"><div><strong>${mode === 'challenge' ? '一步一关，把进步变得看得见。' : '自由探索，按自己的节奏练习。'}</strong><p>${mode === 'challenge' ? '全部关卡均可任选，速度与正确率达标即可收集星级。' : '所有素材均可练习；自由练习计入记录，不解锁关卡。'}</p></div><div class="track-progress">${passed} / ${lessons.length} 关已通关<div class="progress-track"><i style="width:${passed * 100 / lessons.length}%"></i></div></div></div>
     <div class="tabs-bar"><div class="tabs" role="tablist" aria-label="练习类型">${Object.entries(kindNames).map(([kind, label]) => `<button role="tab" aria-selected="${selectedKind === kind}" class="${selectedKind === kind ? 'active' : ''}" data-kind="${kind}">${label}</button>`).join('')}</div><label class="mode-control">练习模式 <select id="mode-select" aria-label="练习模式"><option value="challenge" ${mode === 'challenge' ? 'selected' : ''}>闯关模式</option><option value="free" ${mode === 'free' ? 'selected' : ''}>自由练习</option></select></label></div><p class="practice-count">${kindNames[selectedKind]} · 共 ${lessons.length} 关 · ${zh ? '速度单位：正确字符/分钟' : '速度单位：WPM（5 个正确字符计 1 词）'}</p>
     <div class="level-grid">${lessons.map(lesson => {
       const record = stats.progress[lesson.id], accessible = mode === 'free' || isUnlocked(lesson, corpus.lessons, stats.progress);
@@ -258,30 +265,30 @@ async function finalize() {
   try {
     const data = await api('/api/attempts', { method: 'POST', body: JSON.stringify(active.payload) });
     active.saved = true; active.result = data.result; stats = data.stats;
-    localStorage.removeItem('typeflow-pending');
+    try { localStorage.removeItem(pendingKey); } catch { /* recovery cache is optional after a successful save */ }
     updateShell(currentRoute);
     showResult(active);
   } catch (error) {
-    try { localStorage.setItem('typeflow-pending', JSON.stringify(active.payload)); } catch { /* optional recovery */ }
-    openModal(`${modalHeader('成绩暂未保存')}<div class="guide"><p>${esc(error.message)}</p><p>这次输入已暂存在浏览器，请恢复服务后重试。</p><div class="result-actions"><button class="btn primary" data-action="retry-save">重试保存</button><button class="btn secondary" data-action="close-modal">稍后再试</button></div></div>`);
+    try { localStorage.setItem(pendingKey, JSON.stringify(active.payload)); } catch { /* optional recovery */ }
+    openModal(`${modalHeader('成绩暂未保存')}<div class="guide"><p>${esc(error.message)}</p><p>${browserMode ? '请检查浏览器是否允许保存网站数据，然后重试。当前页面仍保留着本次输入。' : '这次输入已尝试暂存到浏览器，请恢复服务后重试。'}</p><div class="result-actions"><button class="btn primary" data-action="retry-save">重试保存</button><button class="btn secondary" data-action="close-modal">稍后再试</button></div></div>`);
   } finally { active.saving = false; }
 }
 function showResult(active) {
   const r = active.result, l = active.lesson, isChallenge = active.mode === 'challenge';
   const next = track(l.language, l.kind).find(x => x.order === l.order + 1);
   let feedback = !r.complete ? `你已经完成了 ${Math.round(active.typed.length * 100 / l.text.length)}%，每一个字都是积累。休息好了再来，我们按自己的节奏慢慢练。` : r.passed ? '做到了！你的认真练习有了回响。下一关也不用着急，保持自己的节奏就很好。' : `能坚持敲完全文已经很棒了！${r.accuracy < l.targetAccuracy ? '下次试试慢一点，用退格改对就能恢复正确率。' : '准确率已经很稳了，速度会随着熟悉慢慢提高。'} 轻松目标：${l.targetSpeed} ${l.language === 'en' ? 'WPM' : '字/分钟'}、${l.targetAccuracy}% 正确率。`;
-  if (!isChallenge) feedback += ' 自由练习已计入记录，切换闯关模式可解锁后续关卡。';
+  if (!isChallenge) feedback += ' 自由练习已计入记录，切换闯关模式可以收集星级，所有关卡都可直接选择。';
   const mismatches = [...l.text].filter((char, i) => i < active.typed.length && char !== active.typed[i]).slice(0, 12);
-  openModal(`<div class="result"><div class="modal-head" style="margin-bottom:0"><span></span><button class="close-button" data-action="close-modal" aria-label="关闭成绩">×</button></div><div class="result-emblem">${r.passed ? '✦' : '◌'}</div><h2>${isChallenge && r.passed ? '这一关，漂亮通过！' : r.complete ? '坚持完成，你很棒！' : '每一步，都算数。'}</h2><p>${esc(l.title)} · ${r.score} 分</p>${isChallenge ? stars(r.stars, 'result-stars') : '<span class="tag">自由练习</span>'}<div class="result-grid"><div><b>${r.speed.toFixed(1)}</b><small>${l.language === 'en' ? 'WPM' : '字 / 分钟'}</small></div><div><b>${r.accuracy.toFixed(1)}%</b><small>正确率</small></div><div><b>${formatTime(r.elapsed)}</b><small>练习用时</small></div></div><div class="result-feedback">${feedback}<br>准确输入 ${r.correct} 个字符${r.errors ? ` · 练习中调整了 ${r.errors} 次，认真纠错也值得鼓励` : ' · 这次输入很稳，给自己点个赞'}${mismatches.length ? `<br>下次可以留意：${esc(mismatches.map(x => x === ' ' ? '空格' : x).join(' '))}` : ''}</div><div class="result-actions"><button class="btn secondary" data-action="result-back">返回关卡</button><button class="btn ${r.passed && next && isChallenge ? 'secondary' : 'primary'}" data-action="result-retry">再练一次</button>${r.passed && next && isChallenge ? `<button class="btn primary" data-start="${next.id}">下一关 ${icon('arrow')}</button>` : ''}</div><div class="save-state"><span class="status-dot"></span>已保存到本机 · 重启后仍可继续</div></div>`);
+  openModal(`<div class="result"><div class="modal-head" style="margin-bottom:0"><span></span><button class="close-button" data-action="close-modal" aria-label="关闭成绩">×</button></div><div class="result-emblem">${r.passed ? '✦' : '◌'}</div><h2>${isChallenge && r.passed ? '这一关，漂亮通过！' : r.complete ? '坚持完成，你很棒！' : '每一步，都算数。'}</h2><p>${esc(l.title)} · ${r.score} 分</p>${isChallenge ? stars(r.stars, 'result-stars') : '<span class="tag">自由练习</span>'}<div class="result-grid"><div><b>${r.speed.toFixed(1)}</b><small>${l.language === 'en' ? 'WPM' : '字 / 分钟'}</small></div><div><b>${r.accuracy.toFixed(1)}%</b><small>正确率</small></div><div><b>${formatTime(r.elapsed)}</b><small>练习用时</small></div></div><div class="result-feedback">${feedback}<br>准确输入 ${r.correct} 个字符${r.errors ? ` · 练习中调整了 ${r.errors} 次，认真纠错也值得鼓励` : ' · 这次输入很稳，给自己点个赞'}${mismatches.length ? `<br>下次可以留意：${esc(mismatches.map(x => x === ' ' ? '空格' : x).join(' '))}` : ''}</div><div class="result-actions"><button class="btn secondary" data-action="result-back">返回关卡</button><button class="btn ${r.passed && next && isChallenge ? 'secondary' : 'primary'}" data-action="result-retry">再练一次</button>${r.passed && next && isChallenge ? `<button class="btn primary" data-start="${next.id}">下一关 ${icon('arrow')}</button>` : ''}</div><div class="save-state"><span class="status-dot"></span>${savedMessage}</div></div>`);
 }
 function sourceDetails() {
   if (!session?.lesson.references) return;
   const l = session.lesson;
   const sources = l.references.map(ref => ({ ...ref, source: corpus.sources.find(x => x.id === ref.sourceId) }));
-  openModal(`${modalHeader('这段文字从哪里来？')}<div class="source-detail">${sources.map(ref => `<article><strong>${esc(ref.source?.title || 'MathorCup 优秀论文')}</strong><p>PDF 第 ${ref.page} 页${ref.text ? ` · 词组「${esc(ref.text)}」` : ''}</p><p class="path">${esc(corpus.chineseSourceRoot)} / ${esc(ref.source?.file)}</p></article>`).join('')}<p style="margin-top:15px">正文合并了 PDF 排版换行和空格，文章练习为原文节选。</p></div>`);
+  openModal(`${modalHeader('这段文字从哪里来？')}<div class="source-detail">${sources.map(ref => `<article><strong>${esc(ref.source?.title || 'MathorCup 优秀论文')}</strong><p>PDF 第 ${ref.page} 页${ref.text ? ` · 词组「${esc(ref.text)}」` : ''}</p><p class="path">${corpus.chineseSourceRoot ? esc(corpus.chineseSourceRoot) + ' / ' : ''}${esc(ref.source?.file)}</p></article>`).join('')}<p style="margin-top:15px">正文合并了 PDF 排版换行和空格，文章练习为原文节选。</p></div>`);
 }
 function guide() {
-  openModal(`${modalHeader('把练习变成小小的进步')}<div class="guide"><h3>六条路线，各自闯关</h3><p>英文和中文分别包含词组、句子、文章练习。每条路线从第一关开始，同时达到本关的速度与正确率目标即可解锁下一关；自由练习可以体验全部素材。</p><h3>速度和准确率怎么算？</h3><ul><li>英文 WPM = 正确字符数 ÷ 5 ÷ 实际练习分钟数。</li><li>中文速度 = 正确字符数 ÷ 实际练习分钟数；标点和空格也计为字符。</li><li>正确率 = 当前正确字符数 ÷（当前正确字符数 + 累计错误次数）。退格更正不会抹去错误记录。</li><li>从第一次输入开始计时；暂停和切换浏览器标签页会暂停计时。输入法选字期间计时，但不判错。</li></ul><h3>星级与综合评分</h3><p>完成全文且达到双目标获 1 星；正确率至少 97% 且速度达到目标的 1.15 倍获 2 星；正确率至少 99% 且速度达到目标的 1.4 倍获 3 星。自由练习不解锁关卡、不累计通关星级。</p><p>综合评分满分 100：正确率占 70 分，速度达标程度占 30 分。未完成全文计 0 分，仍记录练习时间。</p><h3>输入与保存</h3><p>支持中文输入法、退格纠错、暂停与专注模式。英文区分大小写，中文标点需与原文一致。练习区禁止粘贴；按 Esc 暂停，Ctrl + Enter 提前结束。成绩存放在本机 data/progress.sqlite3，练习记录页可导出 JSON。</p><h3>素材说明</h3><p>中文来自你提供的 ${corpus.sources.length} 篇 MathorCup 优秀论文，练习页可查看 PDF 页码。英文是 6 个雅思 Task 2 常见主题的原创范文，并非官方范文或官方评分。</p></div>`);
+  openModal(`${modalHeader('把练习变成小小的进步')}<div class="guide"><h3>六条路线，各自闯关</h3><p>英文和中文分别包含词组、句子、文章练习。所有关卡都可直接选择，无需通过前一关；达到本关目标即可收集通关星级，自由练习不累计星级。</p><h3>速度和准确率怎么算？</h3><ul><li>英文 WPM = 正确字符数 ÷ 5 ÷ 实际练习分钟数。</li><li>中文速度 = 正确字符数 ÷ 实际练习分钟数；标点和空格也计为字符。</li><li>正确率 = 当前正确字符数 ÷ 当前输入字符数。退格改对后恢复正确率。</li><li>从第一次输入开始计时；暂停和切换浏览器标签页会暂停计时。输入法选字期间计时，但不判错。</li></ul><h3>星级与综合评分</h3><p>完成全文且达到双目标获 1 星；正确率至少 90% 且速度达标获 2 星；正确率至少 95% 且速度达到目标的 1.1 倍获 3 星。自由练习不解锁关卡、不累计通关星级。</p><p>完成全文有 60 分基础分，正确率最多再加 25 分、速度最多再加 15 分。未完成也按输入进度给予基础分。</p><h3>输入与保存</h3><p>支持中文输入法、退格纠错、暂停与专注模式。英文区分大小写，中文标点需与原文一致。练习区禁止粘贴；按 Esc 暂停，Ctrl + Enter 提前结束。${browserMode ? '成绩保存在当前浏览器，换设备或清除浏览器数据后不会自动同步，建议定期导出记录。' : '成绩存放在本机 data/progress.sqlite3。'}练习记录页可导出 JSON。</p><h3>素材说明</h3><p>中文来自你提供的 ${corpus.sources.length} 篇 MathorCup 优秀论文，练习页可查看 PDF 页码。英文是 6 个雅思 Task 2 常见主题的原创范文，并非官方范文或官方评分。</p></div>`);
 }
 function restart() {
   if (!session) return;
@@ -384,13 +391,14 @@ function route() {
 window.addEventListener('hashchange', route);
 
 async function init() {
+  if (browserMode) document.querySelector('.offline-badge').innerHTML = '<i></i> 在线练习 · 进度保存在当前浏览器';
   $('#today-date').textContent = new Date().toLocaleDateString('zh-CN', { month: 'long', day: 'numeric', weekday: 'long' });
   try {
     [corpus, stats] = await Promise.all([api('/api/corpus'), api('/api/stats')]);
     let pending;
-    try { pending = JSON.parse(localStorage.getItem('typeflow-pending')); } catch { /* invalid recovery data */ }
+    try { pending = JSON.parse(localStorage.getItem(pendingKey)); } catch { /* invalid recovery data */ }
     if (pending) {
-      try { const data = await api('/api/attempts', { method: 'POST', body: JSON.stringify(pending) }); stats = data.stats; localStorage.removeItem('typeflow-pending'); toast('上次未保存的练习成绩已恢复。'); } catch { toast('有一条待保存成绩，恢复本地服务后刷新可重试。'); }
+      try { const data = await api('/api/attempts', { method: 'POST', body: JSON.stringify(pending) }); stats = data.stats; localStorage.removeItem(pendingKey); toast('上次未保存的练习成绩已恢复。'); } catch { toast('有一条待保存成绩，恢复本地服务后刷新可重试。'); }
     }
     route();
   } catch (error) {

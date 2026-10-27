@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node tests/engine.test.mjs"
+    "test": "node tests/engine.test.mjs && node tests/browser-store.test.mjs && node tests/scoring-parity.test.mjs",
+    "build:pages": "node tools/build-pages.mjs"
   }
 }

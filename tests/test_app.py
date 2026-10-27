@@ -20,6 +20,11 @@ FIRST = next(x for x in CORPUS["lessons"] if x["id"] == "en-phrase-01")
 
 
 class ScoringTests(unittest.TestCase):
+    def test_browser_scoring_contract_matches_backend(self):
+        cases = json.loads((ROOT / "tests/scoring-fixtures.json").read_text(encoding="utf-8"))
+        for case in cases:
+            self.assertEqual(score_attempt(case["lesson"], case["typed"], case["elapsed"], case["errors"]), case["expected"])
+
     def test_exact_speed_and_threshold(self):
         result = score_attempt(FIRST, FIRST["text"], len(FIRST["text"]) * 60 / 5 / FIRST["targetSpeed"], 0)
         self.assertTrue(result["passed"])

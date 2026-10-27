@@ -194,7 +194,7 @@ td:first-child { color: var(--text); }
 .typing-input:focus, .space-form input:focus, .space-form select:focus {
   border-color: var(--focus); box-shadow: 0 0 0 3px var(--focus-bg);
 }
-.typing-input::placeholder, .space-form input::placeholder { color: var(--muted); opacity: 1; }
+.typing-input::placeholder, .space-form input::placeholder, .search-input::placeholder { color: var(--muted); opacity: 1; }
 .typing-input:disabled, .typing-bottom { background: var(--surface-alt); }
 .typing-bottom kbd { background: var(--paper); border-color: var(--line); }
 .paused-cover { background: var(--overlay-bg); }

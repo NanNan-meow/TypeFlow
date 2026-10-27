@@ -25,6 +25,12 @@ try {
     results.push({name:'settings-error-visible-above-footer',size,theme,passed:true});
     await browser.read('Storage.prototype.setItem=globalThis.originalSetItem');
     await browser.key('Escape','Escape',27);await browser.until("!document.querySelector('#modal').open");
+    await browser.click('[href="#library"]');await browser.until("Boolean(document.querySelector('#source-search'))");
+    const hintColor=await browser.read("getComputedStyle(document.querySelector('#source-search'),'::placeholder').color");
+    assert.equal(hintColor,theme==='dark'?'rgb(176, 166, 195)':'rgb(116, 102, 127)','search hints use the readable theme color');
+    await browser.screenshot(`theme-shots/${size}-${theme}-library-zh.png`);
+    await browser.click('[data-library="en"]');
+    await browser.screenshot(`theme-shots/${size}-${theme}-library-en.png`);
   }
   assert.deepEqual(browser.errors,[]);
   const file=path.join(artifacts,'theme-checks.json');

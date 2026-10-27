@@ -1,4 +1,5 @@
 // GitHub Pages storage adapter. Local Python mode continues to use its HTTP API.
+import { normalizeKeyTimings } from './key-timings.js';
 function roundEven(value, digits = 0) {
   const factor = 10 ** digits;
   const scaled = value * factor;
@@ -94,7 +95,7 @@ export function createBrowserApi({ storage, fetcher = fetch, baseUrl = new URL('
     if (typeof body.requestId !== 'string' || body.requestId.length < 8 || body.requestId.length > 80) throw new Error('记录编号无效');
     const previous = attempts.find(row => row.request_id === body.requestId);
     if (previous) return { result: previous, stats: summarize(attempts, data.lessons, now()) };
-    const result = scoreAttempt(lesson, body.typed, body.elapsed, body.errors, body.mode);
+    const result = { ...scoreAttempt(lesson, body.typed, body.elapsed, body.errors, body.mode), keyTimings: lesson.language === 'en' ? normalizeKeyTimings(body.keyTimings) : null };
     const date = now();
     const created_at = `${dateString(date)}T${String(date.getHours()).padStart(2, '0')}:${String(date.getMinutes()).padStart(2, '0')}:${String(date.getSeconds()).padStart(2, '0')}`;
     attempts.push({ id: attempts.reduce((max, row) => Math.max(max, row.id), 0) + 1, request_id: body.requestId, lesson_id: lesson.id, created_at, ...result });

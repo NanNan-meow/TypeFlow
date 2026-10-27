@@ -191,6 +191,26 @@ class ApiTests(unittest.TestCase):
         self.assertEqual(before["progress"], after["progress"])
         self.assertEqual(before["totalAttempts"], after["totalAttempts"])
 
+    def test_07_key_timings_persist_and_export(self):
+        body = self.payload("en-phrase-01", "timing-request-01")
+        body["keyTimings"] = {"version": 1, "letters": {"a": {"samples": 3, "totalMs": 700, "errors": 1, "longPauses": 0}}}
+        for _ in range(2):
+            status, data = self.request("/api/attempts", body)
+            self.assertEqual(status, 200)
+            self.assertEqual(data["result"]["keyTimings"], body["keyTimings"])
+        self.__class__.proc.terminate()
+        self.__class__.proc.wait(timeout=5)
+        self.__class__.start_backend()
+        _, exported = self.request("/api/export")
+        rows = [row for row in exported["attempts"] if row["request_id"] == body["requestId"]]
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["keyTimings"], body["keyTimings"])
+
+    def test_08_invalid_key_timings_rejected(self):
+        body = self.payload("en-phrase-01", "invalid-timing-01")
+        body["keyTimings"] = {"version": 1, "letters": {"a": {"samples": 0, "totalMs": 100}}}
+        self.assertEqual(self.request("/api/attempts", body)[0], 400)
+
 
 if __name__ == "__main__":
     unittest.main()

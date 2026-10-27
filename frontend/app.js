@@ -1,6 +1,8 @@
 import { countNewErrors, liveMetrics, isUnlocked } from './engine.js';
 import { createBrowserApi } from './browser-store.js';
 import { createPreferences } from './preferences.js';
+import { createKeyTimingTracker } from './key-timings.js';
+import { keyAnalysisSummary, keyAnalysisView, keyDetail } from './key-analysis-view.js';
 
 const browserMode = document.querySelector('meta[name="typeflow-storage"]')?.content === 'browser';
 const browserApi = browserMode ? createBrowserApi() : null;
@@ -40,6 +42,7 @@ const tierNames = ['轻松入门', '稳步进阶', '熟练提升', '高手挑战
 const navigation = [['home', 'home', '学习概览'], ['en', 'keyboard', '英文练习'], ['zh', 'chinese', '中文练习'], ['history', 'history', '练习记录'], ['library', 'book', '素材图书馆']];
 let corpus, stats, session = null, toastTimer, currentRoute = '', tickTimer;
 let selectedKind = 'phrase', mode = 'challenge';
+let keyAnalysisContext = null;
 const main = $('#main');
 const modal = $('#modal');
 
@@ -66,6 +69,7 @@ function openModal(content) {
   const title = $('#modal-content h2');
   if (title) { title.id = 'modal-title'; modal.setAttribute('aria-labelledby', title.id); }
   if (!modal.open) modal.showModal();
+  modal.scrollTop = 0;
 }
 const modalHeader = title => `<div class="modal-head"><h2>${esc(title)}</h2><button class="close-button" data-action="close-modal" aria-label="关闭弹窗">×</button></div>`;
 function stars(count, className = 'stars') {
@@ -148,6 +152,14 @@ function renderHistory(filter = 'all') {
   const rows = stats.history.filter(row => filter === 'all' || corpus.lessons.find(x => x.id === row.lesson_id)?.language === filter);
   main.innerHTML = `<div class="page-heading"><div><div class="eyebrow">YOUR PROGRESS, IN NUMBERS</div><h1>每一份努力，都有记录。</h1><p>已完成 ${stats.totalAttempts} 次练习 · 展示最近 100 条记录</p></div><div class="history-controls"><button class="btn secondary small" data-action="export">${icon('download')} 导出全部记录</button><select class="filter-select" id="history-filter" aria-label="记录语言"><option value="all">全部语言</option><option value="en">英文练习</option><option value="zh">中文练习</option></select></div></div>${rows.length ? `<div class="table-wrap"><table><thead><tr><th>练习内容</th><th>时间</th><th>速度</th><th>正确率</th><th>用时</th><th>结果</th><th>评分</th></tr></thead><tbody>${rows.map(row => { const l = corpus.lessons.find(x => x.id === row.lesson_id); return `<tr><td>${esc(l?.title || row.lesson_id)}<br><span class="tag">${l?.language === 'en' ? '英文' : '中文'} · ${kindNames[l?.kind] || ''}</span></td><td>${esc(row.created_at.replace('T', ' '))}</td><td>${row.speed.toFixed(1)} ${l?.language === 'en' ? 'WPM' : '字/分'}</td><td>${row.accuracy.toFixed(1)}%</td><td>${formatTime(row.elapsed)}</td><td><span class="tag ${row.passed ? 'green' : 'orange'}">${row.mode === 'free' ? '自由练习' : row.passed ? '已通关' : row.complete ? '继续加油' : '未完成'}</span></td><td>${row.score} 分 ${row.mode === 'challenge' ? stars(row.stars) : ''}</td></tr>`; }).join('')}</tbody></table></div>` : `<div class="empty-state">${icon('history')}<h3>故事从第一次练习开始</h3><p>完成一关，你的速度、准确率与成长就会出现在这里。</p><a class="btn primary" href="#en">去练习 ${icon('arrow')}</a></div>`}`;
   $('#history-filter').value = filter;
+  const cells = main.querySelectorAll('tbody tr > td:first-child');
+  rows.forEach((row, index) => {
+    if (!row.keyTimings?.letters || !Object.keys(row.keyTimings.letters).length || !cells[index]) return;
+    const button = document.createElement('button');
+    button.type = 'button'; button.className = 'history-key-analysis';
+    button.dataset.analysisAttempt = row.request_id; button.textContent = '查看按键分析 ↗';
+    cells[index].append(document.createElement('br'), button);
+  });
 }
 
 function library() {
@@ -177,6 +189,7 @@ function startTimer() {
 }
 function stopTimer() {
   if (session?.running) { session.accumulated = elapsed(); session.running = false; }
+  session?.keyTracker?.interrupt();
 }
 function startLesson(id, free = false) {
   const lesson = corpus.lessons.find(x => x.id === id);
@@ -184,6 +197,7 @@ function startLesson(id, free = false) {
   const attemptMode = free ? 'free' : mode;
   if (attemptMode === 'challenge' && !isUnlocked(lesson, corpus.lessons, stats.progress)) return toast('请先通过上一关，或切换到自由练习。');
   session = { lesson, mode: attemptMode, typed: '', errors: 0, accumulated: 0, running: false, paused: false, finished: false, composing: false, hasStarted: false, size: preferences.fontSize, requestId: crypto.randomUUID(), saved: false, saving: false };
+  session.keyTracker = lesson.language === 'en' ? createKeyTimingTracker() : null;
   location.hash = `practice/${id}`;
   if (currentRoute === `practice/${id}`) renderPractice();
 }
@@ -192,12 +206,12 @@ function renderPractice() {
   main.innerHTML = `<div class="practice-header"><div class="practice-title"><button class="back-button" data-action="leave-practice">${icon('back')} 返回${zh ? '中文' : '英文'}练习</button><h1>${esc(l.title)}</h1><small>${kindNames[l.kind]} · ${tierNames[l.tier]} · ${session.mode === 'challenge' ? '闯关模式' : '自由练习'}</small></div><div class="practice-tools"><button data-action="font-smaller" aria-label="缩小参考文字">A−</button><button data-action="font-larger" aria-label="放大参考文字">A+</button><button data-action="focus" aria-label="切换专注模式">专注</button></div></div>
     <div class="practice-stats" aria-label="实时练习数据"><div class="practice-stat"><small>当前速度</small><b id="live-speed">0<span>${zh ? '字/分钟' : 'WPM'}</span></b></div><div class="practice-stat"><small>正确率</small><b id="live-accuracy">100<span>%</span></b></div><div class="practice-stat"><small>练习用时</small><b id="live-time">00:00</b></div><div class="practice-stat"><small>输入进度</small><b id="live-progress">0<span>/ ${l.text.length}</span></b></div></div>
     ${l.prompt ? `<div class="prompt-box"><b>WRITING TASK 2</b> · ${esc(l.prompt)}</div>` : ''}<section class="typing-card"><div class="typing-card-top"><span>${icon('keyboard').replace('class="icon"', 'class="icon" style="display:inline-block;width:13px;height:13px;vertical-align:middle;margin-right:6px"')} ${zh ? '数学建模 · 论文原文' : '雅思写作 · 原创表达'}</span><span id="typing-status">输入第一个字符开始计时</span></div><div class="reference-wrap"><div class="reference-text ${zh ? 'zh' : ''}" id="reference" aria-label="练习原文"></div></div><div class="entry-wrap"><label for="typing-input">在下方逐字输入 · ${zh ? '支持中文输入法，选字后判定' : '注意大小写、空格与标点'}</label><textarea id="typing-input" class="typing-input" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" aria-label="打字输入区" placeholder="${zh ? '切换到中文输入法，跟着原文开始敲击…' : 'Ready when you are. 从第一个字符开始…'}"></textarea></div><div class="typing-bottom"><span><kbd>Esc</kbd> 暂停 / 继续 &nbsp; <kbd>Ctrl</kbd> + <kbd>Enter</kbd> 结束练习</span><span>本关目标：${l.targetSpeed} ${zh ? '字/分' : 'WPM'} · 正确率 ≥ ${l.targetAccuracy}%</span></div><div class="typing-progress"><i id="typing-progress-bar"></i></div><div class="paused-cover" id="paused-cover" hidden><h3>休息一下，再继续。</h3><p>已暂停计时，当前输入会被保留。</p><button class="btn primary" data-action="resume">继续练习 ${icon('arrow')}</button></div></section>
-    <div class="session-actions"><button class="btn secondary" id="pause-button" data-action="pause">暂停练习</button><button class="btn secondary" data-action="restart">重新开始</button><button class="btn primary" data-action="finish">结束并评分 ${icon('arrow')}</button></div><div class="practice-notes"><div class="practice-note"><strong>素材来源</strong>${esc(l.sourceLabel)}${l.references ? ' · <button data-action="source">查看论文与页码 ↗</button>' : ''}${l.translation ? `<br>${esc(l.translation)}` : ''}</div><div class="practice-note"><strong>慢慢来，改对就算对</strong>支持退格修改，更正后恢复正确率。完成全文就有 60 分基础分。标点已全部换成空格，只需输入文字和空格，不用回车。</div></div>`;
+    <div class="session-actions"><button class="btn secondary" id="pause-button" data-action="pause">暂停练习</button><button class="btn secondary" data-action="restart">重新开始</button><button class="btn primary" data-action="finish">结束并评分 ${icon('arrow')}</button></div><div class="practice-notes"><div class="practice-note"><strong>素材来源</strong>${esc(l.sourceLabel)}${l.references ? ' · <button data-action="source">查看论文与页码 ↗</button>' : ''}${l.translation ? `<br>${esc(l.translation)}` : ''}</div><div class="practice-note"><strong>慢慢来，改对就算对</strong>支持退格修改，更正后恢复正确率。完成全文就有 60 分基础分。${l.kind === 'phrase' ? '词组中的标点已换成空格，只需输入文字和空格。' : '句子和文章保留标点，请按原文输入。'}不用回车。</div></div>`;
   // A hidden attribute must win over the flex layout of the pause overlay.
   $('#paused-cover').style.display = 'none';
   const input = $('#typing-input');
   input.value = session.typed;
-  input.addEventListener('compositionstart', () => { session.composing = true; startTimer(); });
+  input.addEventListener('compositionstart', () => { session.keyTracker?.interrupt(); session.composing = true; startTimer(); });
   input.addEventListener('compositionend', () => { session.composing = false; processInput(); });
   input.addEventListener('input', event => { if (!event.isComposing && !session.composing) processInput(); });
   input.addEventListener('beforeinput', event => {
@@ -206,12 +220,14 @@ function renderPractice() {
     else if (event.inputType.startsWith('insert')) startTimer();
   });
   input.addEventListener('keydown', event => {
-    if (event.isComposing || session.composing) return;
+    if (event.isComposing || session.composing) { session.keyTracker?.interrupt(); return; }
     if (event.key === 'Enter' && !event.ctrlKey) event.preventDefault();
     if (['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'Home', 'PageUp', 'PageDown'].includes(event.key)) event.preventDefault();
     if ((event.ctrlKey || event.metaKey) && !['Enter'].includes(event.key)) { if (['a', 'v', 'x', 'z', 'y'].includes(event.key.toLowerCase())) event.preventDefault(); }
     input.setSelectionRange(input.value.length, input.value.length);
+    session.keyTracker?.keyDown(event, performance.now());
   });
+  input.addEventListener('blur', () => session?.keyTracker?.interrupt());
   input.addEventListener('click', () => { if (!session.composing) input.setSelectionRange(input.value.length, input.value.length); });
   for (const type of ['paste', 'drop']) input.addEventListener(type, event => { event.preventDefault(); toast('逐字输入才能记录真实进步，练习区暂不支持粘贴。'); });
   renderReference();
@@ -230,6 +246,7 @@ function processInput() {
   if (value !== input.value) input.value = value;
   if (value === session.typed) return;
   startTimer();
+  session.keyTracker?.commit(session.typed, value, session.lesson.text);
   session.errors += countNewErrors(session.typed, value, session.lesson.text);
   session.typed = value;
   renderReference();
@@ -290,6 +307,7 @@ async function finalize() {
   updateLive();
   const active = session;
   active.payload ??= { lessonId: active.lesson.id, typed: active.typed, elapsed: Math.max(.1, active.accumulated), errors: active.errors, mode: active.mode, requestId: active.requestId };
+  if (active.keyTracker) active.payload.keyTimings ??= active.keyTracker.snapshot();
   active.saving = true;
   openModal(`<div class="result"><div class="result-emblem">✦</div><h2>正在整理这次进步…</h2><p>成绩会自动保存在本机。</p></div>`);
   try {
@@ -310,6 +328,11 @@ function showResult(active) {
   if (!isChallenge) feedback += ' 自由练习已计入记录，切换闯关模式可以收集星级，所有关卡都可直接选择。';
   const mismatches = [...l.text].filter((char, i) => i < active.typed.length && char !== active.typed[i]).slice(0, 12);
   openModal(`<div class="result"><div class="modal-head" style="margin-bottom:0"><span></span><button class="close-button" data-action="close-modal" aria-label="关闭成绩">×</button></div><div class="result-emblem">${r.passed ? '✦' : '◌'}</div><h2>${isChallenge && r.passed ? '这一关，漂亮通过！' : r.complete ? '坚持完成，你很棒！' : '每一步，都算数。'}</h2><p>${esc(l.title)} · ${r.score} 分</p>${isChallenge ? stars(r.stars, 'result-stars') : '<span class="tag">自由练习</span>'}<div class="result-grid"><div><b>${r.speed.toFixed(1)}</b><small>${l.language === 'en' ? 'WPM' : '字 / 分钟'}</small></div><div><b>${r.accuracy.toFixed(1)}%</b><small>正确率</small></div><div><b>${formatTime(r.elapsed)}</b><small>练习用时</small></div></div><div class="result-feedback">${feedback}<br>准确输入 ${r.correct} 个字符${r.errors ? ` · 练习中调整了 ${r.errors} 次，认真纠错也值得鼓励` : ' · 这次输入很稳，给自己点个赞'}${mismatches.length ? `<br>下次可以留意：${esc(mismatches.map(x => x === ' ' ? '空格' : x).join(' '))}` : ''}</div><div class="result-actions"><button class="btn secondary" data-action="result-back">返回关卡</button><button class="btn ${r.passed && next && isChallenge ? 'secondary' : 'primary'}" data-action="result-retry">再练一次</button>${r.passed && next && isChallenge ? `<button class="btn primary" data-start="${next.id}">下一关 ${icon('arrow')}</button>` : ''}</div><div class="save-state"><span class="status-dot"></span>${savedMessage}</div></div>`);
+  if (l.language === 'en' && r.complete) $('.result-feedback').insertAdjacentHTML('beforebegin', keyAnalysisSummary(r.keyTimings ?? active.payload?.keyTimings));
+}
+function showKeyAnalysis(value, title, fromHistory = false) {
+  keyAnalysisContext = { value, title, fromHistory };
+  openModal(keyAnalysisView(value, title, fromHistory));
 }
 function sourceDetails() {
   if (!session?.lesson.references) return;
@@ -345,6 +368,16 @@ function exitSession() {
 document.addEventListener('click', async event => {
   const button = event.target.closest('button, a');
   if (!button) return;
+  if (button.dataset.analysisKey && keyAnalysisContext) {
+    $('#key-analysis-detail').innerHTML = keyDetail(keyAnalysisContext.value, button.dataset.analysisKey);
+    document.querySelectorAll('.letter-key').forEach(key => key.setAttribute('aria-pressed', String(key.dataset.analysisKey === button.dataset.analysisKey)));
+    return;
+  }
+  if (button.dataset.analysisAttempt) {
+    const row = stats.history.find(item => item.request_id === button.dataset.analysisAttempt);
+    if (row) showKeyAnalysis(row.keyTimings, corpus.lessons.find(item => item.id === row.lesson_id)?.title || '英文练习', true);
+    return;
+  }
   if (button.dataset.start || button.dataset.free) {
     modal.close(); startLesson(button.dataset.start || button.dataset.free, Boolean(button.dataset.free)); return;
   }
@@ -356,6 +389,12 @@ document.addEventListener('click', async event => {
   const action = button.dataset.action;
   if (!action) return;
   switch (action) {
+    case 'show-key-analysis':
+      if (session?.result) showKeyAnalysis(session.result.keyTimings ?? session.payload?.keyTimings, session.lesson.title);
+      break;
+    case 'analysis-back':
+      if (!keyAnalysisContext?.fromHistory && session?.result) showResult(session); else modal.close();
+      break;
     case 'personal-space': personalSpace(); break;
     case 'space-history': applyTheme(preferences.theme); modal.close(); location.hash = 'history'; break;
     case 'guide': guide(); break;

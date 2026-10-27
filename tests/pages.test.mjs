@@ -3,7 +3,7 @@ import fs from 'node:fs/promises';
 
 const output = new URL('../dist/', import.meta.url);
 const files = (await fs.readdir(output)).sort();
-assert.deepEqual(files, ['.nojekyll', 'app.js', 'browser-store.js', 'preferences.js', 'corpus.json', 'engine.js', 'favicon.svg', 'index.html', 'styles.css', 'themes.css'].sort());
+assert.deepEqual(files, ['.nojekyll', 'app.js', 'browser-store.js', 'key-timings.js', 'key-analysis-view.js', 'preferences.js', 'corpus.json', 'engine.js', 'favicon.svg', 'index.html', 'styles.css', 'themes.css'].sort());
 const html = await fs.readFile(new URL('index.html', output), 'utf8');
 assert.match(html, /name="typeflow-storage" content="browser"/);
 assert.ok(html.indexOf('document.documentElement.dataset.theme') < html.indexOf('rel="stylesheet"'), 'saved theme is applied before styles paint');

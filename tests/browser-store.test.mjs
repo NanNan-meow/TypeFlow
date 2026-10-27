@@ -50,4 +50,11 @@ const corrupt = createBrowserApi({ ...options, storage: { getItem: () => '{broke
 await assert.rejects(corrupt('/api/stats'), /无法读取/);
 const yesterday = { ...exported.attempts[0], created_at: '2026-10-27T10:00:00' };
 assert.equal(summarize([yesterday], corpus.lessons, options.now()).streak, 1);
+const keyTimings={version:1,letters:{a:{samples:2,totalMs:500,errors:1,longPauses:0}}};
+const timed = await submit({...body,requestId:'timing-request-001',keyTimings});
+assert.deepEqual(timed.result.keyTimings,keyTimings);
+assert.equal(timed.result.score,100,'timing analysis never changes grading');
+assert.deepEqual((await reloaded('/api/stats')).history[0].keyTimings,keyTimings,'reload retains per-attempt analysis');
+assert.deepEqual((await api('/api/export')).attempts.at(-1).keyTimings,keyTimings);
+assert.equal((await submit({...body,requestId:'timing-request-001',keyTimings})).stats.totalAttempts,3,'timed retries are idempotent');
 console.log('Pages browser storage tests passed: scoring, persistence, free selection, export, paths and storage errors.');

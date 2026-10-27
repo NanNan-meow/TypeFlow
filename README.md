@@ -35,6 +35,10 @@ Windows 上安装了 Edge 时，可运行 `node tools/theme-smoke.mjs` 检查三
 
 ## 练习内容
 
+英文词组、句子和文章完成后，成绩页会显示本关的字母平均输入间隔和相对较慢的字母。点击“查看 26 个字母的分析”，可查看键盘分布、各字母平均间隔、采样次数和错按次数；有采样的练习也可以从历史记录重新打开分析，导出的 JSON 会包含这些统计。旧记录不会补造按键耗时。
+
+按键耗时按 A–Z 合并大小写，统计相邻有效输入到当前字母的间隔，单位为毫秒。首次输入、暂停／失焦／输入法选字后的首次输入、退格纠错、长按连发和批量输入不计时，超过 5 秒的长停顿单独记录。至少采样两次的字母才会参与相对较慢的推荐，样本少时只作参考；输入间隔也包含读词和思考时间，不能单独判断手指熟练程度。这些统计不影响速度、正确率、评分或通关要求。
+
 - **英文**：词组 12 关、句子 12 关、文章 6 关。来自教育、环境交通、科技、工作、健康、文化旅游六个雅思 Task 2 常见主题的原创范文，每篇超过 250 词；不是官方真题范文或官方评分。
 - **中文**：词组 26 关、句子 30 关、文章 20 关。提取自 `C:\Users\Administrator\Desktop\MathorCup` 中的 41 篇优秀论文；文章为正文节选，练习页可查看对应论文与 PDF 页码。词组均在原始论文中核对存在。
 - 六条路线的所有关卡全部开放，闯关模式也可以任意选择，无需通过前一关。速度和正确率同时达标即可获得该关的通关记录与星级。自由练习计入记录，不累计通关星级。
@@ -72,6 +76,7 @@ python tools/extract_corpus.py --source "C:\Users\Administrator\Desktop\MathorCu
 python launcher.py --no-browser
 python -m unittest discover -s tests -v
 node tests/engine.test.mjs
+node tools/key-analysis-smoke.mjs
 ```
 
 前端为 HTML/CSS/原生 JavaScript，由独立静态服务代理 `/api` 请求；后端为 Python 标准库 HTTP API + SQLite。两个服务仅监听本机回环地址。运行日志位于 `logs/backend.log` 和 `logs/frontend.log`。

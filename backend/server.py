@@ -13,6 +13,7 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from backend.scoring import score_attempt
+from backend.key_timings import normalize_key_timings
 
 CORPUS = json.loads((ROOT / "data" / "corpus.json").read_text(encoding="utf-8"))
 LESSONS = {x["id"]: x for x in CORPUS["lessons"]}
@@ -38,7 +39,16 @@ def init_db():
                 stars INTEGER NOT NULL, passed INTEGER NOT NULL, complete INTEGER NOT NULL
             );
         """)
+        if "key_timings" not in {row["name"] for row in db.execute("PRAGMA table_info(attempts)")}:
+            db.execute("ALTER TABLE attempts ADD COLUMN key_timings TEXT")
         db.commit()
+
+
+def attempt_record(row):
+    record = dict(row)
+    raw = record.pop("key_timings", None)
+    record["keyTimings"] = json.loads(raw) if raw else None
+    return record
 
 
 def progress(db):
@@ -46,7 +56,7 @@ def progress(db):
 
 
 def summary(db):
-    rows = [dict(r) for r in db.execute("SELECT * FROM attempts ORDER BY id DESC")]
+    rows = [attempt_record(r) for r in db.execute("SELECT * FROM attempts ORDER BY id DESC")]
     today = datetime.now().date()
     days = [{"date": (today - timedelta(days=i)).isoformat(), "minutes": 0, "attempts": 0} for i in range(6, -1, -1)]
     for day in days:
@@ -90,7 +100,7 @@ class Handler(BaseHTTPRequestHandler):
             if path == "/api/stats":
                 return self.send_json(200, summary(db))
             if path == "/api/export":
-                return self.send_json(200, {"app": "typeflow", "version": 1, "exportedAt": datetime.now().isoformat(), "attempts": [dict(r) for r in db.execute("SELECT * FROM attempts ORDER BY id")]})
+                return self.send_json(200, {"app": "typeflow", "version": 1, "exportedAt": datetime.now().isoformat(), "attempts": [attempt_record(r) for r in db.execute("SELECT * FROM attempts ORDER BY id")]})
         self.send_json(404, {"error": "接口不存在"})
 
     def do_POST(self):
@@ -113,12 +123,13 @@ class Handler(BaseHTTPRequestHandler):
             if not isinstance(req, str) or not 8 <= len(req) <= 80:
                 raise ValueError("记录编号无效")
             result = score_attempt(lesson, body.get("typed"), body.get("elapsed"), body.get("errors", 0), body.get("mode", "challenge"))
+            result["keyTimings"] = normalize_key_timings(body.get("keyTimings")) if lesson["language"] == "en" else None
             with closing(connect()) as db:
                 previous = db.execute("SELECT * FROM attempts WHERE request_id=?", (req,)).fetchone()
                 if previous:
-                    return self.send_json(200, {"result": dict(previous), "stats": summary(db)})
+                    return self.send_json(200, {"result": attempt_record(previous), "stats": summary(db)})
                 keys = ["mode", "elapsed", "speed", "accuracy", "errors", "correct", "score", "stars", "passed", "complete"]
-                db.execute("INSERT INTO attempts(request_id,lesson_id,created_at," + ",".join(keys) + ") VALUES (" + ",".join("?" for _ in range(len(keys) + 3)) + ")", [req, lesson["id"], datetime.now().isoformat(timespec="seconds")] + [result[k] for k in keys])
+                db.execute("INSERT INTO attempts(request_id,lesson_id,created_at,key_timings," + ",".join(keys) + ") VALUES (" + ",".join("?" for _ in range(len(keys) + 4)) + ")", [req, lesson["id"], datetime.now().isoformat(timespec="seconds"), json.dumps(result["keyTimings"]) if result["keyTimings"] is not None else None] + [result[k] for k in keys])
                 db.commit()
                 return self.send_json(200, {"result": result, "stats": summary(db)})
         except (ValueError, TypeError, json.JSONDecodeError) as exc:

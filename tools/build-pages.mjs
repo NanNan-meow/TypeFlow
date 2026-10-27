@@ -10,7 +10,7 @@ const existing = await fs.lstat(output).catch(error => { if (error.code !== 'ENO
 if (existing?.isSymbolicLink()) throw new Error('Pages output must not be a symlink');
 if (existing) await fs.rm(output, { recursive: true, force: true });
 await fs.mkdir(output);
-const assets = ['index.html', 'app.js', 'engine.js', 'browser-store.js', 'preferences.js', 'styles.css', 'favicon.svg'];
+const assets = ['index.html', 'app.js', 'engine.js', 'browser-store.js', 'preferences.js', 'styles.css', 'themes.css', 'favicon.svg'];
 for (const asset of assets) await fs.copyFile(path.join(root, 'frontend', asset), path.join(output, asset));
 const indexPath = path.join(output, 'index.html');
 const html = (await fs.readFile(indexPath, 'utf8')).replace('name="typeflow-storage" content="server"', 'name="typeflow-storage" content="browser"');

@@ -9,6 +9,12 @@ const savedMessage = browserMode ? '已保存在当前浏览器 · 刷新后仍�
 const preferencesStore = createPreferences();
 let preferences = preferencesStore.load();
 
+function applyTheme(theme) {
+  document.documentElement.dataset.theme = theme === 'dark' ? 'dark' : 'light';
+  document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#131622' : '#f8f9fc';
+}
+applyTheme(preferences.theme);
+
 const $ = (selector, scope = document) => scope.querySelector(selector);
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 const icons = {
@@ -91,6 +97,10 @@ function personalSpace() {
   const fontOptions = [...new Set([20, 24, 28, 32, 36, preferences.fontSize])].sort((a, b) => a - b);
   const passed = Object.values(stats?.progress || {}).filter(item => item.passed).length;
   openModal(`${modalHeader('个人空间')}<p class="space-intro">给练习室加一点你的习惯，按舒服的节奏慢慢进步。</p><div class="space-summary"><div><strong>${stats?.totalAttempts || 0}</strong><span>次专注练习</span></div><div><strong>${passed}</strong><span>关已通过</span></div><div><strong>${Math.floor((stats?.totalSeconds || 0) / 60)}</strong><span>分钟积累</span></div></div><form id="personal-space-form" class="space-form"><label for="space-nickname">怎么称呼你<input id="space-nickname" name="nickname" type="text" maxlength="20" autocomplete="nickname" value="${esc(preferences.nickname)}" placeholder="填写你的昵称，也可以留空"></label><div class="space-fields"><label for="space-daily-goal">每日练习目标<select id="space-daily-goal" name="dailyGoalMinutes">${goalOptions.map(value => `<option value="${value}" ${value === preferences.dailyGoalMinutes ? 'selected' : ''}>${value} 分钟</option>`).join('')}</select></label><label for="space-font-size">练习原文字号<select id="space-font-size" name="fontSize">${fontOptions.map(value => `<option value="${value}" ${value === preferences.fontSize ? 'selected' : ''}>${value}px${value === 28 ? ' · 默认' : ''}</option>`).join('')}</select></label></div><div class="space-preview" id="space-font-preview" style="font-size:${preferences.fontSize}px">每一次练习 都是进步<br><span>Find your own flow</span></div><p class="space-storage">${browserMode ? '练习成绩和这些设置保存在当前浏览器，无需注册。换设备或清除网站数据后不会自动同步，记得导出重要记录。' : '练习成绩保存在本机；昵称、每日目标和字体设置保存在当前浏览器。'}</p><div class="space-shortcuts"><button type="button" class="btn secondary" data-action="space-history" ${!stats ? 'disabled' : ''}>${icon('history')}查看练习记录</button><button type="button" class="btn secondary" data-action="export" ${!stats ? 'disabled' : ''}>${icon('download')}导出全部记录</button></div><p id="space-error" class="space-error" role="alert" hidden></p><div class="space-actions"><button type="button" class="btn secondary" data-action="close-modal">暂时不改</button><button type="submit" class="btn primary">保存设置 ${icon('check')}</button></div></form>`);
+  const themeField = document.createElement('fieldset');
+  themeField.className = 'theme-fieldset';
+  themeField.innerHTML = `<legend>外观主题</legend><p>选择后立即预览，保存后记住你的选择。</p><div class="theme-options">${[['light', '☀', '白天', '清爽明亮'], ['dark', '☾', '黑夜', '柔和护眼']].map(([value, symbol, name, description]) => `<label class="theme-option" data-theme-option="${value}"><input type="radio" name="theme" value="${value}" ${preferences.theme === value ? 'checked' : ''}><span class="theme-choice"><span class="theme-swatch ${value}" aria-hidden="true">${symbol}</span><span><strong>${name}</strong><small>${description}</small></span><span class="theme-check" aria-hidden="true">✓</span></span></label>`).join('')}</div>`;
+  $('#personal-space-form').prepend(themeField);
 }
 
 function applyPracticeFont(size) {
@@ -115,7 +125,7 @@ function home() {
   const greeting = time < 12 ? '上午好' : time < 18 ? '下午好' : '晚上好';
   const latest = stats.history[0] && corpus.lessons.find(x => x.id === stats.history[0].lesson_id);
   const next = nextLesson(latest?.language || 'en', latest?.kind || 'phrase');
-  main.innerHTML = `<div class="page-heading"><div><div class="eyebrow">YOUR LEARNING JOURNEY</div><h1>${greeting}，${preferences.nickname ? esc(preferences.nickname) : '欢迎回到练习室'} <span style="font-size:21px">☀</span></h1><p>保持自己的节奏，今天也向前一点。</p></div><div class="streak-badge"><span>♨</span> 已连续练习 <b>${stats.streak}</b> 天</div></div>
+  main.innerHTML = `<div class="page-heading home-heading"><div><div class="eyebrow">YOUR LEARNING JOURNEY</div><h1>${greeting}，${preferences.nickname ? esc(preferences.nickname) : '欢迎回到练习室'} <span style="font-size:21px">☀</span></h1><p>保持自己的节奏，今天也向前一点。</p></div><div class="streak-badge"><span>♨</span> 已连续练习 <b>${stats.streak}</b> 天</div></div>
     <section class="hero"><div class="hero-copy"><div class="hero-tag">SMALL STEPS. STEADY PROGRESS.</div><h2>让每一次敲击，<br>都成为<em>进步。</em></h2><p>从词组到文章，从准确到流畅。<br>在熟悉的知识里，找到属于你的打字节奏。</p><div class="hero-actions"><button class="btn primary" data-start="${next.id}">${stats.totalAttempts ? '继续我的练习' : '开始第一次练习'} ${icon('arrow')}</button><button class="btn ghost" data-action="guide">了解闯关规则 ↗</button></div></div>${keyboardArt()}</section>
     <section class="metrics" aria-label="学习数据">${metric('history', '累计练习时长', Math.floor(stats.totalSeconds / 60), '分钟', stats.totalAttempts ? `来自 ${stats.totalAttempts} 次专注练习` : '从今天开始，记录你的投入')}${metric('award', '已通关关卡', totalPassed, `/ ${corpus.lessons.length} 关`, `<span class="positive">✦</span> 六条路线，各自成长`)}${metric('target', '平均正确率', stats.totalAttempts ? stats.averageAccuracy.toFixed(1) : '—', '%', '改对就算对，认真纠错也很棒')}${metric('bolt', '英文最佳速度', stats.bestSpeed.en ? stats.bestSpeed.en.toFixed(1) : '—', 'WPM', `中文最佳 ${stats.bestSpeed.zh ? stats.bestSpeed.zh.toFixed(0) : '—'} 字/分钟`)}</section>
     <div class="section-title"><h2>选择你的练习 <span>两种语言，六条进阶路线</span></h2><a href="#library">探索全部素材 ${icon('arrow')}</a></div><section class="courses">${courseCard('en')}${courseCard('zh')}</section>
@@ -347,9 +357,9 @@ document.addEventListener('click', async event => {
   if (!action) return;
   switch (action) {
     case 'personal-space': personalSpace(); break;
-    case 'space-history': modal.close(); location.hash = 'history'; break;
+    case 'space-history': applyTheme(preferences.theme); modal.close(); location.hash = 'history'; break;
     case 'guide': guide(); break;
-    case 'close-modal': modal.close(); break;
+    case 'close-modal': applyTheme(preferences.theme); modal.close(); break;
     case 'pause': session?.paused ? resumePractice() : pausePractice(); break;
     case 'resume': resumePractice(); break;
     case 'finish': finishPractice(); break;
@@ -376,6 +386,7 @@ document.addEventListener('submit', event => {
   const values = new FormData(event.target);
   try {
     preferences = preferencesStore.save(Object.fromEntries(values));
+    applyTheme(preferences.theme);
     if (session) { session.size = preferences.fontSize; applyPracticeFont(session.size); }
     if (stats) { if (currentRoute === 'home') home(); updateShell(currentRoute); }
     modal.close();
@@ -383,9 +394,11 @@ document.addEventListener('submit', event => {
   } catch (error) {
     $('#space-error').textContent = error.message;
     $('#space-error').hidden = false;
+    $('#space-error').scrollIntoView({ block: 'nearest' });
   }
 });
 document.addEventListener('change', event => {
+  if (event.target.name === 'theme' && event.target.closest('#personal-space-form')) applyTheme(event.target.value);
   if (event.target.id === 'space-font-size') $('#space-font-preview').style.fontSize = `${Number(event.target.value)}px`;
   if (event.target.id === 'mode-select') { mode = event.target.value; renderTrack(currentRoute); }
   if (event.target.id === 'history-filter') renderHistory(event.target.value);
@@ -401,7 +414,9 @@ document.addEventListener('keydown', event => {
 document.addEventListener('visibilitychange', () => { if (document.hidden && session?.hasStarted && !session.finished) pausePractice(); });
 window.addEventListener('beforeunload', event => { if (session?.typed.length && !session.finished) { event.preventDefault(); event.returnValue = ''; } });
 $('#help-button').addEventListener('click', guide);
-modal.addEventListener('click', event => { if (event.target === modal) modal.close(); });
+modal.addEventListener('click', event => { if (event.target === modal) { applyTheme(preferences.theme); modal.close(); } });
+modal.addEventListener('cancel', () => applyTheme(preferences.theme));
+modal.addEventListener('close', () => applyTheme(preferences.theme));
 
 function route() {
   const requested = location.hash.slice(1) || 'home';

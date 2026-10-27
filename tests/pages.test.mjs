@@ -3,9 +3,11 @@ import fs from 'node:fs/promises';
 
 const output = new URL('../dist/', import.meta.url);
 const files = (await fs.readdir(output)).sort();
-assert.deepEqual(files, ['.nojekyll', 'app.js', 'browser-store.js', 'preferences.js', 'corpus.json', 'engine.js', 'favicon.svg', 'index.html', 'styles.css'].sort());
+assert.deepEqual(files, ['.nojekyll', 'app.js', 'browser-store.js', 'preferences.js', 'corpus.json', 'engine.js', 'favicon.svg', 'index.html', 'styles.css', 'themes.css'].sort());
 const html = await fs.readFile(new URL('index.html', output), 'utf8');
 assert.match(html, /name="typeflow-storage" content="browser"/);
+assert.ok(html.indexOf('document.documentElement.dataset.theme') < html.indexOf('rel="stylesheet"'), 'saved theme is applied before styles paint');
+assert.equal((html.match(/data-action="personal-space"/g) || []).length, 1, 'only one personal-space entry is shown');
 for (const match of html.matchAll(/(?:src|href)="([^"#][^"]*)"/g)) {
   assert.ok(match[1].startsWith('./'), `Asset must support a repository subpath: ${match[1]}`);
   const url = new URL(match[1], 'https://example.github.io/TypeFlow/');

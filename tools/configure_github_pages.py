@@ -10,6 +10,7 @@ from urllib.request import ProxyHandler, Request, build_opener
 
 ROOT = Path(__file__).resolve().parents[1]
 RELEASE_FILES = [".github/workflows/pages.yml", ".gitignore", "README.md", "frontend/index.html", "frontend/app.js", "frontend/browser-store.js", "frontend/preferences.js", "frontend/styles.css", "package.json", "tests/test_app.py", "tests/browser-store.test.mjs", "tests/pages.test.mjs", "tests/preferences.test.mjs", "tests/scoring-parity.test.mjs", "tests/scoring-fixtures.json", "tools/build-pages.mjs", "tools/configure_github_pages.py", "tools/scoring-fixtures.py", "tools/profile-smoke.mjs"]
+RELEASE_FILES += ["frontend/themes.css", "tools/browser-test-harness.mjs", "tools/theme-smoke.mjs", "tools/theme-error-smoke.mjs", "tools/theme-review.mjs"]
 
 
 def main():
@@ -82,7 +83,7 @@ def main():
             html = response.read().decode("utf-8")
         if 'name="typeflow-storage" content="browser"' not in html:
             raise RuntimeError("Deployed page has not updated to browser-storage mode")
-        for asset in ("app.js", "browser-store.js", "preferences.js", "styles.css", "engine.js", "favicon.svg"):
+        for asset in ("app.js", "browser-store.js", "preferences.js", "styles.css", "themes.css", "engine.js", "favicon.svg"):
             with opener.open(url + asset, timeout=20) as response:
                 if response.status != 200:
                     raise RuntimeError(f"Published asset is unavailable: {asset}")

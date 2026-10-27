@@ -6,9 +6,16 @@
   <meta name="theme-color" content="#6155d9">
   <meta name="typeflow-storage" content="server">
   <meta name="description" content="TypeFlow 本地打字练习室：用雅思写作和数学建模论文，练出有节奏的进步。">
+  <script>
+    try {
+      const saved = JSON.parse(localStorage.getItem(`typeflow:preferences:v1:${new URL('.', document.baseURI).pathname}`));
+      document.documentElement.dataset.theme = saved?.theme === 'dark' ? 'dark' : 'light';
+    } catch { document.documentElement.dataset.theme = 'light'; }
+  </script>
   <title>TypeFlow · 打字练习室</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./themes.css">
   <script src="./app.js" type="module"></script>
 </head>
 <body>
@@ -24,7 +31,7 @@
       </div>
     </aside>
     <div class="workspace">
-      <header class="topbar"><div class="breadcrumb">学习空间 <span>/</span> <b id="breadcrumb">学习概览</b></div><div class="topbar-right"><span id="today-date"></span><button type="button" class="local-pill" id="personal-space-button" data-action="personal-space" aria-haspopup="dialog" aria-controls="modal">个人空间</button><button type="button" class="avatar" data-action="personal-space" aria-label="打开个人空间" aria-haspopup="dialog" aria-controls="modal">我</button></div></header>
+      <header class="topbar"><div class="breadcrumb">学习空间 <span>/</span> <b id="breadcrumb">学习概览</b></div><div class="topbar-right"><span id="today-date"></span><button type="button" class="personal-entry" id="personal-space-button" data-action="personal-space" aria-haspopup="dialog" aria-controls="modal"><span class="avatar" aria-hidden="true">我</span><span>个人空间</span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 10 4 4 4-4"/></svg></button></div></header>
       <main id="main" tabindex="-1"><div class="loading"><span class="loader"></span>正在准备你的练习室…</div></main>
       <footer>TYPEFLOW <span>让输入更流畅，让学习有回响。</span><span>为每一次小小的进步而设计 ✦</span></footer>
     </div>

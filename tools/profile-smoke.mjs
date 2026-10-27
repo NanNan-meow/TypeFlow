@@ -50,6 +50,7 @@ try {
   async function read(expression) { const result = await cdp('Runtime.evaluate', { expression, returnByValue: true, awaitPromise: true }); if (result.exceptionDetails) throw new Error(result.exceptionDetails.text); return result.result.value; }
   async function until(expression) { for (let i = 0; i < 70; i++) { if (await read(expression)) return; await delay(100); } throw new Error('UI condition failed: ' + expression); }
   async function click(selector) {
+    await read(`document.querySelector(${JSON.stringify(selector)})?.scrollIntoView({block:'center',inline:'nearest'})`);
     const point = await read(`(() => { const node = document.querySelector(${JSON.stringify(selector)}); if (!node) throw new Error('Element missing'); const r = node.getBoundingClientRect(); return {x:r.x+r.width/2,y:r.y+r.height/2}; })()`);
     await cdp('Input.dispatchMouseEvent', { type: 'mousePressed', button: 'left', clickCount: 1, ...point });
     await cdp('Input.dispatchMouseEvent', { type: 'mouseReleased', button: 'left', clickCount: 1, ...point });
@@ -64,6 +65,7 @@ try {
   await cdp('Page.navigate', { url: base });
   await until("Boolean(document.querySelector('.hero'))");
   assert.equal(await read("document.querySelector('#personal-space-button').tagName"), 'BUTTON');
+  assert.equal(await read("document.querySelectorAll('[data-action=personal-space]').length"), 1);
   await click('#personal-space-button');
   await until("document.querySelector('#modal').open && Boolean(document.querySelector('#personal-space-form'))");
   assert.equal(await read("document.querySelector('#space-font-size').value"), '28');

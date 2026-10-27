@@ -1,10 +1,13 @@
 import { countNewErrors, liveMetrics, isUnlocked } from './engine.js';
 import { createBrowserApi } from './browser-store.js';
+import { createPreferences } from './preferences.js';
 
 const browserMode = document.querySelector('meta[name="typeflow-storage"]')?.content === 'browser';
 const browserApi = browserMode ? createBrowserApi() : null;
 const pendingKey = browserMode ? `typeflow-pending:${new URL('.', import.meta.url).pathname}` : 'typeflow-pending';
 const savedMessage = browserMode ? '已保存在当前浏览器 · 刷新后仍可继续' : '已保存到本机 · 重启后仍可继续';
+const preferencesStore = createPreferences();
+let preferences = preferencesStore.load();
 
 const $ = (selector, scope = document) => scope.querySelector(selector);
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
@@ -54,6 +57,8 @@ async function api(path, options = {}) {
 
 function openModal(content) {
   $('#modal-content').innerHTML = content;
+  const title = $('#modal-content h2');
+  if (title) { title.id = 'modal-title'; modal.setAttribute('aria-labelledby', title.id); }
   if (!modal.open) modal.showModal();
 }
 const modalHeader = title => `<div class="modal-head"><h2>${esc(title)}</h2><button class="close-button" data-action="close-modal" aria-label="关闭弹窗">×</button></div>`;
@@ -74,8 +79,23 @@ function updateShell(route) {
   const section = route.startsWith('practice/') ? session?.lesson.language : route;
   $('#navigation').innerHTML = navigation.map(([id, glyph, label]) => `<a href="#${id}" class="nav-link ${section === id ? 'active' : ''}" ${section === id ? 'aria-current="page"' : ''} title="${label}">${icon(glyph)}<span>${label}</span></a>`).join('');
   $('#breadcrumb').textContent = route.startsWith('practice/') ? '专注练习' : navigation.find(x => x[0] === route)?.[2] || '学习概览';
-  $('#daily-progress').style.width = `${Math.min(100, stats.todaySeconds / 9)}%`;
-  $('#daily-time').textContent = `${Math.floor(stats.todaySeconds / 60)} / 15 分钟`;
+  $('#daily-progress').style.width = `${Math.min(100, stats.todaySeconds / (preferences.dailyGoalMinutes * 60) * 100)}%`;
+  $('#daily-time').textContent = `${Math.floor(stats.todaySeconds / 60)} / ${preferences.dailyGoalMinutes} 分钟`;
+  $('#daily-goal-description').textContent = `给自己 ${preferences.dailyGoalMinutes} 分钟的专注时间。`;
+  $('.avatar').textContent = [...preferences.nickname][0] || '我';
+}
+
+function personalSpace() {
+  pausePractice();
+  const goalOptions = [...new Set([5, 10, 15, 20, 30, 45, 60, preferences.dailyGoalMinutes])].sort((a, b) => a - b);
+  const fontOptions = [...new Set([20, 24, 28, 32, 36, preferences.fontSize])].sort((a, b) => a - b);
+  const passed = Object.values(stats?.progress || {}).filter(item => item.passed).length;
+  openModal(`${modalHeader('个人空间')}<p class="space-intro">给练习室加一点你的习惯，按舒服的节奏慢慢进步。</p><div class="space-summary"><div><strong>${stats?.totalAttempts || 0}</strong><span>次专注练习</span></div><div><strong>${passed}</strong><span>关已通过</span></div><div><strong>${Math.floor((stats?.totalSeconds || 0) / 60)}</strong><span>分钟积累</span></div></div><form id="personal-space-form" class="space-form"><label for="space-nickname">怎么称呼你<input id="space-nickname" name="nickname" type="text" maxlength="20" autocomplete="nickname" value="${esc(preferences.nickname)}" placeholder="填写你的昵称，也可以留空"></label><div class="space-fields"><label for="space-daily-goal">每日练习目标<select id="space-daily-goal" name="dailyGoalMinutes">${goalOptions.map(value => `<option value="${value}" ${value === preferences.dailyGoalMinutes ? 'selected' : ''}>${value} 分钟</option>`).join('')}</select></label><label for="space-font-size">练习原文字号<select id="space-font-size" name="fontSize">${fontOptions.map(value => `<option value="${value}" ${value === preferences.fontSize ? 'selected' : ''}>${value}px${value === 28 ? ' · 默认' : ''}</option>`).join('')}</select></label></div><div class="space-preview" id="space-font-preview" style="font-size:${preferences.fontSize}px">每一次练习 都是进步<br><span>Find your own flow</span></div><p class="space-storage">${browserMode ? '练习成绩和这些设置保存在当前浏览器，无需注册。换设备或清除网站数据后不会自动同步，记得导出重要记录。' : '练习成绩保存在本机；昵称、每日目标和字体设置保存在当前浏览器。'}</p><div class="space-shortcuts"><button type="button" class="btn secondary" data-action="space-history" ${!stats ? 'disabled' : ''}>${icon('history')}查看练习记录</button><button type="button" class="btn secondary" data-action="export" ${!stats ? 'disabled' : ''}>${icon('download')}导出全部记录</button></div><p id="space-error" class="space-error" role="alert" hidden></p><div class="space-actions"><button type="button" class="btn secondary" data-action="close-modal">暂时不改</button><button type="submit" class="btn primary">保存设置 ${icon('check')}</button></div></form>`);
+}
+
+function applyPracticeFont(size) {
+  if ($('#reference')) $('#reference').style.fontSize = `${size}px`;
+  if ($('#typing-input')) $('#typing-input').style.fontSize = `${Math.max(18, size - 6)}px`;
 }
 
 function metric(glyph, name, value, unit, foot) {
@@ -95,7 +115,7 @@ function home() {
   const greeting = time < 12 ? '上午好' : time < 18 ? '下午好' : '晚上好';
   const latest = stats.history[0] && corpus.lessons.find(x => x.id === stats.history[0].lesson_id);
   const next = nextLesson(latest?.language || 'en', latest?.kind || 'phrase');
-  main.innerHTML = `<div class="page-heading"><div><div class="eyebrow">YOUR LEARNING JOURNEY</div><h1>${greeting}，欢迎回到练习室 <span style="font-size:21px">☀</span></h1><p>保持自己的节奏，今天也向前一点。</p></div><div class="streak-badge"><span>♨</span> 已连续练习 <b>${stats.streak}</b> 天</div></div>
+  main.innerHTML = `<div class="page-heading"><div><div class="eyebrow">YOUR LEARNING JOURNEY</div><h1>${greeting}，${preferences.nickname ? esc(preferences.nickname) : '欢迎回到练习室'} <span style="font-size:21px">☀</span></h1><p>保持自己的节奏，今天也向前一点。</p></div><div class="streak-badge"><span>♨</span> 已连续练习 <b>${stats.streak}</b> 天</div></div>
     <section class="hero"><div class="hero-copy"><div class="hero-tag">SMALL STEPS. STEADY PROGRESS.</div><h2>让每一次敲击，<br>都成为<em>进步。</em></h2><p>从词组到文章，从准确到流畅。<br>在熟悉的知识里，找到属于你的打字节奏。</p><div class="hero-actions"><button class="btn primary" data-start="${next.id}">${stats.totalAttempts ? '继续我的练习' : '开始第一次练习'} ${icon('arrow')}</button><button class="btn ghost" data-action="guide">了解闯关规则 ↗</button></div></div>${keyboardArt()}</section>
     <section class="metrics" aria-label="学习数据">${metric('history', '累计练习时长', Math.floor(stats.totalSeconds / 60), '分钟', stats.totalAttempts ? `来自 ${stats.totalAttempts} 次专注练习` : '从今天开始，记录你的投入')}${metric('award', '已通关关卡', totalPassed, `/ ${corpus.lessons.length} 关`, `<span class="positive">✦</span> 六条路线，各自成长`)}${metric('target', '平均正确率', stats.totalAttempts ? stats.averageAccuracy.toFixed(1) : '—', '%', '改对就算对，认真纠错也很棒')}${metric('bolt', '英文最佳速度', stats.bestSpeed.en ? stats.bestSpeed.en.toFixed(1) : '—', 'WPM', `中文最佳 ${stats.bestSpeed.zh ? stats.bestSpeed.zh.toFixed(0) : '—'} 字/分钟`)}</section>
     <div class="section-title"><h2>选择你的练习 <span>两种语言，六条进阶路线</span></h2><a href="#library">探索全部素材 ${icon('arrow')}</a></div><section class="courses">${courseCard('en')}${courseCard('zh')}</section>
@@ -153,7 +173,7 @@ function startLesson(id, free = false) {
   if (!lesson) return toast('这份练习不存在。');
   const attemptMode = free ? 'free' : mode;
   if (attemptMode === 'challenge' && !isUnlocked(lesson, corpus.lessons, stats.progress)) return toast('请先通过上一关，或切换到自由练习。');
-  session = { lesson, mode: attemptMode, typed: '', errors: 0, accumulated: 0, running: false, paused: false, finished: false, composing: false, hasStarted: false, size: 28, requestId: crypto.randomUUID(), saved: false, saving: false };
+  session = { lesson, mode: attemptMode, typed: '', errors: 0, accumulated: 0, running: false, paused: false, finished: false, composing: false, hasStarted: false, size: preferences.fontSize, requestId: crypto.randomUUID(), saved: false, saving: false };
   location.hash = `practice/${id}`;
   if (currentRoute === `practice/${id}`) renderPractice();
 }
@@ -185,7 +205,7 @@ function renderPractice() {
   input.addEventListener('click', () => { if (!session.composing) input.setSelectionRange(input.value.length, input.value.length); });
   for (const type of ['paste', 'drop']) input.addEventListener(type, event => { event.preventDefault(); toast('逐字输入才能记录真实进步，练习区暂不支持粘贴。'); });
   renderReference();
-  $('#reference').style.fontSize = `${session.size}px`;
+  applyPracticeFont(session.size);
   clearInterval(tickTimer);
   tickTimer = setInterval(updateLive, 150);
   if (session.paused) pausePractice();
@@ -326,6 +346,8 @@ document.addEventListener('click', async event => {
   const action = button.dataset.action;
   if (!action) return;
   switch (action) {
+    case 'personal-space': personalSpace(); break;
+    case 'space-history': modal.close(); location.hash = 'history'; break;
     case 'guide': guide(); break;
     case 'close-modal': modal.close(); break;
     case 'pause': session?.paused ? resumePractice() : pausePractice(); break;
@@ -343,12 +365,28 @@ document.addEventListener('click', async event => {
     case 'source': pausePractice(); sourceDetails(); break;
     case 'focus': document.body.classList.toggle('focus-mode'); break;
     case 'font-larger': case 'font-smaller':
-      session.size = Math.max(16, Math.min(36, session.size + (action === 'font-larger' ? 2 : -2))); $('#reference').style.fontSize = `${session.size}px`; break;
+      session.size = Math.max(16, Math.min(36, session.size + (action === 'font-larger' ? 2 : -2))); applyPracticeFont(session.size); break;
     case 'export':
       try { const data = await api('/api/export'); const url = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' })); const a = document.createElement('a'); a.href = url; a.download = `TypeFlow-练习记录-${new Date().toLocaleDateString('sv-SE')}.json`; a.click(); setTimeout(() => URL.revokeObjectURL(url), 1000); toast('全部练习记录已导出。'); } catch (error) { toast(error.message); } break;
   }
 });
+document.addEventListener('submit', event => {
+  if (event.target.id !== 'personal-space-form') return;
+  event.preventDefault();
+  const values = new FormData(event.target);
+  try {
+    preferences = preferencesStore.save(Object.fromEntries(values));
+    if (session) { session.size = preferences.fontSize; applyPracticeFont(session.size); }
+    if (stats) { if (currentRoute === 'home') home(); updateShell(currentRoute); }
+    modal.close();
+    toast('设置已保存，按舒服的节奏慢慢练。');
+  } catch (error) {
+    $('#space-error').textContent = error.message;
+    $('#space-error').hidden = false;
+  }
+});
 document.addEventListener('change', event => {
+  if (event.target.id === 'space-font-size') $('#space-font-preview').style.fontSize = `${Number(event.target.value)}px`;
   if (event.target.id === 'mode-select') { mode = event.target.value; renderTrack(currentRoute); }
   if (event.target.id === 'history-filter') renderHistory(event.target.value);
 });

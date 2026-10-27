@@ -18,13 +18,13 @@
       <div class="nav-caption">WORKSPACE <span>学习空间</span></div>
       <nav id="navigation" aria-label="主导航"></nav>
       <div class="sidebar-bottom">
-        <div class="daily-card"><span class="tiny-icon">✦</span><strong>每天一点，进步不止一点。</strong><p>给自己 15 分钟的专注时间。</p><div class="progress-track"><i id="daily-progress"></i></div><div class="daily-label"><span>今日练习</span><b id="daily-time">0 / 15 分钟</b></div></div>
+        <div class="daily-card"><span class="tiny-icon">✦</span><strong>每天一点，进步不止一点。</strong><p id="daily-goal-description">给自己 15 分钟的专注时间。</p><div class="progress-track"><i id="daily-progress"></i></div><div class="daily-label"><span>今日练习</span><b id="daily-time">0 / 15 分钟</b></div></div>
         <button class="help-button" id="help-button"><span>ⓘ</span> 使用指南与评分规则 <span>↗</span></button>
         <div class="offline-badge"><i></i> 本地运行 · 进度自动保存</div>
       </div>
     </aside>
     <div class="workspace">
-      <header class="topbar"><div class="breadcrumb">学习空间 <span>/</span> <b id="breadcrumb">学习概览</b></div><div class="topbar-right"><span id="today-date"></span><span class="local-pill">个人空间</span><span class="avatar">我</span></div></header>
+      <header class="topbar"><div class="breadcrumb">学习空间 <span>/</span> <b id="breadcrumb">学习概览</b></div><div class="topbar-right"><span id="today-date"></span><button type="button" class="local-pill" id="personal-space-button" data-action="personal-space" aria-haspopup="dialog" aria-controls="modal">个人空间</button><button type="button" class="avatar" data-action="personal-space" aria-label="打开个人空间" aria-haspopup="dialog" aria-controls="modal">我</button></div></header>
       <main id="main" tabindex="-1"><div class="loading"><span class="loader"></span>正在准备你的练习室…</div></main>
       <footer>TYPEFLOW <span>让输入更流畅，让学习有回响。</span><span>为每一次小小的进步而设计 ✦</span></footer>
     </div>

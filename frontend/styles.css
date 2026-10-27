@@ -10,3 +10,25 @@
 .typing-input{font-size:22px;line-height:1.9}.reference-text,.reference-text.zh{font-size:28px;line-height:2}.course-bottom{flex-wrap:wrap;gap:12px}.level-targets{flex-wrap:wrap}.sidebar{overflow-y:auto}.brand>span:last-child{font-size:25px}.reference-text{color:#92879f}.practice-note{font-size:14px}.guide p,.guide ul,.source-detail{font-size:15px}.result-feedback{font-size:15px}.typing-card-top{font-size:13px}.typing-bottom{font-size:13px}.entry-wrap label{font-size:13px}.level-card{min-height:250px}.nav-link{font-size:16px}.btn{font-size:14px}.course p{line-height:1.9}.course-kinds{flex-wrap:wrap}.topbar{height:86px}.source-info small{font-size:12px}
 @media(max-width:850px){.nav-link{font-size:14px}}
 @media(max-width:640px){.sidebar{overflow:visible}.nav-link{padding:8px 9px}.nav-link span{font-size:11px}.typing-input{font-size:21px}.reference-text,.reference-text.zh{font-size:26px}.practice-tools button{font-size:13px}.practice-tools{flex-wrap:wrap;justify-content:flex-end}.topbar{height:65px}.typing-bottom{font-size:12px}.level-card{min-height:250px}.practice-count{font-size:12px}.practice-stats{gap:0}.hero p{max-width:240px}.course-top{margin-left:12px}.course-bottom{font-size:12px}.study-pill{font-size:12px}}
+
+/* Personal space is an accessible, persistent settings dialog. */
+button.local-pill,button.avatar{transition:background .15s,box-shadow .15s}
+button.local-pill:hover{background:var(--purple-light);color:var(--purple);border-color:#d9d2f4}
+button.avatar:hover{box-shadow:0 0 0 3px #e5dff8}
+.space-intro{font-size:14px;line-height:1.8;color:#8b8098;margin-top:-6px}
+.space-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding:18px 12px;margin:20px 0 23px;background:#f6f3fd;border:1px solid #eae3f5;border-radius:12px;text-align:center}
+.space-summary strong{display:block;color:#77609b;font-size:26px;font-weight:600;line-height:1.5}
+.space-summary span{display:block;color:#a18bb4;font-size:12px}
+.space-form label{display:flex;flex-direction:column;gap:8px;font-size:14px;font-weight:500;color:#776582}
+.space-form input,.space-form select{width:100%;min-width:0;background:#fdfbff;border:1px solid #e2daed;border-radius:8px;padding:11px 12px;color:#665373;font-size:15px;outline:none}
+.space-form input::placeholder{color:#b4a5c0;font-size:13px}
+.space-form input:focus,.space-form select:focus{border-color:#a994d3;box-shadow:0 0 0 3px #f0eaf9}
+.space-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:19px}
+.space-preview{margin:18px 0 15px;padding:18px 16px;border:1px dashed #ded2ef;border-radius:9px;line-height:1.8;color:#8c72a8;overflow-wrap:anywhere;background:#fdfbff}
+.space-preview span{font-size:.75em;color:#aa96bc;letter-spacing:.6px}
+.space-storage{font-size:12px;line-height:1.9;color:#a08eae}
+.space-shortcuts{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 22px}
+.space-shortcuts .btn{flex:1;white-space:nowrap}
+.space-actions{display:flex;justify-content:flex-end;gap:10px;border-top:1px solid var(--line);padding-top:20px}
+.space-error{color:#b66073;background:#fff2f5;border-radius:7px;padding:10px 12px;font-size:13px;margin-bottom:16px}
+@media(max-width:640px){.space-intro{font-size:13px}.space-summary{padding:15px 8px}.space-summary strong{font-size:24px}.space-fields{gap:12px}.space-form input,.space-form select{font-size:16px}.space-shortcuts .btn{font-size:12px;padding:10px}.space-actions .btn{font-size:14px}}
